@@ -1,0 +1,10 @@
+/*
+ * general.css
+ * Esta hoja de estilos contiene la base de estilos que se utiliza en todas las páginas, excepto en la página de aterrizaje.
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
