@@ -45,7 +45,6 @@ Connect().use(ServeStatic(__dirname)).listen(Port, () => {
     });
     Nodemon.on('crash', () => {
         process.stdout.write('\x07');
-        console.log(Tiza.bold.red.bgBlack(` Error: ${Script} estrellado por alguna razón`));
         console.log('');
     });
 });
