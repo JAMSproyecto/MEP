@@ -99,8 +99,9 @@ app.use((req, res, next) => {
  * Obtener los componentes y asignarlos a la app
  */
 
+const articulos = require('./componentes/articulos/articulos.route');
 
-
+app.use('/api', articulos);
 
 
 
