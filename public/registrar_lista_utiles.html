@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
-    <title></title>
+    <title>Registrar Lista de útiles</title>
     <link href="./css/reset.min.css" rel="stylesheet">
     <link href="./css/animate.min.css" rel="stylesheet">
     <link href="./css/general.css" rel="stylesheet">
@@ -20,35 +20,40 @@
     </header>
 
     <main>
-        <form id="frm_articulo">
+        <form id="frm_lista_utiles">
             <div>
                 <label for="txt_codigo">Código</label>
-                <input type="text" id="txt_codigo" placeholder="Código del articulo">
+                <input type="text" id="txt_codigo" placeholder="Agregue el código de la institución">
+            </div>
+
+            <div>
+                <label for="txt_tipo">Tipo</label>
+                <input type="text" id="txt_tipo" placeholder="tipo de la lista de utiles">
             </div>
 
             <div>
                 <label for="txt_nombre">Nombre</label>
-                <input type="text" id="txt_nombre" placeholder="Nombre del articulo">
+                <input type="text" id="txt_nombre" placeholder="Nombre del lista de útiles">
             </div>
 
             <div>
-                <label for="txt_descripcion">Descripción</label>
-                <textarea id="txt_descripcion"></textarea>
+                <label for="txt_anno">Año</label>
+                <input type="text" id="txt_anno" placeholder="Agregue el año">
             </div>
 
             <div>
-                <button type="button" id="btn_agregar">Agregar</button>
+                <button type="button" id="btn_crear">Crear</button>
             </div>
 
         </form>
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/servicio_articulos.js"></script>
-    <script src="js/controlador_registrar_articulos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/servicio_lista_utiles.js"></script>
+    <script src="js/controlador_registrar_lista_utiles.js"></script>
 
-    
 </body>
 
 </html>

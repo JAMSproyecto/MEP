@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,17 +23,13 @@
         </div>
     </header>
     <main>
-        <div>
-            <label for="txt_filtrar">Filtrar</label>
-            <input type="text" id="txt_filtrar">
-        </div>
-        <table id="tbl_articulos">
+        <table id="tbl_lista_utiles">
             <thead>
                 <tr>
-                    <th>Código</th>
+                    <th>Tipo</th>
                     <th>Nombre</th>
-                    <th>Descripción</th>
-
+                    <th>Anno</th>
+                    <th>Código de la institución</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,11 +38,10 @@
         </table>
 
     </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/servicio_articulos.js"></script>
-    <script src="js/controlador_listar_articulos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/servicio_lista_utiles.js"></script>
+    <script src="js/controlador_listar_lista_utiles.js"></script>
 
 </body>
 </html>
