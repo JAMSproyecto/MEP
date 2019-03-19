@@ -1,0 +1,73 @@
+footer{
+    background: #353b48;
+    height: 150px;
+ 
+    color: #fff;
+}
+
+
+.fa{
+    font-weight: 900;
+    /* background: #dcdde1; */
+    border: 2px solid #fff;
+    padding: 7px;
+    border-radius: 18px;
+    font-size: 10px;
+}
+
+
+.telefono,
+.fax,
+.correo{
+    margin: 10px;
+}
+
+.columna-derecha{
+   
+    
+position: relative;
+}
+
+.direccion{
+    position: absolute;
+    left: 43%;
+    top:50px;
+}
+
+.info-contacto{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+
+.direccion strong{
+    font-size: 23px;
+    padding-left: 37px;
+}
+
+
+.direccion p:last-child{
+    padding-left: 27px;
+}
+
+
+.direccion p{
+ margin-top: 7px;
+}
+
+
+.calendario{
+    position: absolute;
+    left: 84%;
+    top: 70px;
+}
+
+.fa-calendar-alt{
+    font-size:25px;
+   
+}
+
+.calendario strong{
+    margin-left: 10px;
+    font-size: 24px;
+}

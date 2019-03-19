@@ -1,0 +1,89 @@
+.header{
+    box-shadow: 6px 3px 11px #78909C;
+    margin-bottom: 20px;
+}
+.header__top{
+    background: #17c0eb;
+    padding:    20px 0;
+}
+
+.header__bottom{
+    display: flow-root;
+    width: 1000px;
+    margin: auto;
+    padding: 5px;
+}
+
+
+.columna__izquierda{
+    float: left;
+}
+
+.columna__izquierda img{
+    width: 100px;
+    padding: 7px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+   
+
+.columna__izquierda:hover{
+    box-shadow: 0px 0px 50px rgba(0,0,0,5);
+    -webkit-transition-duration: 0.3s;
+}
+
+.columna__derecha{
+    margin-top:15px;
+    float: right;
+}
+
+.contenedor{
+    display: table;
+    padding: 5px;
+}
+
+.celda{
+    display: table-cell;
+    padding-right: 10px;
+}
+
+.celda button {
+   background-color: #ffb142;
+border: none;
+color: black;
+padding: 15px 5px;
+text-align: center;
+display: inline-block;
+font-size: 13px;
+  width: 125px;
+   border-radius: 5px;
+  font-weight: bold;
+}
+
+.celda button a {
+  text-decoration: none; 
+  color: black;
+}
+
+.celda button:hover{
+    box-shadow: 0px 0px 50px rgba(0,0,0,5);
+}
+
+.columna__derecha img{
+    border-radius: 130px;
+    width: 65px;
+    vertical-align: middle;
+    margin-right: 15px;
+    border: 2px solid #353b48;
+}
+
+
+
+.columna__derecha nav a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin: 12px;
+    color: #000;
+}

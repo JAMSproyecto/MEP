@@ -1,10 +1,28 @@
-/*
- * general.css
- * Esta hoja de estilos contiene la base de estilos que se utiliza en todas las páginas, excepto en la página de aterrizaje.
-*/
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-body {
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+body{
+  font-family: 'Nunito', sans-serif;
+  color: #34495e;
+  background: #f5f6fa;
 }
+
+
+.wrapper{
+  display: table;
+  line-height: 30px;
+  table-layout: fixed;
+  width: 1000px;
+  margin: 60px auto;
+ 
+}
+
+
+.titulo{
+  margin: 40px auto;
+  width: 400px;
+  font-size: 40px;
+  text-align: center
+  /* padding: 5px; */
+}
+
+
 

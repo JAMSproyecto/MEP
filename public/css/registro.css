@@ -1,0 +1,183 @@
+
+.contenedor_izquierdo{
+  background: #dfe6e9;
+
+}
+
+.columna_izquierda{
+  padding: 44px 49px;
+  position: relative;
+  /* bottom: -10px; */
+  top: 34px;   
+}
+
+.form_datos label{
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 21px;
+  width: 105px;
+}
+
+
+.form_datos input{
+  padding: 11px 45px;
+  border: 0px;
+  border-radius: 4px;
+}
+
+.datos{
+  margin-bottom: 26px;
+}
+
+
+
+.contenedor_derecho{
+  background: #81b43e;
+  padding: -4rem 1rem 0;
+  color: #fff;
+  position: relative;
+  right: 66px;
+  top: 90px;
+  box-shadow: 16px 9px 2px #bdc3c7;
+  padding: 10px;
+}
+
+.columna_derecha{
+  margin-top: 32px;
+}
+
+.form_descripcion textarea{
+  height: 62px;
+  width: 77%;
+  border-radius: 4px;
+}
+
+.form_descripcion{
+  margin: auto;
+  width: 350px;
+  margin-top: 25px;
+}
+
+.form_boton{
+  width: 200px;
+  margin: auto;
+  padding: 50px;
+}
+
+#btn_agregar{
+  padding: 10px 39px;
+  font-size: 15px;
+}
+
+.form_datos .error_input, 
+.form_descripcion .error_input {
+  border: 1px solid red;
+}
+
+
+
+/*.bloque_registro {
+
+  border-bottom: 1px groove;
+  width: 50%;
+  margin:auto;
+}
+  
+.datos_izq {
+  display: inline-block;
+  padding-bottom: 45px;
+  padding-right: 10px;
+  margin:auto;
+  width:48%;
+}
+  
+.datos_der {
+  display: inline-block;
+  padding-bottom: 45px;
+  padding-left: 10px;
+  margin:auto;
+  width:48%;
+}
+  
+.datos_izq input, .datos_der input{
+  width: 240px;
+  height:25px;
+  text-align:center;
+  display: block;
+  margin-bottom: 20px;
+  height:25px;
+  border: 0px;    
+  border-radius: 4px;
+}
+  
+.datos_izq div select, .slt_hijos {
+  display: block;
+  width: 240px;
+  text-align:center;
+  margin-bottom: 30px;
+  height:25px;
+  border: 0px;
+  border-radius: 4px;
+}
+  
+.bloque_hijos {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+  
+#slt_hijos {
+  height:25px;
+  border: 0px;
+  border-radius: 4px;
+}
+  
+#txt_direccion {
+  border: 0px;
+  border-radius: 4px;
+}
+
+.bloque_boton{
+  margin-top: 45px;
+  text-align:center;
+}
+  
+#boton_registrar {
+  background-color: #ffb142;
+  border: none;
+  color: black;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+  
+#boton_registrar:hover{
+  box-shadow: 0px 0px 50px rgba(0,0,0,5);
+}
+  
+  /*Para la pagina del pin de validacion
+  
+.bloque_pin {
+  text-align: center;
+  background-color: #f5f6fa;
+  width: 90%;
+  margin: auto;
+  padding: 25px;
+}
+  
+.bloque_pin div {
+  margin-bottom:30px;
+}
+  
+.bloque_pin div label {
+  display: inline-block;
+  width: 180px;
+}
+  
+.bloque_boton {
+  padding-top: 35px;
+  text-align: center;
+}*/

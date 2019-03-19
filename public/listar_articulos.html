@@ -1,50 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Lista de Artìculos</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/lista.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
+
 <body>
-    <header id="header_principal">
-        <nav>
-           <a href="index.html">Inicio</a>
-           <a href="contacto.html">Contacto</a> 
-        </nav>
-        <div>
-            
+    <header class="header">
+        <div class="header__top"></div>
+        <div class="header__bottom">
+            <div class="columna__izquierda">
+                <a href="#">
+                    <img src="imgs/logo_mep.png" class="imagen_mep">
+                </a>
+            </div>
+            <div class="columna__derecha">
+                <div class="contenedor">
+                    <nav class="celda">
+                        <a class="logo" href="#">
+                            <img src="imgs/parents.jpg" />
+
+                            <span>roberto</span>
+                        </a>
+                    </nav>
+                    <form class="celda">
+                        <button type="button" class="btn" id="btn-sesion">cerrar sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
         </div>
     </header>
     <main>
-        <div>
-            <label for="txt_filtrar">Filtrar</label>
-            <input type="text" id="txt_filtrar">
-        </div>
-        <table id="tbl_articulos">
-            <thead>
-                <tr>
-                    <th>Código</th>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
+        <section >
+            <h1 class="titulo">Lista de Artículos Escolares</h1>
+            <div class="wrapper">
+                <div class="filtrar">
+                    <label for="txt_filtrar">Filtrar</label>
+                    <input type="text" id="txt_filtrar">
+                </div>
+                <div class="contenedor_tabla">
+                    <table id="tbl_articulos">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
 
-                </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-        </table>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
 
     </main>
 
+    <footer>
+        <div class="columna-derecha">
+            <div class="info-contacto">
+                <div class="telefono">
+                    <i class="fa fas fa-phone"></i>
+                    <strong>Telefono:</strong>
+                    <strong>22-24-66-88</strong>
+                </div>
+                <div class="fax">
+                    <i class="fa fas fa-fax"></i>
+                    <strong>Fax: </strong>
+                    <strong>29-53-55-22</strong>
+                </div>
+
+                <div class="correo">
+                    <i class="fa fas fa-envelope-square"></i>
+                    <strong>Corre: </strong>
+                    <strong>educacion@cenfotec.com</strong>
+
+
+                </div>
+            </div>
+
+
+            <div class="direccion">
+                <strong>Dirección</strong>
+                <p>San jose, Costa Rica</p>
+                <p>Av 24, calle 12</p>
+            </div>
+
+
+        </div>
+
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/servicio_articulos.js"></script>
     <script src="js/controlador_listar_articulos.js"></script>
 
 </body>
+
 </html>

@@ -1,0 +1,42 @@
+table {
+  border-collapse: separate;
+  width: 100%;
+}
+th,td {
+  padding: 10px 5px;
+}
+th {
+  height: 35px;
+  font-size:20px;
+  background: #17c0eb;
+  color: #fff;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+td, th {
+  border-right: 1px solid #c6c9cc;
+  border-bottom: 1px solid #c6c9cc;
+}
+.contenedor_tabla{
+ position: relative;
+}
+
+.filtrar{
+  margin-bottom: 40px;
+}
+
+.filtrar label{
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 21px;
+  width: 105px;
+}
+
+.filtrar input{
+  padding: 11px 45px;
+  border: 0px;
+  border-radius: 4px;
+}
+
