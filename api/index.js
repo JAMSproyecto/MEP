@@ -25,12 +25,14 @@ const ColorBackEnd = tiza.rgb(248, 260, 190).bgBlack,
 /**
  * Se definen las variables necesarias para la conexión con MongoDB
  */
-const Config = require('../config') || {},
-    Url1 = Config.bd.dbUrl1 || '',
-    DbContrasena = encodeURIComponent(Config.bd.contrasena) || '',
-    Url2 = Config.bd.dbUrl2 || '',
-    Dburl = `${Url1}${DbContrasena}${Url2}`,
-    Port = Config.puerto.servidor || 4001;
+const Port = 4000 || 4001,
+Dburl = 'mongodb://jams:'+encodeURIComponent('proyecto06')+'@clusterjams-shard-00-00-bwmen.mongodb.net:27017,clusterjams-shard-00-01-bwmen.mongodb.net:27017,clusterjams-shard-00-02-bwmen.mongodb.net:27017/MEP?ssl=true&replicaSet=clusterJAMS-shard-0&authSource=admin&retryWrites=true';
+
+
+/**
+ * Usar Promise con bluebird
+ */
+mongoose.Promise = require('bluebird');
 
 let db = mongoose.connection;
 
@@ -70,7 +72,6 @@ db.on('disconnected', () => {
     console.log(' ');
 });
 
-
 /**
  * Le indicamos a express que envíe las respuestas a la carpeta "public"
  */
@@ -79,8 +80,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 /**
  * Le indicamos a la aplicación que el formato de los datos va a ser JSON
  */
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json({ limit: '50mb', extended: true }));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(morgan('dev'));
 
 /**
@@ -94,20 +95,17 @@ app.use((req, res, next) => {
     next();
 });
 
-
 /**
  * Obtener los componentes y asignarlos a la app
  */
 
- //este es el componente de los articulos 
+//Este es el componente de los articulos 
 const articulos = require('./componentes/articulos/articulos.route');
-
-
-
-//este es el componente de la lista de utiles 
-const lista_utiles = require('./componentes/lista_utiles/lista_utiles.route');
-
 app.use('/api', articulos);
+
+
+//Este es el componente de la lista de utiles 
+const lista_utiles = require('./componentes/lista_utiles/lista_utiles.route');
 app.use('/api', lista_utiles);
 
 
