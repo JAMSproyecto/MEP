@@ -16,12 +16,15 @@
     "body-parser": "^1.18.3",
     "connect": "^3.6.6",
     "express": "^4.16.4",
+    "express-di": "^5.0.0",
     "mongoose": "^5.4.19",
     "mongoose-plugin-autoinc": "^1.1.9",
     "morgan": "^1.9.1",
     "nodemailer": "^5.1.1",
     "nodemon": "^1.18.10",
     "path": "^0.12.7",
-    "chalk": "^2.4.2"
+    "chalk": "^2.4.2",
+    "bluebird": "^3.5.3",
+    "googleapis": "^38.0.0"
   }
 }
