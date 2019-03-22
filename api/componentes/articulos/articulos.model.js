@@ -1,6 +1,7 @@
 'use strict';
 
 const mongoose = require('mongoose');
+const NombreTabla = 'articulo_';
 
 let schema_articulo = new mongoose.Schema(
     {
@@ -10,4 +11,4 @@ let schema_articulo = new mongoose.Schema(
     }
 );
 
-module.exports = mongoose.model('Articulo',schema_articulo);
+module.exports = mongoose.model(NombreTabla, schema_articulo);
