@@ -32,7 +32,7 @@ let registrar_articulo = (pcodigo,pnombre, pdescripcion) => {
       });
 };
 
-let listar_articulos = () =>{
+let obtener_articulos = () =>{
   let articulos = [];
 
   let request = $.ajax({

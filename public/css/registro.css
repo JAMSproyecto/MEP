@@ -29,17 +29,16 @@
   margin-bottom: 26px;
 }
 
-
-
 .contenedor_derecho{
   background: #81b43e;
   padding: -4rem 1rem 0;
   color: #fff;
   position: relative;
-  right: 66px;
-  top: 90px;
+  right: -18px;
+  top: -21px;
   box-shadow: 16px 9px 2px #bdc3c7;
   padding: 10px;
+  border-radius: 10px
 }
 
 .columna_derecha{

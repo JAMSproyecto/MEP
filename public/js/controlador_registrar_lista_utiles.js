@@ -3,9 +3,9 @@
 const input_tipo = document.querySelector('#txt_tipo');
 const input_nombre = document.querySelector('#txt_nombre');
 const input_anno = document.querySelector('#txt_anno');
-const input_codigo = document.querySelector('#txt_codigo');
 
-const boton_crear = document.querySelector('#btn_crear');
+
+const boton_crear = document.querySelector('#btn_agregar');
 
 let validar = () => {
     let error = false;
@@ -31,12 +31,7 @@ let validar = () => {
         input_anno.classList.remove('error_input');
     }
 
-    if (input_codigo.value == '') {
-        error = true;
-        input_codigo.classList.add('error_input');
-    } else {
-        input_codigo.classList.remove('error_input');
-    }
+  
     return error;
 };
 
@@ -45,9 +40,9 @@ let obtener_datos = () =>{
         let tipo = input_tipo.value;
         let nombre = input_nombre.value;
         let anno = input_anno.value;
-        let codigo = input_codigo.value;
+        
 
-        registrar_lista_utiles(tipo, nombre, anno, codigo);
+        registrar_lista_utiles(tipo, nombre, anno);
     } else {
         swal.fire({
             type: 'warning',

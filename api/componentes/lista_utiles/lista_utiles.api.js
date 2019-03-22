@@ -24,7 +24,7 @@ lista_utiles_nuevo.save(
             res.json(
                 {
                     success : true,
-                    msg : `se registro la lista de utiles de forma correcte`
+                    msg : `se registro la lista de utiles de forma correcta`
                 }
             )
         }
@@ -32,7 +32,7 @@ lista_utiles_nuevo.save(
 );
 };
 
-module.exports.listar_todos = (req, res) =>{
+module.exports.obtener_todos = (req, res) =>{
     model_utiles.find().then(
         function (utiles){
             if (utiles.length > 0) {
@@ -53,4 +53,41 @@ module.exports.listar_todos = (req, res) =>{
         }
         
     )
+};
+
+module.exports.agregar_articulos = (req, res) =>{
+
+    model_utiles.update(
+        { _id : req.body.id_lista},
+
+        {
+            $push:
+            {
+                'articulos':
+                {
+                  codigo_articulo: req.body.codigo,
+            
+                }
+            }
+
+        },
+        function(error){
+            if (error) {
+                res.json(
+                    {
+                        success : false,
+                        msg : `No se pudo guardar el articulo, ocurrio el siguiente error ${error}`
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success : true,
+                        msg : `Se registro el articulo con exito `
+                    }
+                )
+            }
+        }
+
+    );
 };

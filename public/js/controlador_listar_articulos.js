@@ -3,7 +3,7 @@
 const tabla = document.querySelector('#tbl_articulos tbody');
 const input_filtrar = document.querySelector('#txt_filtrar');
 
-let articulos = listar_articulos();
+let articulos = obtener_articulos();
 
 let mostrar_datos = () =>{    
     let filtro = input_filtrar.value;
@@ -22,6 +22,9 @@ let mostrar_datos = () =>{
 };
 input_filtrar.addEventListener('keyup', mostrar_datos);
 mostrar_datos();
+
+
+
 
 
 
