@@ -99,20 +99,17 @@ app.use((req, res, next) => {
  * Obtener los componentes y asignarlos a la app
  */
 
-//Este es el componente de los articulos 
-const articulos = require('./componentes/articulos/articulos.route');
-app.use('/api', articulos);
+const CompBitacora = require('./componentes/bitacora_transaccional/bitacora.route');
+app.use('/api', CompBitacora);
 
+const CompNivelesCEdu = require('./componentes/centro_educativo_niveles/CEduNiveles.route');
+app.use('/api', CompNivelesCEdu);
 
-//Este es el componente de la lista de utiles 
-const lista_utiles = require('./componentes/lista_utiles/lista_utiles.route');
-app.use('/api', lista_utiles);
+const CompArticulos = require('./componentes/articulos/articulos.route');
+app.use('/api', CompArticulos);
 
-
-
-
-
-
+const CompListaUtiles = require('./componentes/lista_utiles/lista_utiles.route');
+app.use('/api', CompListaUtiles);
 
 
 
@@ -129,6 +126,14 @@ app.use('/api', lista_utiles);
 
 
 
+
+
+
+
+
+
+const CompInstalacion = require('./componentes/instalacion/instalacion.route');
+app.use('/api', CompInstalacion);
 
 
 // Se guarda todo lo que se ha realizado
