@@ -40,3 +40,15 @@ td, th {
   border-radius: 4px;
 }
 
+.bloque_filtro {
+  text-align: right;
+  padding: 15px;
+  width: 80%;
+  margin: auto;
+}
+
+.bloque_filtro label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 15px;
+}
