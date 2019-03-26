@@ -7,7 +7,7 @@ let conectado = sessionStorage.getItem('conectado');
 let tipoUsuario = sessionStorage.getItem('tipoUsuario');
 
 
-if(conectado){
+if(null !== conectado){
     switch(tipoUsuario){
         case 'administrador':
 

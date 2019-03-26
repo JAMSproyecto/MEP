@@ -21,7 +21,7 @@ let registrar_cita = (pnombre, papellidos, ptelefono, pcorreo, pfecha, phora, pm
             contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
         }
 
-    );POST
+    );
 
     request.done(function (msg) {
         if (msg.success) {
@@ -56,7 +56,7 @@ let registrar_cita = (pnombre, papellidos, ptelefono, pcorreo, pfecha, phora, pm
     );
 };
 
-POST
+
 
 let listar_citas = () => {
     let lista_citas = [];
