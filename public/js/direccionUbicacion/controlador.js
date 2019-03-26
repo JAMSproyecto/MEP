@@ -3,20 +3,21 @@
 const sltProvincia = document.querySelector('#sltProvincia');
 const sltCanton = document.querySelector('#sltCanton');
 const sltDistrito = document.querySelector('#sltDistrito');
+const contenedorMapa = document.querySelector('#contenedorMapa');
 
-const mapaPlataforma = new H.service.Platform({
-    'app_id': 'khwWZ9nlsn7bfe5F7klu',
-    'app_code': 'gRIT1ZrN3maCeoxjUKgAbw',
-    useHTTPS: true
-});
-const mapaTipos = mapaPlataforma.createDefaultLayers();
-const contenedorMapa = document.getElementById('contenedorMapa');
-const hasProperty = Object.prototype.hasOwnProperty;
-
+let mapaTipos;
+if ('undefined' !== typeof H) {
+    const mapaPlataforma = new H.service.Platform({
+        'app_id': 'khwWZ9nlsn7bfe5F7klu',
+        'app_code': 'gRIT1ZrN3maCeoxjUKgAbw',
+        useHTTPS: true
+    });
+    mapaTipos = mapaPlataforma.createDefaultLayers();  
+}
 
 let llenarProvincias = () => {
     if (objProvincias && !!Object.keys(objProvincias).length) {
-
+        const hasProperty = Object.prototype.hasOwnProperty;
         let key;
         for (key in objProvincias) {
             if (!hasProperty.call(objProvincias, key)) continue;
@@ -28,9 +29,10 @@ let llenarProvincias = () => {
 };
 
 let obtenerLatitud = (pIdProvincia) => {
-	let lat = 0;
-	if (objProvincias && !!Object.keys(objProvincias).length) {
-	let key;
+    let lat = 0;
+    if (objProvincias && !!Object.keys(objProvincias).length) {
+		const hasProperty = Object.prototype.hasOwnProperty;
+        let key;
         for (key in objProvincias) {
             if (!hasProperty.call(objProvincias, key)) continue;
             if (objProvincias[key]['idProvincia'] == pIdProvincia) {
@@ -38,13 +40,14 @@ let obtenerLatitud = (pIdProvincia) => {
                 break;
             }
         }
-        }
-	return lat;
+    }
+    return lat;
 };
 let obtenerLongitud = (pIdProvincia) => {
-	let lng = 0;
-	if (objProvincias && !!Object.keys(objProvincias).length) {
-	let key;
+    let lng = 0;
+    if (objProvincias && !!Object.keys(objProvincias).length) {
+		const hasProperty = Object.prototype.hasOwnProperty;
+        let key;
         for (key in objProvincias) {
             if (!hasProperty.call(objProvincias, key)) continue;
             if (objProvincias[key]['idProvincia'] == pIdProvincia) {
@@ -52,8 +55,8 @@ let obtenerLongitud = (pIdProvincia) => {
                 break;
             }
         }
-        }
-	return lng;
+    }
+    return lng;
 };
 
 let cambioProvincia = () => {
@@ -64,22 +67,25 @@ let cambioProvincia = () => {
 
         contenedorMapa.innerHTML = '';
 
-        if (lat !== 0 && lng !== 0) {
-            const mapa = new H.Map(
-                document.getElementById('contenedorMapa'),
-                mapaTipos.normal.map,
-                {
-                    zoom: 10,
-                    center: {lng: lng, lat: lat}
-                });
+        if ('undefined' !== typeof H) {
+            if (lat !== 0 && lng !== 0) {
+
+                const mapa = new H.Map(
+                    document.getElementById('contenedorMapa'),
+                    mapaTipos.normal.map,
+                    {
+                        zoom: 10,
+                        center: {lng: lng, lat: lat}
+                    });
+            }
         }
 
 
         sltCanton.innerHTML = '<option disabled selected>Seleccione un cant&oacute;n...</option>';
 
         if (objCantones && !!Object.keys(objCantones).length) {
+			const hasProperty = Object.prototype.hasOwnProperty;
             let key;
-
             for (key in objCantones) {
                 if (!hasProperty.call(objCantones, key)) continue;
                 if (objCantones[key]['idProvincia'] == idProvincia) {
@@ -99,6 +105,7 @@ let obtenerDistritos = () => {
     sltDistrito.innerHTML = '<option disabled selected>Seleccione un distrito...</option>';
 
     if (objDistritos && !!Object.keys(objDistritos).length) {
+		const hasProperty = Object.prototype.hasOwnProperty;
         let key = '';
         for (key in objDistritos) {
             if (!hasProperty.call(objDistritos, key)) continue;
@@ -111,7 +118,13 @@ let obtenerDistritos = () => {
     }
 };
 
-sltProvincia.addEventListener('change', cambioProvincia, false);
-sltCanton.addEventListener('change', obtenerDistritos, false);
+if(sltProvincia){
+	sltProvincia.addEventListener('change', cambioProvincia, false);
+}
 
-llenarProvincias();
+if(sltCanton){
+ sltCanton.addEventListener('change', obtenerDistritos, false);
+}
+
+
+

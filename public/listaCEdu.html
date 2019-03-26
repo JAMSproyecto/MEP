@@ -2,17 +2,22 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
-    <title>Centros Educativos</title>
-    <link href="./imgs/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-	<link href="./css/reset.min.css" rel="stylesheet">
-    <link href="./css/general.css" rel="stylesheet">
+    <title>MEP</title>
+    <link href="./imgs/favicon.ico" rel="shortcut icon" type="image/x-icon"/>  
+
+    <link href="./css/reset.min.css" rel="stylesheet">
+	
+    <link href="./css/dataTables/jei.dataTables.min.css" rel="stylesheet">	
+    <link href="./css/dataTables/buttons.dataTables.min.css" rel="stylesheet">
+	
+    <link href="./css/fontawesome/all.min.css" rel="stylesheet">
     <link href="./css/animate.min.css" rel="stylesheet">
-    <link href="./css/header.css" rel="stylesheet">
+    <link href="./css/general.css" rel="stylesheet">
+    <link href="./css/headerRegistro.css" rel="stylesheet">
     <link href="./css/footer.css" rel="stylesheet">
     <link href="./css/tablas.css" rel="stylesheet">
-    <link href="./css/obtenerCentroEducativo.css" rel="stylesheet">
 </head>
 <body>
 <header class="header" id="menuPrincipal">
@@ -21,40 +26,55 @@
         <a class="header__nav__brand" href="javascript:void(0);">
             <img alt="Logo" src="./imgs/logo_mep.png">
         </a>
-        <a href="./registrarCentroEducativo.html">Registrar centro educativo</a>
-        <a class="header__nav__active" href="./centros_educativos.html">Centros educativos</a>
-        <a class="header__nav__bars" href="javascript:void(0);" onclick="menuPrincipal(); return false;">
+        
+		<a class="header__nav__bars" href="javascript:void(0);" onclick="menuPrincipal(); return false;">
             <i class="fa fa-bars"></i>
         </a>
         <div class="header__nav__right">
             <a class="header__nav__right__avatar" href="javascript:void(0);">
                 <img alt="Avatar" src="./imgs/parents.jpg">
-                <span>Roberto</span>
+                <span>&Oacute;scar Romero</span>
             </a>
-            <a class="btn btn--amarillo" href="./iniciarSesion.html">Iniciar sesi&oacute;n</a>
+            <a class="btn btn--amarillo" href="./inicio_sesion.html">Iniciar sesi&oacute;n</a>
         </div>
     </nav>
 </header>
 
-<main>
-<div class="text_center"><h1>Centros educativos</h1></div>
-    <section>
+<main class="formulario">
+ <div class="text_center"><h1>Centros educativos</h1></div>
 <div class="tabla__responsive">
-            <table class="tabla" id="tblCentrosEducativos">
-                <thead>
+            <table class="tabla tabla__rayada" id="tblCentrosEducativos">
+                <thead class="cabecera--celeste">
                 <tr>
-                    <th>Columna</th>
-                    <th>Columna</th>
-                    <th>Columna</th>
-                    <th>Columna</th>
+                    <th>Foto</th>
+                    <th>Nombre</th>
+                    <th>Provincia</th>
+                    <th>Cant&oacute;n</th>
+                    <th>Distrito</th>
+                    <th>Direcci&oacute;n</th>
+                    <th>Calificaci&oacute;n</th>
+                    <th>Calificaci&oacute;n MEP</th>
+                    <th>Perfil</th>
                 </tr>
                 </thead>
                 <tbody></tbody>
+				<tfoot>
+                <tr>
+                    <th>Foto</th>
+                    <th>Nombre</th>
+                    <th>Provincia</th>
+                    <th>Cant&oacute;n</th>
+                    <th>Distrito</th>
+                    <th>Direcci&oacute;n</th>
+                    <th>Calificaci&oacute;n</th>
+                    <th>Calificaci&oacute;n MEP</th>
+                    <th>Perfil</th>
+                </tr>
+                </tfoot>
             </table>
-<div class="text_center"><h2><a href="http://127.0.0.1:4000/api/obtener_todos_centro_educativo" target="_blank" title="">Ver JSON</a></h2></div>
 
         </div>
-    </section>
+
 </main>
 
 <footer>
@@ -119,7 +139,23 @@
         </div>
     </div>
 </footer>
-<script src="./js/jquery-3.3.1.min.js"></script>
-<script src="./js/sweetalert2.all.min.js"></script>	   
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<!-- datatable -->
+<script src="./js/dataTables/Buttons/jszip.min.js"></script>
+<script src="./js/dataTables/jquery.dataTables.es.min.js"></script>
+<script src="./js/dataTables/Buttons/dataTables.buttons.min.js"></script>
+<!-- /datatable -->
+
+<script src="./js/general.js"></script>
+
+<script src="./js/direccionUbicacion/provinciaCantonDistrito.js"></script>
+<script src="./js/direccionUbicacion/controladorListar.js"></script>
+
+<script src="./js/servicio_listar_cedu.js"></script>
+<script src="./js/controlador_listar_cedu.js"></script>
 </body>
 </html>
