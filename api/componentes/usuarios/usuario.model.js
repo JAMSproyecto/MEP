@@ -22,6 +22,7 @@ let schemaUsuarios = new Mongoose.Schema(
         tipo: {
             type: TiposEsquema.String,
             required: true,
+            trim: true,
             enum: ['SuperAdmin', 'CentroEducativo', 'PadreFamilia']
         },
         aprobado: {
@@ -36,15 +37,19 @@ let schemaUsuarios = new Mongoose.Schema(
         },
         pin: {
             type: TiposEsquema.String,
+            trim: true,
             required: true
         },
         fechaCreado: {
             type: TiposEsquema.String,
+            trim: true,
             required: true
         },
         fechaActualizado: {
             type: TiposEsquema.String,
-            required: false
+            trim: true,
+            required: false,
+            default: ''
         }
     }
 );

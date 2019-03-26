@@ -33,17 +33,8 @@ let schemaRegistrarCEdu = new Mongoose.Schema(
             trim: true,
             enum: ['Privada', 'Pública']
         },
-		nivel: {type: TiposEsquema.String, required: true},
-        /*nivel: [{
-            idNivel: {type: TiposEsquema.ObjectId, ref: 'centro_educativo_nivel_', required: true},
-            listaUtiles: [{
-                tipo: {type: TiposEsquema.String},
-                descripcion: {type: TiposEsquema.String},
-                cantidad: {type: TiposEsquema.Number}
-            }]
-        }],*/
 		
-		fotoCentro: {type: TiposEsquema.String, required: false},
+		fotoCentro: {type: TiposEsquema.String, required: false, default: ''},
 		 
         direccion: [{
              idProvincia: {type: TiposEsquema.Number, required: true},
@@ -53,8 +44,8 @@ let schemaRegistrarCEdu = new Mongoose.Schema(
         }],
 		
         ubicacion: [{
-            latitud: {type: TiposEsquema.String, required: true},
-            longitud: {type: TiposEsquema.String, required: true}
+            latitud: {type: TiposEsquema.String, trim: true, required: true},
+            longitud: {type: TiposEsquema.String, trim: true, required: true}
         }],
         annoFundacion: {
             type: TiposEsquema.Number,
@@ -64,21 +55,24 @@ let schemaRegistrarCEdu = new Mongoose.Schema(
             type: TiposEsquema.String,
 			required: true
         },
-		 //adjuntosPermisos,
+        adjuntos: [{
+            type: TiposEsquema.String, required: true
+        }],
         telefono: {
             type: TiposEsquema.Number,
             min: 8,
             required: true
         },
         fax: {
-            type: TiposEsquema.Number, required: false
+            type: TiposEsquema.Number, required: false, default: ''
         },
-        /*sitioWeb: {
-            type: TiposEsquema.String, required: false
+        sitioWeb: {
+            type: TiposEsquema.String, required: false, default: ''
         },
-        redesSociales: [{
-            type: TiposEsquema.String, required: false
-        }],*/
+		
+        redesSociales: {
+            type: TiposEsquema.String, required: false, default: ''
+        },
         contacto: [{
             correo: {type: TiposEsquema.String, trim: true},
             primerNombre: {type: TiposEsquema.String},
@@ -96,16 +90,17 @@ let schemaRegistrarCEdu = new Mongoose.Schema(
             type: TiposEsquema.String,
             required: false,
             trim: true,
+			default: 'Mixto',
             enum: ['Mixto', 'Mujer', 'Hombre']
         },
         bachillerInternacional: {
-            type: TiposEsquema.Boolean, required: false
+            type: TiposEsquema.Boolean, required: false, default: false
         },
         religion: {
-            type: TiposEsquema.String, required: false
+            type: TiposEsquema.String, required: false, default: ''
         },
         idiomas: [{
-            type: TiposEsquema.String, required: false
+            type: TiposEsquema.String, required: false, default: ''
         }],
         servicios: [{
             type: TiposEsquema.String, required: false
@@ -115,12 +110,36 @@ let schemaRegistrarCEdu = new Mongoose.Schema(
             fecha: {type: TiposEsquema.String}
         }],
         comentarios: [{
-            texto: {type: TiposEsquema.String},
-            /* posteadoPor: {
+            texto: {type: TiposEsquema.String}/*,
+             posteadoPor: {
                  type: TiposEsquema.ObjectId,
                  ref: 'padres_familia_'
              }*/
-        }]
+        }],
+		
+		//En el caso de la calificación de los padres que se almacena aquí es el promedio de toda la lista de calificaciones realizadas por los padres.
+		calificacion: [{
+		mep: {type: TiposEsquema.Number, min:0, max: 10, default:0},
+		padres: {type: TiposEsquema.Number, min:0, max: 5, default:0}
+	    }],
+		
+		
+		/* TODO : Los niveles es mejor trabajarlos en una tabla por aparte en la tabla de niveles, donde cada nivel tenga
+		su propia lista de utiles y relacionar los articulos.
+		* aquí sólo sería poner un array con la lista de los ids de los nivel del centro.
+		*/
+		nivel: {type: TiposEsquema.String, required: true},
+        /*nivel: [{
+            idNivel: {type: TiposEsquema.ObjectId, ref: 'centro_educativo_nivel_', required: true},
+            listaUtiles: [{
+                tipo: {type: TiposEsquema.String},
+                descripcion: {type: TiposEsquema.String},
+                cantidad: {type: TiposEsquema.Number}
+				
+				//articulos...
+				
+            }]
+        }],*/
        
         //enfasis,
     }

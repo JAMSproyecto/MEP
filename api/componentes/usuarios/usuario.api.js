@@ -146,9 +146,6 @@ module.exports.obtener_pendientes = async (req, res) => {
     }
 };
 
-
-
-
 module.exports.validar_credenciales = function (req, res) {
     ModelUsuarios.findOne({correo: req.body.correo}).then(
         function (usuario) {
@@ -172,4 +169,6 @@ module.exports.validar_credenciales = function (req, res) {
             }
         }
     )
-}; 
+};
+
+
