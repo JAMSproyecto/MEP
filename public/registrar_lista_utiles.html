@@ -24,7 +24,7 @@
                 <a class="header__nav__brand" href="javascript:void(0);">
                     <img alt="Logo" src="./imgs/logo_mep.png">
                 </a>
-                <a class="header__nav__active" href="./registrarCentroEducativo.html">Registrar centro educativo</a>
+                <a class="header__nav__active" href="./registrarCentroEducativo.html">Registrar Lista de útiles</a>
                 <a href="./centros_educativos.html">Centros educativos</a>
                 <a class="header__nav__bars" href="javascript:void(0);" onclick="menuPrincipal(); return false;">
                     <i class="fa fa-bars"></i>
@@ -34,7 +34,7 @@
                         <img alt="Avatar" src="./imgs/parents.jpg">
                         <span>Roberto</span>
                     </a>
-                    <a class="btn btn--amarillo" href="./iniciarSesion.html">Iniciar sesi&oacute;n</a>
+                    <a class="btn btn--amarillo" href="./iniciarSesion.html">Cerrar sesi&oacute;n</a>
                 </div>
             </nav>
         </header>
@@ -42,15 +42,14 @@
         <main>
             <section class="bloque_principal">
                 <h1 class="titulo">Crear Lista de útiles</h1>
-                <div class="wrapper">
                     <div class="contenedor_izquierdo">
                         <div class="columna_izquierda">
-                            <form id="frm_datos">
+                            <form class="form_datos">
 
                                 <div class="datos">
                                     <label for="txt_tipo">Tipo</label>
                                     <select id="txt_tipo">
-                                        <option value="">--Seleccione el tipo de lista--</option>
+                                        <option value="">Seleccione el tipo de lista</option>
                                         <option value="MEP">MEP</option>
                                         <option value="centro_educativo">Centro Educativo</option>
                                     </select>
@@ -71,7 +70,7 @@
                         </div>
 
                     </div>
-                </div>
+                
 
                 <form class="form_boton">
                     <button type="button" id="btn_agregar">Crear</button>

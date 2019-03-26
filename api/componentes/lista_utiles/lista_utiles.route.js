@@ -4,6 +4,12 @@ const express = require('express');
 const router= express.Router();
 const lista_utiles_api = require('./lista_utiles.api');
 
+router.param('id', function(req,res, next , id){
+    req.body.id = id;
+
+    next();
+}
+);
 
 router.route('/registrar_lista_utiles')
     .post(
@@ -27,5 +33,13 @@ router.route('/agregar_articulo')
              lista_utiles_api.agregar_articulos(req, res);
             }
         );
+
+router.route('/buscar_lista_id/:id')
+            .get(
+                function(req, res)
+                {
+                lista_utiles_api.buscar_por_id(req, res);
+                }
+            );
 
 module.exports = router;

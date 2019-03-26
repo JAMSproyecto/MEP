@@ -1,15 +1,15 @@
 'use strict';
 
-let registrar_lista_utiles  = (pnombre, ptipo, panno, pcodigo) =>{
+let registrar_lista_utiles  = ( ptipo, panno, pnombre) =>{
 
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_lista_utiles",
         method: "POST",
         data: {
-            nombre: pnombre,
             tipo: ptipo,
+            nombre: pnombre,
             anno: panno,
-            codigo: pcodigo
+          
         }, 
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -58,14 +58,15 @@ let obtener_lista_utiles = () =>{
       
 };
 
-let agregar_articulo  = (pid_lista, pcodigo_articulo) =>{
+let agregar_articulo  = (pid_lista, pcodigo_articulo, pcantidad) =>{
 
   let request = $.ajax({
       url: "http://localhost:4000/api/agregar_articulo",
       method: "POST",
       data: {
           id_lista: pid_lista,
-         codigo_articulo: pcodigo_articulo
+         codigo_articulo: pcodigo_articulo,
+         cantidad : pcantidad
       }, 
       dataType: "json",
       contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -73,11 +74,7 @@ let agregar_articulo  = (pid_lista, pcodigo_articulo) =>{
 
   request.done(function (msg)
       {
-          swal.fire({
-              type: 'success',
-              title: 'Artículo enviada',
-              text: 'el registro fue éxitoso'
-            });
+          
   });
 
   request.fail(function (jqXHR, textStatus) {
@@ -87,4 +84,29 @@ let agregar_articulo  = (pid_lista, pcodigo_articulo) =>{
         text: 'Ocurrió un error inesperado, por favor intente de nuevo'
       });
     });
+};
+
+
+let buscar_por_id = (id) =>{
+  let lista = [];
+
+  let request = $.ajax({
+    url: "http://localhost:4000/api/buscar_lista_id/" +id ,
+    type: "GET",
+    data: {
+    },
+    dataType: "json",
+    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    async: false
+  });
+
+  request.done(function (res) {
+    lista = res.lista;
+
+  });
+
+  request.fail(function (jqXHR, textStatus) {
+
+  });
+  return lista;
 };

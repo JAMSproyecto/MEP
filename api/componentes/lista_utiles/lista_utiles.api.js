@@ -1,4 +1,5 @@
 'use strict';
+
 const model_utiles = require('./lista_utiles.model');
 
 module.exports.registrar = (req, res) =>{
@@ -7,7 +8,7 @@ module.exports.registrar = (req, res) =>{
             tipo : req.body.tipo,
             nombre : req.body.nombre,
             anno : req.body.anno,
-            codigo : req.body.codigo
+            
         }
     );
 
@@ -32,6 +33,7 @@ lista_utiles_nuevo.save(
 );
 };
 
+
 module.exports.obtener_todos = (req, res) =>{
     model_utiles.find().then(
         function (utiles){
@@ -55,6 +57,7 @@ module.exports.obtener_todos = (req, res) =>{
     )
 };
 
+
 module.exports.agregar_articulos = (req, res) =>{
 
     model_utiles.update(
@@ -65,8 +68,8 @@ module.exports.agregar_articulos = (req, res) =>{
             {
                 'articulos':
                 {
-                  codigo_articulo: req.body.codigo,
-            
+                  codigo: req.body.codigo_articulo,
+                  cantidad : req.body.cantidad  
                 }
             }
 
@@ -90,4 +93,28 @@ module.exports.agregar_articulos = (req, res) =>{
         }
 
     );
+};
+
+
+module.exports.buscar_por_id = (req, res) => {
+    model_utiles.find({_id : req.body.id }).then(
+        function (lista){
+            if (lista) {
+                res.json(
+                    {
+                        success : true,
+                        lista : lista
+                    }
+                )
+            } else {
+                res.json(
+                    {
+                        success : false,
+                        coleccion_utiles : `no se encontraron lista de útiles registrados`
+                    }
+                )
+            }
+        }
+        
+    )
 };

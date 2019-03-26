@@ -1,20 +1,12 @@
 'use strict';
-
-const input_codigo = document.querySelector('#txt_codigo');
+//constantes que obtienen los datos del formulario
 const input_nombre = document.querySelector('#txt_nombre');
 const input_descripcion = document.querySelector('#txt_descripcion');
-
 const boton_agregar = document.querySelector('#btn_agregar');
 
+//función para validar que no hay campos vacíos 
 let validar = () => {
     let error = false;
-
-    if (input_codigo.value == '') {
-        error = true;
-        input_codigo.classList.add('error_input');
-    } else {
-        input_codigo.classList.remove('error_input');
-    }
 
     if (input_nombre.value == '') {
         error = true;
@@ -33,13 +25,13 @@ let validar = () => {
     return error;
 };
 
+//función que envia los datos al servicio 
 let obtener_datos = () => {
-    if (validar() == false) {
-        let codigo = input_codigo.value;
+    if (validar() == false ) {
         let nombre = input_nombre.value;
         let descripcion = input_descripcion.value;
-
-        registrar_articulo(codigo, nombre, descripcion);
+        registrar_articulo(nombre, descripcion);
+       
     } else {
         swal.fire({
             type: 'warning',
@@ -48,5 +40,5 @@ let obtener_datos = () => {
         });
     }
 };  
-
-boton_agregar.addEventListener('click', obtener_datos);
+//evento para agregar los datos 
+boton_agregar.addEventListener('click', obtener_datos );

@@ -24,7 +24,7 @@
             <a class="header__nav__brand" href="javascript:void(0);">
                 <img alt="Logo" src="./imgs/logo_mep.png">
             </a>
-            <a class="header__nav__active" href="./registrarCentroEducativo.html">Registrar centro educativo</a>
+            <a class="header__nav__active" href="./registrarCentroEducativo.html">Registrar Lista de útiles</a>
             <a href="./centros_educativos.html">Centros educativos</a>
             <a class="header__nav__bars" href="javascript:void(0);" onclick="menuPrincipal(); return false;">
                 <i class="fa fa-bars"></i>
@@ -34,7 +34,7 @@
                     <img alt="Avatar" src="./imgs/parents.jpg">
                     <span>Roberto</span>
                 </a>
-                <a class="btn btn--amarillo" href="./iniciarSesion.html">Iniciar sesi&oacute;n</a>
+                <a class="btn btn--amarillo" href="./iniciarSesion.html">Cerrar sesi&oacute;n</a>
             </div>
         </nav>
     </header>
@@ -43,28 +43,23 @@
         <section class="bloque_principal">
             <h1 class="titulo">Registrar Artículos Escolares</h1>
 
-            <div class="wrapper">
-                <div class="celda">
-                    <div class="contenedor_izquierdo">
-                        <div class="columna_izquierda">
-                            <form class="form_datos">
-                                <div class="datos">
-                                    <label for="txt_codigo">Código</label>
-                                    <input type="text" id="txt_codigo">
-                                </div>
-
-                                <div class="datos">
-                                    <label for="txt_nombre">Nombre</label>
-                                    <input type="text" id="txt_nombre">
-                                </div>
-                            </form>
-                            <form class="form_descripcion">
-                                <label for="txt_descripcion">Agregar una Descripción</label>
-                                <textarea id="txt_descripcion"></textarea>
-                            </form>
-                        </div>
+            <div class="contenedor_izquierdo">
+                <form class="form_datos">
+                  
+                    <div class="datos">
+                        <label for="txt_nombre">Nombre</label>
+                        <input type="text" id="txt_nombre">
                     </div>
-                </div>
+                </form>
+            </div>
+            <div class="contenedor_izquierdo">
+                <form class="form_descripcion">
+                    <div class="datos">
+                        <label for="txt_descripcion">Agregar una Descripción</label>
+                        <textarea id="txt_descripcion"></textarea>
+                    </div>
+
+                </form>
             </div>
 
             <form class="form_boton">

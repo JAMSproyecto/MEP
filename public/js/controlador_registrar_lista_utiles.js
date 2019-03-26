@@ -40,9 +40,8 @@ let obtener_datos = () =>{
         let tipo = input_tipo.value;
         let nombre = input_nombre.value;
         let anno = input_anno.value;
-        
-
         registrar_lista_utiles(tipo, nombre, anno);
+        window.location.href = 'listar_lista_utiles.html';
     } else {
         swal.fire({
             type: 'warning',

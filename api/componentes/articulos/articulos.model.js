@@ -1,10 +1,10 @@
 'use strict';
-
+/*se define el esquema de como se van a guardar los datos
+  de los articulos*/
 const mongoose = require('mongoose');
 
 let schema_articulo = new mongoose.Schema(
     {
-    codigo : {type : String, unique : true, require : true},
     nombre : {type : String, required : true},
     descripcion : {type : String, required : true}
     }

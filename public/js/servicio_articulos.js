@@ -1,12 +1,12 @@
 'use strict';
 
-let registrar_articulo = (pcodigo,pnombre, pdescripcion) => {
+//función para registrar los datos con su respectiva ruta
+let registrar_articulo = (pnombre, pdescripcion) => {
 
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_articulo",
         method: "POST",
         data:{
-            codigo : pcodigo,
             nombre : pnombre,
             descripcion : pdescripcion
         },
@@ -32,11 +32,12 @@ let registrar_articulo = (pcodigo,pnombre, pdescripcion) => {
       });
 };
 
+//función para obtener los datos con su respectiva ruta
 let obtener_articulos = () =>{
   let articulos = [];
 
   let request = $.ajax({
-    url: "http://localhost:4000/api/listar_articulos",
+    url: "http://localhost:4000/api/obtener_articulos",
     method: "GET",
     data: {
     },
@@ -54,4 +55,29 @@ let obtener_articulos = () =>{
 
   });
   return articulos;
+};
+
+//función para buscar los articulos por medio del id de mongo
+let buscar_articulo_por_id = (id) =>{
+  let articulo = [];
+
+  let request = $.ajax({
+    url: "http://localhost:4000/api/buscar_articulo_por_id/" +id ,
+    type: "GET",
+    data: {
+    },
+    dataType: "json",
+    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    async: false
+  });
+
+  request.done(function (res) {
+    articulo = res.articulo;
+
+  });
+
+  request.fail(function (jqXHR, textStatus) {
+
+  });
+  return articulo;
 };

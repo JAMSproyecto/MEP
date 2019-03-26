@@ -1,18 +1,31 @@
-
-.contenedor_izquierdo{
-  background: #dfe6e9;
-
+main section{
+  display: flow-root;
+  padding-bottom: 45px;
 }
 
-.columna_izquierda{
-  padding: 44px 49px;
-  position: relative;
-  /* bottom: -10px; */
-  top: 34px;   
+section .contenedor_izquierdo{
+  display: initial;
+  margin: 0 3%;
+  width: 48%;
+  padding-left: 10%;
 }
+
+section .contenedor_derecho{
+  display: inline-block;
+  margin: 0 auto;
+  width: 28%;
+}
+
 
 .form_datos label{
-  display: inline-block;
+  display: -webkit-box;
+  text-transform: capitalize;
+  font-size: 21px;
+  width: 105px;
+}
+
+.form_descripcion label{
+
   text-transform: capitalize;
   font-size: 21px;
   width: 105px;
@@ -25,30 +38,32 @@
   border-radius: 4px;
 }
 
-.datos{
-  margin-bottom: 26px;
+.form_datos select{
+  height: 38px;
+  width: 54%;
+  border-radius: 4px;
+  padding: 11px 45px;
+  border: 0px;
 }
 
-.contenedor_derecho{
-  background: #81b43e;
-  padding: -4rem 1rem 0;
-  color: #fff;
-  position: relative;
-  right: -18px;
-  top: -21px;
-  box-shadow: 16px 9px 2px #bdc3c7;
-  padding: 10px;
-  border-radius: 10px
+.datos{
+  margin-bottom: 26px;
+  text-align: -webkit-center;
 }
+
 
 .columna_derecha{
   margin-top: 32px;
 }
 
+
+
 .form_descripcion textarea{
   height: 62px;
   width: 77%;
   border-radius: 4px;
+  padding: 11px 45px;
+  border: 0px;
 }
 
 .form_descripcion{
@@ -66,6 +81,11 @@
 #btn_agregar{
   padding: 10px 39px;
   font-size: 15px;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  background-image: none;
+  background-color: rgb(var(--pure-material-primary-rgb, 235, 204, 98));
+  font-weight: 500;
+  color: #111;
 }
 
 .form_datos .error_input, 

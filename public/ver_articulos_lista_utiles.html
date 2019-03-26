@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lista de Artìculos</title>
+    <title>Artìculos de la lista de útiles</title>
 
     <link rel="stylesheet" href="imgs/favicon.ico">
     <link rel="stylesheet" href="css/reset.css">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/lista.css">
     <link rel="stylesheet" href="./css/footer.css">
-    
+
 </head>
 
 <body>
@@ -41,21 +41,22 @@
     </header>
     <main>
         <section>
-            <h1 class="titulo">Agregar Artículos a la lista de útiles</h1>
+            <h1 id="titulo" class="titulo"></h1>
+            <h2 id="titulo2" class="titulo"></h2>
             <div class="wrapper">
-                <div class="filtrar">
-                    <label for="txt_filtrar">Filtrar</label>
-                    <input type="text" id="txt_filtrar">
-                    <a href="listar_lista_utiles.html">Regresar</a>
-                </div>
+
                 <div class="contenedor_tabla">
+                    <div class="filtrar">
+                        <label for="txt_filtrar">Filtrar</label>
+                        <input type="text" id="txt_filtrar">
+                        <a href="listar_lista_utiles.html">Regresar</a>
+                    </div>
                     <table id="tbl_articulos">
                         <thead>
                             <tr>
                                 <th>Nombre</th>
                                 <th>Descripción</th>
-                                <th>Cantidad</th>
-                                <th></th>
+                                | <th>Cantidad</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -65,9 +66,7 @@
                 </div>
 
             </div>
-            <form class="form_boton">
-                <button type="button" id="btn_agregar">Agregar</button>
-            </form>
+
         </section>
 
     </main>
@@ -146,7 +145,7 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/servicio_articulos.js"></script>
     <script src="js/servicio_lista_utiles.js"></script>
-    <script src="js/controlador_agregar_articulos.js"></script>
+    <script src="js/controlador_ver_articulos_lista_utiles.js"></script>
 
 </body>
 
