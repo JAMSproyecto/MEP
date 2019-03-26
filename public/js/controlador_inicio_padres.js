@@ -3,7 +3,7 @@
 const Input_Usuario = document.querySelector('#input_usuario');
 const Input_Contrasenna = document.querySelector('#input_contrasenna');
 const Boton_Ingresar = document.querySelector('#boton_ingresar');
- 
+
 let mostrarAlerta = (mensaje) => {
     Swal.fire({
         toast: false,
@@ -23,11 +23,10 @@ let obtener_Datos = () => {
     let contrasenna = Input_Contrasenna.value;
 
     let errorBlancos = validar(usuario, contrasenna);
-    let usuarioAceptado = false;
 
-    if(!errorBlancos){
-        usuarioAceptado = validar_credenciales(usuario, contrasenna);
-        if(usuarioAceptado){
+    if (!errorBlancos) {
+        let usuarioAceptado = validar_credenciales(usuario, codificar(contrasenna));
+        if (usuarioAceptado) {
             window.location.href = 'principal_padres.html';
         } else {
             mostrarAlerta('Usuario o contraseña invalida');
@@ -40,17 +39,17 @@ let obtener_Datos = () => {
 let validar = (pusuario, pcontrasenna) => {
     let error = false;
 
-    if(pusuario == ''){
+    if (pusuario == '') {
         error = true;
         input_usuario.classList.add('error_input');
-    }else{
+    } else {
         input_usuario.classList.remove('error_input');
     }
 
-    if(pcontrasenna == ''){
+    if (pcontrasenna == '') {
         error = true;
         input_contrasenna.classList.add('error_input');
-    }else{
+    } else {
         input_contrasenna.classList.remove('error_input');
     }
 

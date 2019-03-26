@@ -1,8 +1,10 @@
 table {
   border-collapse: separate;
+ 
   width: 100%;
 }
-th,td {
+th,
+td {
   padding: 10px 5px;
 }
 th {
@@ -14,59 +16,38 @@ th {
   font-weight: normal;
   vertical-align: middle;
 }
-
+tr:first-child th:first-child {
+  border-top-left-radius: 6px;
+}
+tr:first-child th:last-child {
+  border-top-right-radius: 6px;
+}
 td, th {
   border-right: 1px solid #c6c9cc;
   border-bottom: 1px solid #c6c9cc;
 }
-.contenedor_tabla{
- position: relative;
+td:first-child {
+  border-left: 1px solid #c6c9cc;
+}
+tr:nth-child(even) td {
+  background: #eaeaed;
+}
+tr:last-child td:first-child {
+  border-bottom-left-radius: 6px;
+}
+tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
 }
 
-.filtrar{
-  margin-bottom: 40px;
-}
-
-.filtrar label{
-  display: inline-block;
-  text-transform: capitalize;
-  font-size: 21px;
-  width: 105px;
-}
-
-.filtrar input{
-  padding: 11px 45px;
-  border: 0px;
-  border-radius: 4px;
-}
-
-#tbl_articulos .error_input {
-  border: 1px solid red;
-}
-
-.form_boton{
-  width: 200px;
+.bloque_filtro {
+  text-align: right;
+  padding: 15px;
+  width: 80%;
   margin: auto;
-  padding: 50px;
 }
 
-#btn_agregar{
-  padding: 10px 39px;
-  font-size: 15px;
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-  background-image: none;
-  background-color: rgb(var(--pure-material-primary-rgb, 235, 204, 98));
-  font-weight: 500;
-  color: #111;
+.bloque_filtro label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 15px;
 }
-
-.btn_tabla{
-  padding: 10px 39px;
-  font-size: 15px;
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-  background-image: none;
-  background-color: rgb(var(--pure-material-primary-rgb, 235, 204, 98));
-  font-weight: 500;
-  color: #111;
-}
-

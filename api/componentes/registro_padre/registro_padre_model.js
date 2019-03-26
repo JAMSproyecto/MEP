@@ -13,7 +13,7 @@ let schema_registro_padres = new Mongoose.Schema(
         fechaNacimiento: {type : String, required : true},
         numCel: {type : String, required : true},
         numCasa: {type : String, required : false},
-        email: {type : String, required : true},
+        correo: {type : String, required : true, unique: true,  trim: true},
         provincia: {type : String, required : true},
         canton: {type : String, required : true},
         distrito: {type : String, required : true},
@@ -26,8 +26,7 @@ let schema_registro_padres = new Mongoose.Schema(
         nombreHijo3: {type: String, required: false},
         edadHijo3: {type: Number, required: false},
         nombreHijo4: {type: String, required: false},
-        edadHijo4: {type: Number, required: false},
-        contrasenna: {type: String, required: true}
+        edadHijo4: {type: Number, required: false}
     }
 );
 

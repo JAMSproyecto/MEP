@@ -111,7 +111,32 @@ app.use('/api', CompArticulos);
 const CompListaUtiles = require('./componentes/lista_utiles/lista_utiles.route');
 app.use('/api', CompListaUtiles);
 
+const bitacora_transaccional = require('./componentes/bitacora_transaccional/bitacora.route');
+app.use('/api', bitacora_transaccional);
 
+const citas = require('./componentes/citas/citas.route');
+app.use('/api', citas);
+
+const ce_niveles = require('./componentes/centro_educativo_niveles/CEduNiveles.route');
+app.use('/api', ce_niveles);
+
+const instalacion = require('./componentes/instalacion/instalacion.route');
+app.use('/api', instalacion);
+
+const registrar_ce = require('./componentes/registrar_centro_educativo/registrarCEdu.route');
+app.use('/api', registrar_ce);
+
+const CompCredenciales = require('./componentes/credenciales/credenciales.route');
+app.use('/api', CompCredenciales);
+
+const registrar_pf = require('./componentes/registro_padre/registro_padre_route');
+app.use('/api', registrar_pf);
+
+const usuario = require('./componentes/usuarios/usuario.route');
+app.use('/api', usuario);
+
+const actividades = require('./componentes/actividad/registrar_actividad.route');
+app.use('/api', actividades);
 
 
 

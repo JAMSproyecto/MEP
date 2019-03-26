@@ -19,13 +19,11 @@ let mostrar_datos = () => {
             fila.insertCell().innerHTML = padresFamilia[i]['nombre'];
             fila.insertCell().innerHTML = padresFamilia[i]['apellido'];
             fila.insertCell().innerHTML = padresFamilia[i]['segundoApellido'];
-            fila.insertCell().innerHTML = padresFamilia[i]['email'];
+            fila.insertCell().innerHTML = padresFamilia[i]['correo'];
             fila.insertCell().innerHTML = padresFamilia[i]['provincia'];
             fila.insertCell().innerHTML = padresFamilia[i]['canton'];
         }
-
     }
-
 };
 
 input_filtrar.addEventListener('keyup', mostrar_datos);

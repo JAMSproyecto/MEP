@@ -31,9 +31,6 @@ const edad_hijo3 = document.querySelector('#num_edad_hijo3');
 const nombre_hijo4 = document.querySelector('#txt_nombre_hijo4');
 const edad_hijo4 = document.querySelector('#num_edad_hijo4');
 
-const Input_Contrasenna = document.querySelector('#txt_contrasena');
-const Input_Contrasenna2 = document.querySelector('#txt_contrasena2');
-
 const boton_registrar = document.querySelector('#boton_registrar');
 
 let mostrarAlerta = (mensaje) => {
@@ -92,36 +89,27 @@ let validar_datos_generales = () => {
 };
 
 
+let obtenerEdad = (pFecha) =>{
+    return Math.floor( (new Date() - new Date(pFecha).getTime() ) / 3.15576e+10 );
+};
+
+
 let validar_edad = () => {
-
     let error_edad = false;
+    let DOB = fecha_nacimiento.value.trim(); //YYYY-MM-DD
+   
 
-    let DOB = fecha_nacimiento.value;
-
-    function getAge(DOB) {
-        var today = new Date();
-        var birthDate = new Date(DOB);
-        var age = today.getFullYear() - birthDate.getFullYear();
-        var m = today.getMonth() - birthDate.getMonth();
-        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-            age = age - 1;
-        }
-
-        return age;
-    }
-
-    let edad = getAge(DOB);
-
-    if (fecha_nacimiento.value == '') {
+    if (DOB.length < 1) {
         error_edad = true;
         fecha_nacimiento.classList.add('error_input');
     } else {
-        if (edad >= 18) {
+        let edad = obtenerEdad(DOB);
+        if (edad > 17) {
             fecha_nacimiento.classList.remove('error_input');
-            mostrarAlerta('El usuario debe de ser mayor de edad');
         } else {
             fecha_nacimiento.classList.add('error_input');
             error_edad = true;
+            mostrarAlerta('El usuario debe de ser mayor de edad');
         }
     }
     return error_edad;
@@ -136,8 +124,6 @@ let validarCorreo = (pValor) => {
     const ExpresionRegular = /^((([a-z]|\d|[!#\$%&’\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&’\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/;
     return ExpresionRegular.test(pValor);
 };
-
-
 
 let validar_datos_contacto = () => {
     let error_datos_contacto = false;
@@ -169,7 +155,6 @@ let validar_datos_contacto = () => {
         error_datos_contacto = true;
         email_correo2.classList.add('error_input');
     }
-
     return error_datos_contacto;
 };
 
@@ -208,43 +193,13 @@ let validar_direccion = () => {
     return error_direccion;
 };
 
-let validar_contrasenna = () => {
-
-    let error = false;
-
-    if (Input_Contrasenna.value == '') {
-        error = true;
-        txt_contrasenna.classList.add('error_input');
-    } else {
-        txt_contrasena.classList.remove('error_input');
-    }
-
-    if (Input_Contrasenna2.value == '') {
-        error = true;
-        txt_contrasena2.classList.add('error_input');
-    } else {
-        txt_contrasena2.classList.remove('error_input');
-    }
-
-    if (Input_Contrasenna.value == Input_Contrasenna2.value) {
-        txt_contrasena2.classList.remove('error_input');
-    } else {
-        error = true;
-        txt_contrasena2.classList.add('error_input');
-    }
-
-    return error;
-}
-
-
 
 let obtener_datos = () => {
 
     if (validar_datos_generales() == false) {
         if (validar_edad() == false) {
             if (validar_datos_contacto() == false) {
-                if (validar_direccion() == false) {
-                    if (validar_contrasenna() == false) {
+                if (validar_direccion() == false) {              
                         let nombre = txt_nombre.value;
                         let segundoNombre = txt_segundo_nombre.value;
                         let apellido = txt_apellido.value;
@@ -269,11 +224,7 @@ let obtener_datos = () => {
                         let edadHijo3 = edad_hijo3.value;
                         let nombreHijo4 = nombre_hijo4.value;
                         let edadHijo4 = edad_hijo4.value;
-                        let contrasenna = Input_Contrasenna.value;
-                        registrar_padre(nombre, segundoNombre, apellido, segundoApellido, tipoIdentificacion, numIdentificacion, nacionalidad, fechaNacimiento, numCel, numCasa, email, provincia, canton, distrito, direccion, cantidadHijos, nombreHijo, edadHijo, nombreHijo2, edadHijo2, nombreHijo3, edadHijo3, nombreHijo4, edadHijo4, contrasenna);
-                    } else {
-                        mostrarAlerta('Por favor revise los campos resaltados en la sección de contraseña')
-                    }
+                        registrar_padre(nombre, segundoNombre, apellido, segundoApellido, tipoIdentificacion, numIdentificacion, nacionalidad, fechaNacimiento, numCel, numCasa, email, provincia, canton, distrito, direccion, cantidadHijos, nombreHijo, edadHijo, nombreHijo2, edadHijo2, nombreHijo3, edadHijo3, nombreHijo4, edadHijo4);
                 } else {
                     mostrarAlerta('Por favor revise los campos resaltados en la sección de dirección');
                 }
@@ -287,7 +238,6 @@ let obtener_datos = () => {
         mostrarAlerta('Por favor revise los campos resaltados en la sección de datos generales');
     }
 };
-
 
 
 boton_registrar.addEventListener('click', obtener_datos);
