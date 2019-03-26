@@ -1,6 +1,7 @@
 'use strict';
 
 const mongoose = require('mongoose');
+const NombreTabla = 'lista_utiles_';
 
 let schema_utiles = new mongoose.Schema(
     {   //codigo :{type : mongoose.Types.ObjectId, ref: 'centro_educativo_', require : true},
@@ -17,4 +18,4 @@ let schema_utiles = new mongoose.Schema(
     }
 );
 
-module.exports = mongoose.model('lista_utiles', schema_utiles);
+module.exports = mongoose.model(NombreTabla, schema_utiles);
