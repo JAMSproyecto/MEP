@@ -19,26 +19,27 @@ const Tiza = require('chalk');
 const Script = './api/index.js';
 
 Connect().use(ServeStatic(__dirname)).listen(Port, () => {
+    process.stdout.write('\x1b[H\x1b[2J');
+    console.log(Tiza.rgb(163, 84, 73).bgBlack(' /////////////////////////////////////'));
+    console.log('');
+    console.log(Tiza.rgb(236, 236, 236).bgBlack('      App :: localhost:') + Tiza.bold.rgb(185, 212, 49).bgBlack(Port) + Tiza.rgb(236, 236, 236).bgBlack('/') + Tiza.rgb(131, 218, 137).bgBlack('public') + Tiza.rgb(236, 236, 236).bgBlack('/'));
+    console.log('');
+    console.log(Tiza.rgb(236, 236, 236).bgBlack(' ++++++++++++++++++++++++++++++++++++'));
+    console.log(Tiza.rgb(236, 236, 236).bgBlack(' +                                  +'));
+    console.log(Tiza.rgb(236, 236, 236).bgBlack(' +          ' + Tiza.bold.rgb(105, 170, 176).bgBlack('node') + ' ' + Tiza.bold.rgb(241, 167, 115).bgBlack('server.js') + '          +'));
+    console.log(Tiza.rgb(236, 236, 236).bgBlack(' +                                  +'));
+    console.log(Tiza.rgb(236, 236, 236).bgBlack(' ++++++++++++++++++++++++++++++++++++'));
+
     Nodemon({
         script: Script,
         ext: 'js'
     });
     Nodemon.on('start', () => {
-        process.stdout.write('\x1b[H\x1b[2J');
-        console.log(Tiza.rgb(236, 236, 236).bgBlack(' '));
-        console.log(Tiza.rgb(163, 84, 73).bgBlack(' /////////////////////////////////////'));
-        console.log(Tiza.rgb(236, 236, 236).bgBlack(' '));
-        console.log(Tiza.rgb(236, 236, 236).bgBlack('      App :: localhost:' + Tiza.bold.rgb(185, 212, 49).bgBlack(Port) + '/public/'));
-        console.log(Tiza.rgb(236, 236, 236).bgBlack(' '));
-        console.log(Tiza.rgb(236, 236, 236).bgBlack(' ++++++++++++++++++++++++++++++++++++'));
-        console.log(Tiza.rgb(236, 236, 236).bgBlack(' +                                  +'));
-        console.log(Tiza.rgb(236, 236, 236).bgBlack(' +          ' + Tiza.bold.rgb(105, 170, 176).bgBlack('node') + ' ' + Tiza.bold.rgb(241, 167, 115).bgBlack('server.js') + '          +'));
-        console.log(Tiza.rgb(236, 236, 236).bgBlack(' +                                  +'));
-        console.log(Tiza.rgb(236, 236, 236).bgBlack(' ++++++++++++++++++++++++++++++++++++'));
-        console.log(Tiza.rgb(236, 236, 236).bgBlack(' '));
-        console.log(Tiza.rgb(236, 236, 236).bgBlack(' '));
+        console.log('');
+        console.log('');
+        console.log('');
         console.log(Tiza.rgb(180, 180, 180).bgBlack(` Hora: `) + Tiza.rgb(236, 236, 236).bgBlack(`${(new Date()).toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1")}`));
-        console.log(Tiza.rgb(236, 236, 236).bgBlack(' '));
+        console.log('');
     });
     Nodemon.on('crash', () => {
         process.stdout.write('\x07');
