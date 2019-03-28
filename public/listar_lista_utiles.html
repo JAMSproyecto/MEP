@@ -11,39 +11,125 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fontawesome/all.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="./css/headerRegistro.css">
-    <link rel="stylesheet" href="./css/lista.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <link href="./css/general.css" rel="stylesheet">
+    <link href="./css/headerCentro.css" rel="stylesheet">
+    <link href="css/formularios.css" rel="stylesheet" />
+    <link href="./css/tablas.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <header class="header" id="menuPrincipal">
-        <div class="header__top"></div>
-        <nav class="header__nav">
-            <a class="header__nav__brand" href="javascript:void(0);">
-                <img alt="Logo" src="./imgs/logo_mep.png">
-            </a>
-            <a class="header__nav__bars" href="javascript:void(0);" onclick="menuPrincipal(); return false;">
-                <i class="fa fa-bars"></i>
-            </a>
-            <div class="header__nav__right">
-                <a class="header__nav__right__avatar" href="javascript:void(0);">
-                    <img alt="Avatar" src="./imgs/parents.jpg">
-                    <span>Natalia</span>
-                </a>
-                <a class="btn btn--amarillo" href="./iniciarSesion.html">Cerrar sesi&oacute;n</a>
+    <header>
+        <div class="column__arriba">
+            <nav class="menu__arriba">
+                <ul>
+                    <li> <a href="perfil_admin.html"><i class="fas fa-hand-point-left"></i></li>
+                    <li><a class="btn_top modificar" href="#">Modificar Perfil</a>
+                    </li>
+                    <li> <a class="btn_top contrasenia" href="#">Cambiar contraseña</a></li>
+                    <li> <a class="btn_top notificacioness" href="#">Notificaciones</a></li>
+                    <li>
+                        <a class="sesion" href="#">Cerrar sesion</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="column__abajo">
+            <div class="contenedor">
+                <div class="logo">
+                    <img src="imgs/logo_mep.png" class="imagen_mep">
+                </div>
+                <nav class="menu__abajo">
+                    <ul>
+
+                        <span>|</span>
+                        <li>
+
+                            <a class="calificaciones" href="#">Calificaciones</a>
+                            <ul>
+                                <li><a href="#">Calificar un Centro Educativo</a></li>
+                                <li><a href="#">Registrar un Rubro</a></li>
+                                <li><a href="#">Lista de Rubros</a></li>
+                                <li><a href="#"> Ver Calificación de Centros </a></li>
+                            </ul>
+
+                        </li>
+                        <span>|</span>
+                        <li><a class="centros" href="#">Centros Educativos</a>
+                            <ul>
+                                <li><a href="registrarCentroEducativo.html">Registrar Centro Educativo</a></li>
+                                <li><a href="listaCEdu.html">Lista de Centros Educativos</a></li>
+
+                                <li><a href="#">Aprobar/Rechazar Centro Educativo</a></li>
+                                <li><a href="#"> Suspender/Reactivar Centro Educativo </a></li>
+                            </ul>
+                        </li>
+                        <span>|</span>
+                        <li><a class="utiles" href="#">Lista de Utiles</a>
+                            <ul>
+                                <li><a href="registrar_articulos.html">Agregar articulos</a></li>
+                                <li><a href="listar_articulos.html">Listar articulos</a></li>
+                                <li><a href="registrar_lista_utiles.html">Registrar Utiles</a></li>
+                                <li><a href="listar_lista_utiles.html">Listar utiles</a></li>
+                            </ul>
+                        </li>
+                        <span>|</span>
+                        <li><a class="padres" href="#">Usuarios padres de familia</a>
+                            <ul>
+                                <li><a href="listar_padres.html">Lista de padres de familia</a></li>
+
+                            </ul>
+
+                        </li>
+                        <span>|</span>
+
+                        <li><a class="utiles" href="#"> Etiquetas de búsqueda</a>
+                            <ul>
+                                <li><a class="subtitulos" href="#">Registrar etiquetas</a></li>
+                                <li><a class="subtitulos" href="#">Listar etiquetas</a>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <span>|</span>
+                        <li><a class="utiles" href="#"> Preguntas frecuentes</a>
+                            <ul>
+                                <li><a class="subtitulos" href="#">Registrar FAQ</a></li>
+                                <li><a class="subtitulos" href="#">Listar FAQ</a>
+                                    <ul>
+                                        <li><a class="subtitulos" href="#">Listar centro educativo</a>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        </li>
+                        <span>|</span>
+
+                        <li>
+                            <a class="reporte">Reportes</a>
+                            <ul>
+                                <li><a href="#">Ranking:Padres de familia</a></li>
+                                <li><a href="#">Ranking:MEP</a></li>
+                                <li><a href="#">Visitas a Centros Educativos</a></li>
+                                <li><a href="#">Bitacora Transacional</a></li>
+                            </ul>
+                        </li>
+                        <span>|</span>
+
+                    </ul>
+                </nav>
             </div>
-        </nav>
+        </div>
     </header>
     <main>
         <section>
-            <h1 class="titulo">Lista de útiles</h1>
+            <h1 class="titulo__principal">Lista de útiles</h1>
             <div class="wrapper">
-                <div class="filtrar">
+                <div class="bloque__filtro">
                     <label for="txt_filtrar">Filtrar</label>
                     <input type="text" id="txt_filtrar">
-                    
+
                 </div>
                 <div class="contenedor_tabla">
                     <table id="tbl_lista_utiles">
@@ -58,84 +144,26 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
+
                         </tbody>
                     </table>
-                   
-
                 </div>
+                <div class="menu__utiles">
+                    <div class="contenedor__menu">
+                        <nav class="regresar regresar__articulo">
+                            <a href="perfil_admin.html">
+                                <i class="fas fars fa-arrow-circle-left"></i>
+                                <p>Perfil</p>
+                            </a>
+                        </nav>
 
-    
+                    </div>
+        </section>
+
 
     </main>
-    <footer>
-        <div class="footer__cuerpo">
-            <div class="footer__flex">
-                <ul class="footer__lista__top">
-                    <li>
-                        <h4 class="footer__lista__header">Contacto</h4>
-                    </li>
-                    <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'><i
-                                class="fa fas fa-phone"></i> Tel&eacute;fono:
-                            22-24-66-88</a></li>
-                    <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'><i
-                                class="fa fas fa-fax"></i> Fax:
-                            29-53-55-22</a></li>
-                    <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'><i
-                                class="fa fas fa-envelope-square"></i> Correo electr&oacute;nico:
-                            educacion@ucenfotec.com</a></li>
-                </ul>
-                <ul class="footer__lista__top">
-                    <li>
-                        <h4 class="footer__lista__header">Direcci&oacute;n</h4>
-                    </li>
-                    <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'>San
-                            Jos&eacute;,
-                            Barrio Cristo
-                            Rey</a></li>
-                    <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'>Av 24, calle
-                            12</a></li>
-                </ul>
-                <ul class="footer__lista__top">
-                    <li>
-                        <h4 class="footer__lista__header">Citas</h4>
-                    </li>
-                    <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'><i
-                                class="far fa-calendar-alt"></i> Agendar</a></li>
-                </ul>
-                <section class="footer__social__seccion footer__flex">
-                    <span class="footer__social__traslapar footer__social__conectate">
-                        Conectate <span class="footer__social__pequeno">con</span> nosotros
-                    </span>
-                    <span class="footer__social__traslapar footer__social__iconos__envoltura">
-                        <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank"
-                            title="Pinterest"><i class="fab fa-pinterest-square"></i></a>
-                        <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank"
-                            title="Facebook"><i class="fab fa-facebook-square"></i></a>
-                        <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank" title="Twitter"><i
-                                class="fab fa-twitter-square"></i></a>
-                        <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank"
-                            title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank" title="Youtube"><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank"
-                            title="Google Plus"><i class="fab fa-google-plus-square"></i></a>
-                    </span>
-                </section>
-                <section class="footer__inferior__seccion footer__flex">
-                    <div class="footer__inferior__envoltura">
-                        <i class="fa fa-copyright"></i> 2019
-                        <address class="footer__direccion__compania">JAMS</address>
-                        <span class="footer__inferior__derechos"> - Todos los derechos reservados </span>
-                    </div>
-                    <div class="footer__inferior__envoltura">
-                        <a class="footer__ancla__generica" href="javascript:void(0);">Condiciones</a> | <a
-                            class="footer__ancla__generica" href="javascript:void(0);">Privacidad</a>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </footer>
+
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
