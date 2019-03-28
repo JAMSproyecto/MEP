@@ -25,7 +25,7 @@ router.route('/registrar_lista_utiles')
         }
     );
 
-router.route('/listar_lista_utiles/:id_cedu')
+router.route('/listar_lista_utiles/:codigo')
         .get(
             function(req, res)
             {
