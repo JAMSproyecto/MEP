@@ -11,6 +11,13 @@ router.param('id', function(req,res, next , id){
 }
 );
 
+router.param('id_cedu', function(req,res, next , id){
+    req.body.codigo = id;
+
+    next();
+}
+);
+
 router.route('/registrar_lista_utiles')
     .post(
         function(req, res){
@@ -18,7 +25,7 @@ router.route('/registrar_lista_utiles')
         }
     );
 
-router.route('/listar_lista_utiles')
+router.route('/listar_lista_utiles/:id_cedu')
         .get(
             function(req, res)
             {
