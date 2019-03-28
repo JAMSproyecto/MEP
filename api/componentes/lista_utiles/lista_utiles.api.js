@@ -37,7 +37,7 @@ lista_utiles_nuevo.save(
 
 module.exports.obtener_todos = (req, res) =>{
     
-    model_utiles.find(req.body.codigo).then(
+    model_utiles.find({codigo : req.body.codigo}).then(
         function (utiles){
             const cantidad = Object.keys(utiles).length;
             if (cantidad > 0) {

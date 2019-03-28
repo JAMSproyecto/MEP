@@ -11,8 +11,8 @@ router.param('id', function(req,res, next , id){
 }
 );
 
-router.param('id_cedu', function(req,res, next , id){
-    req.body.codigo = id;
+router.param('codigo', function(req,res, next , codigo){
+    req.body.codigo = codigo;
 
     next();
 }

@@ -42,10 +42,12 @@ let registrar_lista_utiles  = ( ptipo, panno, pnombre) =>{
 };
 
 let obtener_lista_utiles = (codigo) =>{
+  sessionStorage.setItem('id_cedu', 4);
+  let codigo_inst = sessionStorage.getItem('id_cedu');
     let coleccion_utiles = [];
     //sessionStorage.setItem('id', );
     let request = $.ajax({
-        url: "http://localhost:4000/api/listar_lista_utiles/"+codigo,
+        url: "http://localhost:4000/api/listar_lista_utiles/"+codigo_inst,
         method: "GET",
         data: {
         },
@@ -55,7 +57,7 @@ let obtener_lista_utiles = (codigo) =>{
       });
     
       request.done(function (res) {
-        if (res.succes == true) {
+        if (res.success == true) {
           coleccion_utiles = res.coleccion_utiles;
         }else{
           swal.fire({
