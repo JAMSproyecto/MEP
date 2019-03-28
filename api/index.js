@@ -129,6 +129,9 @@ app.use('/api', citas);
 const actividades = require('./componentes/actividad/registrar_actividad.route');
 app.use('/api', actividades);
 
+const pregfreq = require('./componentes/preguntas_frecuentes/preguntas_frecuentes.route');
+app.use('/api', pregfreq);
+
 
 
 
