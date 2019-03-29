@@ -1,7 +1,11 @@
 table {
   border-collapse: separate;
  
+<<<<<<< HEAD
   width: 90%;
+=======
+  width: 1400px;
+>>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
   margin: 30px auto;
 }
 th,
@@ -57,14 +61,22 @@ tr:last-child td:last-child {
 
 #tbl_articulos{
   border-collapse: separate;
+<<<<<<< HEAD
   width: 90%;
+=======
+  width: 1000px;
+>>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
   margin: 30px auto;
 }
 
 
 #tbl_lista_utiles{
   border-collapse: separate;
+<<<<<<< HEAD
   width: 90%;
+=======
+  width: 1066px;
+>>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
   margin: 30px auto;
 
 }

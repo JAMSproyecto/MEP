@@ -44,6 +44,7 @@ h2 {
 
 
 
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 body {
@@ -154,25 +155,34 @@ main {
 }
 
 .text_center {
+=======
+ 
+ body{
+     position: static;
+ }
+ 
+ .titulo__principal{
+>>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
     text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
-.text_right {
-    text-align: right;
+
+.titulo__secundario{
+    color: #17c0eb;
+    font-size: 21px;
+    font-weight: 600;
+    padding: 10px 49px;
+ 
 }
 
-.float_left {
-    float: left;
+
+.titulo__secundario__registro{
+    padding: 10px 0px;
 }
 
-.float_right {
-    float: right;
-}
-
-.mb_15 {
-    margin-bottom: 15px;
-}
-
+<<<<<<< HEAD
 .px_30 {
     padding-left: 30px;
     padding-right: 30px;
@@ -751,6 +761,20 @@ main section .datos_izq {
 
 main section .datos_der {
     float: right;
+=======
+h2 {
+    color: #17c0eb;
+    font-size: 21px;
+    font-weight: 600;
+      margin-top:35px;
+    margin-bottom: 35px;
+}
+
+
+.titulo__tablas{
+    text-align: center;
+    font-size: 20px;
+>>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
 }
 
 main section .datos_izq input,
@@ -779,6 +803,7 @@ main section .datos_der textarea {
         width: 100%;
     }
 
+<<<<<<< HEAD
 }
 
 
@@ -790,6 +815,10 @@ main section .datos_der textarea {
     padding: 15px;
     min-height: 280px;
     margin: 0 auto;
+=======
+.centros__aprobados{
+    margin-bottom: 100px;
+>>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
 }
 .fotoCentroEdu .fotoCentroEdu__Previa img {
     max-width: 100%;
@@ -901,6 +930,7 @@ input:not([type]) {
     text-align: left;
 }
 
+<<<<<<< HEAD
 input[type="file"]:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -1961,3 +1991,11 @@ left: 68%;
     position: relative;
     left: 44px;
 }
+=======
+.bloque_filtro {
+    text-align: left;
+    padding: 15px;
+    width: 80%;
+    margin: auto;
+}
+>>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
