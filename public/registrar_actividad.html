@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Actividades</title>
+
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontawesome/all.min.css">
+    <link rel="stylesheet" href="./css/headerCentro.css" />
+    <link rel="stylesheet" href="./css/general.css" />
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="column__arriba">
+            <nav class="menu__arriba">
+                <ul>
+                    <li> <a href="perfil_centro.html"><i class="fas fa-hand-point-left"></i></a></li>
+                    <li> <a class="btn_top contrasenia" href="#">Cambiar Contraseña</a></li>
+                    <li><a class="sesion" href="#">Cerrar sesion</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="column__abajo">
+            <div class="contenedor">
+                <div class="logo">
+                    <img src="imgs/logo_mep.png" class="imagen_mep">
+                </div>
+                <nav class="menu__abajo">
+                    <ul>
+                        <span>|</span>
+                        <li>
+                            <a class="reporte">Reportes</a>
+                            <ul>
+                                <li><a class="subtitulos" href="#">Ranking Anual</a></li>
+                            </ul>
+                        </li>
+                        <span>|</span>
+                        <li>
+
+                            <a class="calificaciones" href="#">Modificar Perfil</a>
+                            <ul>
+                                <li><a class="subtitulos" href="#">Modificar Cedula Juridica</a></li>
+                                <li><a class="subtitulos" href="#">Ubicacion</a></li>
+                                <li><a class="subtitulos" href="#">Imagenes de Perfil</a></li>
+                                <li><a class="subtitulos" href="#">Actulizar Documentos </a></li>
+                                <li><a class="subtitulos" href="#">Actualizar Matricula</a></li>
+                            </ul>
+
+                        </li>
+                        <span>|</span>
+                        <li><a class="centros" href="#">Actividad</a>
+                            <ul>
+                                <li><a class="subtitulos" href="registrar_actividad.html">Registrar Actividad</a></li>
+                                <li><a class="subtitulos" href="listar_actividad.html">Listar Actividad</a></li>
+
+                            </ul>
+                        </li>
+                        <span>|</span>
+                        <li><a class="utiles" href="#"> Utiles</a>
+                            <ul>
+                                <li><a class="subtitulos" href="registrar_lista_utiles.html">Registrar lista de
+                                        Utiles</a></li>
+                                <li><a class="subtitulos" href="listar_lista_utiles.html">Modificar lista de Utiles</a>
+                                </li>
+                                <li><a class="subtitulos" href="#">Ver lista de Utiles</a></li>
+                                <span>|</span>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+            <h1 class="titulo__principal"> Registrar Evento </h1>
+        <section class=" bloque__principal actividad">
+
+         
+            <div class="actividad__contenedor">
+                <form class="registrar_actividad">
+                    <div class="dato text_center">
+                        <label for="txt_actividad">Nombre de la actividad</label>
+                        <input type="text" id="txt_actividad">
+                    </div>
+
+                    <div class="dato text_center">
+                        <label for="txt_fecha">Fecha</label>
+                        <input type="text" id="txt_fecha">
+                    </div>
+                    <div class="hora__actividad ">
+                        <div class="dato text_center hora">
+                            <label for="txt_hora_inicio"> Hora inicio </label>
+                            <input type="time" id="txt_hora_inicio">
+                        </div>
+
+                        <div class="dato text_center hora">
+                            <label for="txt_finaliza"> Hora final </label>
+                            <input type="time" id="txt_finaliza">
+                        </div>
+
+                    </div>
+
+                    <div class="dato text_center">
+                        <label for="txt_costo"> Costo </label>
+                        <input type="number" id="txt_costo">
+                    </div>
+
+                    <div class="dato text_center">
+                        <label for="txt_lugar"> Lugar </label>
+                        <input type="text" id="txt_lugar">
+                    </div>
+
+                    <div class="dato text_center">
+                        <label for="txt_finalidad"> Finalidad </label>
+                        <input type="text" id="txt_finalidad">
+                    </div>
+
+                    <div class="dato text_center">
+                        <label for="txt_detalles"> Informacion Importante </label>
+                        <textarea id="txt_detalles"></textarea>
+                    </div>
+                </form>
+                <form>
+                    <div class="bloque_boton">
+                        <button type="button" class="boton" id="btn_enviar">Enviar</button>
+                    </div>
+                </form>
+
+
+            </div>
+
+            </div>
+
+
+        </section>
+
+
+
+
+    </main>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="js/servicio_registrar_actividad.js"></script>
+    <script src="js/controlador_registrar_actividad.js"></script>
+
+
+
+
+</body>
+
+</html>

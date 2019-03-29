@@ -3,95 +3,133 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
-    <title>MEP</title>
-    <link href="./imgs/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link rel="stylesheet" href="css/estilosCss.css" />
-    <link rel="stylesheet" href="css/header.css" />
+    <title>Perfil Admin</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontawesome/all.min.css">
+    <link rel="stylesheet" href="css/headerCentro.css" />
+    <link rel="stylesheet" href="css/formularios.css" />
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/tablas.css" />
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__top">
-            <nav class="menu_top">
-                <ul>
-                    <li><a class="btn_top modificar" href="#">Modificar Perfil</a>
-                    </li>
-                    <li> <a class="btn_top contrasenia" href="#">Cambiar Contraseña</a></li>
-                    <li> <a class="btn_top notificacioness" href="#">notificaciones</a></li>
-                    <li>
-                        <a class="sesion" href="#">Cerrar sesion</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </div>
-
-        <div class="header__bottom">
-            <div class="header__content">
-                <div class="contenedor">
-                    <div class="logo">
-                        <img src="./imgs/logo_mep.png" class="imagen_mep">
-                    </div>
-                    <nav class="menu-derecho">
+        <header>
+                <div class="column__arriba">
+                    <nav class="menu__arriba">
                         <ul>
-                            <span>|</span>
+                           
+                            <li><a class="btn_top modificar" href="#">Modificar perfil</a>
+                            </li>
+                            <li> <a class="btn_top contrasenia" href="#">Cambiar contraseña</a></li>
+                            <li> <a class="btn_top notificacioness" href="#">Notificaciones</a></li>
                             <li>
-                                <a class="reporte">Reportes</a>
-                                <ul>
-                                    <li><a href="#">Ranking:Padres de familia</a></li>
-                                    <li><a href="#">Ranking:MEP</a></li>
-                                    <li><a href="#">Visitas a Centros Educativos</a></li>
-                                    <li><a href="#">Bitacora Transacional</a></li>
-                                </ul>
+                                <a class="sesion" href="#">Cerrar sesion</a>
                             </li>
-
-                            <span>|</span>
-                            <li>
-
-                                <a class="calificaciones" href="#">Calificaciones</a>
-                                <ul>
-                                    <li><a href="#">Calificar un Centro Educativo</a></li>
-                                    <li><a href="#">Registrar un Rubro</a></li>
-                                    <li><a href="#">Lista de Rubros</a></li>
-                                    <li><a href="#"> Ver calificación de Centros </a></li>
-                                </ul>
-
-                            </li>
-                            <span>|</span>
-                            <li><a class="centros" href="#">Centros Educativos</a>
-                                <ul>
-                                    <li><a href="#">Lista de Centros Educativos</a></li>
-                                    <li><a href="#">Registrar Centro Educativo</a></li>
-                                    <li><a href="#">Aprobar/Rechazar Centro Educativo</a></li>
-                                    <li><a href="#"> Suspender/Reactivar Centro Educativo </a></li>
-                                </ul>
-                            </li>
-                            <span>|</span>
-                            <li><a class="utiles" href="#">Lista de Utiles</a>
-                                <ul>
-                                    <li><a href="#">Ver lista de Utiles</a></li>
-                                    <li><a href="#">Modificar lista de Utiles</a></li>
-                                </ul>
-                            </li>
-                            <span>|</span>
-                            <li><a class="padres" href="#">Usuarios Padres</a></li>
-                            <span>|</span>
                         </ul>
                     </nav>
                 </div>
-            </div>
-        </div>
-
-    </header>
+                <div class="column__abajo">
+                    <div class="contenedor">
+                        <div class="logo">
+                            <img src="imgs/logo_mep.png" class="imagen_mep">
+                        </div>
+                        <nav class="menu__abajo">
+                            <ul>
+                                <span>|</span>
+                                <li><a class="centros" href="#">Centros educativos</a>
+                                    <ul>
+                                        <li><a href="registrarCentroEducativo.html">Registrar centro educativo</a></li>
+                                        <li><a href="listaCEdu.html">Lista de centros educativos</a></li>
+        
+                                        <li><a href="#">Aprobar/Rechazar centro educativo</a></li>
+                                        <li><a href="#"> Suspender/Reactivar centro educativo </a></li>
+                                    </ul>
+                                </li>
+                                <span>|</span>
+                                <li>
+                                    <a class="calificaciones" href="#">Calificaciones</a>
+                                    <ul>
+                                        <li><a href="#">Calificar un centro educativo</a></li>
+                                        <li><a href="#">Registrar un rubro</a></li>
+                                        <li><a href="#">Lista de rubros</a></li>
+                                        <li><a href="#"> Ver calificación de centros educativos </a></li>
+                                    </ul>
+        
+                                </li>
+        
+                                <span>|</span>
+                                <li><a class="utiles" href="#">Útiles</a>
+                                    <ul>
+                                        <li><a href="registrar_articulos.html">Registrar artículos</a></li>
+                                        <li><a href="listar_articulos.html">Listar  artículos</a></li>
+                                        <li><a href="registrar_lista_utiles.html">Registrar lista de útiles</a></li>
+                                        <li><a href="listar_lista_utiles.html">Listar útiles</a></li>
+                                    </ul>
+                                </li>
+                                <span>|</span>
+                                <li><a class="padres" href="#">Usuarios padres de familia</a>
+                                    <ul>
+                                        <li><a href="listar_padres.html">Lista de padres de familia</a></li>
+        
+                                    </ul>
+        
+                                </li>
+                                <span>|</span>
+        
+                                <li><a class="utiles" href="#"> Etiquetas de búsqueda</a>
+                                    <ul>
+                                        <li><a class="subtitulos" href="#">Registrar etiquetas</a></li>
+                                        <li><a class="subtitulos" href="#">Listar etiquetas</a>
+                                        </li>
+                                    </ul>
+        
+                                </li>
+                                <span>|</span>
+                                <li><a class="utiles" href="#"> Preguntas frecuentes</a>
+                                    <ul>
+                                        <li><a class="subtitulos" href="registrarPreguntaFrecuenteGeneral.html">Registrar
+                                                FAQ</a></li>
+                                        <li><a class="subtitulos" href="listarPreguntasFrecuentesGenerales.html">Registrar
+                                                FAQ</a></li>
+                                        <li><a class="subtitulos" href="#">Listar FAQ</a>
+                                            <ul>
+                                                <li><a class="subtitulos" href="#">Listar centros educativos</a>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+        
+                                </li>
+                                <span>|</span>
+        
+                                <li>
+                                    <a class="reporte">Reportes</a>
+                                    <ul>
+                                        <li><a href="#">Ranking:Padres de familia</a></li>
+                                        <li><a href="#">Ranking:MEP</a></li>
+                                        <li><a href="#">Visitas a centros educativos</a></li>
+                                        <li><a href="#">Bitacora transacional</a></li>
+                                    </ul>
+                                </li>
+                                <span>|</span>
+        
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
     <main>
-        <section class="lista_centros">
-
-            <div class=" grey centros">
-                <strong>Lista de centros por Aprobar</strong>
+        <section>
+            <div class="centros__aprobados">
+                <div class="titulo__tablas">
+                    <strong>Lista de centros educativos  por aprobar</strong>
+                </div>
                 <table id="tbl_centro">
-
                     <thead>
                         <tr>
                             <th>Nombre del Centro</th>
@@ -102,15 +140,13 @@
 
                         </tr>
                     </thead>
-
-
                 </table>
             </div>
-
-            <div class="grey atrasados">
-                <strong>Lista de centros atrasados</strong>
+            <div class="centros__atrasados">
+                <div class="titulo__tablas">
+                    <strong>Lista de centros  educativos atrasados</strong>
+                </div>
                 <table id="tbl_centro">
-
                     <thead>
                         <tr>
                             <th>Nombre del Centro</th>
@@ -118,21 +154,10 @@
                             <th>Correo</th>
                             <th>Ubicación</th>
                             <th>Fecha</th>
-
                         </tr>
                     </thead>
-
-
                 </table>
-
             </div>
-
-           
-
-
-
-
-
         </section>
     </main>
 </body>
