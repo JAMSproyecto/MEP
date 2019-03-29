@@ -66,7 +66,7 @@ let listar_todas_actividades = () => {
     });
 
     request.done(function (res){
-        debugger;
+
         actividades_arreglo = res.msg;
 
         
