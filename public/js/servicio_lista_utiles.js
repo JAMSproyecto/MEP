@@ -1,14 +1,16 @@
 'use strict';
 
 let registrar_lista_utiles  = ( ptipo, panno, pnombre) =>{
-
+  sessionStorage.setItem('id_cedu', 4);//Borrar al integrar con jeison
     let request = $.ajax({
+
         url: "http://localhost:4000/api/registrar_lista_utiles",
         method: "POST",
         data: {
+            codigo : sessionStorage.getItem('id_cedu'),
             tipo: ptipo,
             nombre: pnombre,
-            anno: panno,
+            anno: panno
           
         }, 
         dataType: "json",
@@ -17,11 +19,17 @@ let registrar_lista_utiles  = ( ptipo, panno, pnombre) =>{
 
     request.done(function (msg)
         {
+          if (msg.succes == true) {
             swal.fire({
-                type: 'success',
-                title: 'Lista de utiles enviada',
-                text: 'el registro fue éxitoso'
-              });
+              type: 'success',
+              title: msg.msg
+            });
+          }else{
+            swal.fire({
+              type: 'error',
+              title: msg.msg
+            });
+          }
     });
 
     request.fail(function (jqXHR, textStatus) {
@@ -34,15 +42,12 @@ let registrar_lista_utiles  = ( ptipo, panno, pnombre) =>{
 };
 
 let obtener_lista_utiles = () =>{
-<<<<<<< HEAD
   sessionStorage.setItem('id_cedu',4);
   let codigo_inst = sessionStorage.getItem('id_cedu');
-=======
->>>>>>> parent of 22ecb77... Merge branch 'master' of https://github.com/JAMSproyecto/MEP
     let coleccion_utiles = [];
-
+    //sessionStorage.setItem('id', );
     let request = $.ajax({
-        url: "http://localhost:4000/api/listar_lista_utiles",
+        url: "http://localhost:4000/api/listar_lista_utiles/"+codigo_inst,
         method: "GET",
         data: {
         },
@@ -52,12 +57,23 @@ let obtener_lista_utiles = () =>{
       });
     
       request.done(function (res) {
-        coleccion_utiles = res.coleccion_utiles;
-    
+        if (res.success == true) {
+          coleccion_utiles = res.coleccion_utiles;
+        }else{
+          swal.fire({
+            type: 'info',
+            title: 'No se encontraron útiles' 
+          });
+          console.log(res.coleccion_utiles);
+        }
+
       });
     
       request.fail(function (jqXHR, textStatus) {
-    
+        swal.fire({
+          type: 'error',
+          title: 'Error al cargar la lista de útiles'
+        });
       });
       return coleccion_utiles;
       
