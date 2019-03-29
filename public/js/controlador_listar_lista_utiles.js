@@ -18,7 +18,7 @@ function seleccionar_lista(){
 
 
 let mostrar_datos = () =>{
-    let lista_utiles = obtener_lista_utiles();
+    let lista_utiles = obtener_lista_utiles(sessionStorage.getItem('id_cedu'));
    
 
     for (let i= 0; i < lista_utiles.length; i++) {
