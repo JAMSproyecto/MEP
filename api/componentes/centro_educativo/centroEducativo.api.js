@@ -77,7 +77,7 @@ module.exports.registrar_centro_educativo = async (req, res) => {
 
         res.json({
             success: true,
-            message: 'El centro educativo se registró correctamente'
+            message: 'El centro educativo se registrÃ³ correctamente'
         });
 	}else{
 		const mensaje = 'El usuario ' + req.body.correoCentro + ' ya existe';
