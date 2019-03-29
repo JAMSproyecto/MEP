@@ -57,7 +57,6 @@ let registrar_cita = (pnombre, papellidos, ptelefono, pcorreo, pfecha, phora, pm
 };
 
 
-
 let listar_citas = () => {
     let lista_citas = [];
    

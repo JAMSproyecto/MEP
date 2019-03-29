@@ -79,7 +79,7 @@ module.exports.registrar_Padre = (req, res) => {
 
                             let mailOptions = {
                                 from: 'soporte.mep.costarica@gmail.com',
-                                to: registro_Padre.email,
+                                to: registro_Padre.correo,
                                 subject: 'Verificación de correo electrónico',
                                 html: `<h1 style="color:#227093;">Saludos ${ registro_Padre.nombre} </h1>
                                 <p>Gracias por registrarse en nuestra aplicación</p>
