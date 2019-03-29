@@ -41,8 +41,8 @@ let registrar_lista_utiles  = ( ptipo, panno, pnombre) =>{
       });
 };
 
-let obtener_lista_utiles = (codigo) =>{
-  sessionStorage.setItem('id_cedu', 4);
+let obtener_lista_utiles = () =>{
+  sessionStorage.setItem('id_cedu',4);
   let codigo_inst = sessionStorage.getItem('id_cedu');
     let coleccion_utiles = [];
     //sessionStorage.setItem('id', );
