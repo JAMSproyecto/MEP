@@ -6,10 +6,11 @@ const nodemailer = require('nodemailer');
 
 /*funcion para mandar correo al padre*/
 let transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'hotmail',
     auth: {
-        user: 'soporte.mep.costarica@gmail.com',
-        pass: '1Proyecto9'
+      user: 'anhernan19@hotmail.com',
+      pass: 'arbolesdejusticia28',
+      html: ''
     }
 });
 /* fin de funcion para mandar al padre*/
@@ -114,11 +115,10 @@ let calendario =  dia +'-'+ mes + '-' + annio;*/
             } else {
         /*envio el correo de confirmacion al padre*/
                 let mailOptions = {
-                    from: 'soporte.mep.costarica@gmail.com',
+                    from: 'anhernan19@hotmail.com',
                     to: nueva_cita.Correo,
                     subject: 'Registro de Cita recibido',
-                    html: `<h1> Saludos ${nueva_cita.Nombre} </h1>
-                    <p>Se ha registrado su cita para el día ${nueva_cita.Fecha} a las ${nueva_cita.Hora} </p>`,
+                    html: '<h1> Saludos ${nueva_cita.Nombre} </h1>',
                  
                 };
                 transporter.sendMail(mailOptions, function(error, info){

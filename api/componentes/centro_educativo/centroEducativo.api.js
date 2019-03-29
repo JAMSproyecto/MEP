@@ -9,11 +9,9 @@ const ObtenerFecha = require ('./../funciones_genericas/obtenerFecha');
 
 module.exports.registrar_centro_educativo = async (req, res) => {
     try {
-		
-		const existeUsuario = await ModelUsuario.find({correo:req.body.correoCentro}).countDocuments();
-		
-		if(existeUsuario < 1){
+
         let registroUsuario = new ModelUsuario();
+
         registroUsuario.correo = req.body.correoCentro;
         registroUsuario.pin = ObtenerPin.get();
         registroUsuario.tipo = 'CentroEducativo';
@@ -52,7 +50,7 @@ module.exports.registrar_centro_educativo = async (req, res) => {
             identificacion: req.body.identificacionContacto,
             departamento: req.body.departamentoContacto,
             telefono: req.body.telefonoContacto
-        }];
+        }];calificacion.padres
 		cEduNuevo.calificacion = [{
 		mep: 0,
 		padres: 0
@@ -79,16 +77,7 @@ module.exports.registrar_centro_educativo = async (req, res) => {
             success: true,
             message: 'El centro educativo se registró correctamente'
         });
-	}else{
-		const mensaje = 'El usuario ' + req.body.correoCentro + ' ya existe';
-		
-		console.log(Tiza.bold.yellow.bgBlack(mensaje));
-		
-		res.json({
-            success: false,
-            message: mensaje
-        });
-	}
+
     } catch (err) {
         console.log(Tiza.bold.yellow.bgBlack('Error al registrar el centro educativo:'));
         console.log(Tiza.bold.yellow.bgBlack(err.message));

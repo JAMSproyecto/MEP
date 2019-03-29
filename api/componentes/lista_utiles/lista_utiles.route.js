@@ -11,13 +11,6 @@ router.param('id', function(req,res, next , id){
 }
 );
 
-router.param('codigo', function(req,res, next , codigo){
-    req.body.codigo = codigo;
-
-    next();
-}
-);
-
 router.route('/registrar_lista_utiles')
     .post(
         function(req, res){
@@ -25,7 +18,7 @@ router.route('/registrar_lista_utiles')
         }
     );
 
-router.route('/listar_lista_utiles/:codigo')
+router.route('/listar_lista_utiles')
         .get(
             function(req, res)
             {

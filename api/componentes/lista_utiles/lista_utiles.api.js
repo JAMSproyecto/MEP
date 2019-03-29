@@ -5,10 +5,9 @@ const model_utiles = require('./lista_utiles.model');
 module.exports.registrar = (req, res) =>{
     let lista_utiles_nuevo = new model_utiles(
         {
-            codigo : req.body.codigo,
             tipo : req.body.tipo,
             nombre : req.body.nombre,
-            anno : req.body.anno
+            anno : req.body.anno,
             
         }
     );
@@ -36,11 +35,9 @@ lista_utiles_nuevo.save(
 
 
 module.exports.obtener_todos = (req, res) =>{
-    
-    model_utiles.find({codigo : req.body.codigo}).then(
+    model_utiles.find().then(
         function (utiles){
-            const cantidad = Object.keys(utiles).length;
-            if (cantidad > 0) {
+            if (utiles.length > 0) {
                 res.json(
                     {
                         success : true,

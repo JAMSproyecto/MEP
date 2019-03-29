@@ -66,11 +66,7 @@ let listar_todas_actividades = () => {
     });
 
     request.done(function (res){
-<<<<<<< HEAD
         debugger;
-=======
-
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
         actividades_arreglo = res.msg;
 
         

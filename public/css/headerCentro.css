@@ -1,43 +1,24 @@
 body{
     font-family: 'Nunito', sans-serif;
-<<<<<<< HEAD
     margin: 0;
     padding: 0;
-=======
-    margin: 0px;
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
 }
 
 header{
     margin-bottom: 50px;
-<<<<<<< HEAD
     width: 100%;
-=======
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
 }
 
 header .column__arriba{
     background: #17c0eb;
     display: flow-root;
     padding: 20px;
-<<<<<<< HEAD
     width: 100%;
    
 }
      
 .menu__arriba{
     float: right
-=======
-   
-}
-   
-
-
-    
-.menu__arriba{
-    float: right;
-  
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
 }
 
 .menu__arriba  ul{
@@ -63,11 +44,7 @@ header .column__arriba{
            /* background: #2980b9;*/
             text-decoration: none;
             font-weight: 700;
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
     }
 
 /*final estilos menu arriba*/
@@ -75,24 +52,15 @@ header .column__arriba{
 /*estilos menu abajo*/
 
 header .column__abajo{
-<<<<<<< HEAD
     background: #f9f9f9; 
-=======
-    background: #f9f9f9;
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
      padding: 10px 0;
      display: flow-root;
 
 }
 
-<<<<<<< HEAD
 header .contenedor{
     padding: 0px 58px;
     width: 100%;
-=======
-.contenedor{
-    padding: 0px 58px;
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
 }
 
 
@@ -129,11 +97,7 @@ header .contenedor{
 
 
 .menu__abajo li>  ul {
-<<<<<<< HEAD
     background-color: #FAFAFA;
-=======
-    background-color: #ffeaa7;
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
     /*background-color:#B3E5FC;*/
 
     clip: rect(0,0,0,0);
@@ -141,17 +105,12 @@ header .contenedor{
    width: 270px;
    padding: 5px 0px;
     position: absolute;
-<<<<<<< HEAD
-=======
-   
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
 }
 
 .menu__abajo li ul li{
     padding: 5px 7px;
     list-style: none;
 }
-<<<<<<< HEAD
 
 
 .menu__abajo li:hover > ul{
@@ -159,19 +118,6 @@ header .contenedor{
 }
 
 
-=======
-.menu__abajo li:hover > ul{
-    clip: auto;
-   
- 
-}
-.menu__abajo ul ul ul {
-    left: 100%;
-    margin: 0;
-    top: 0;
-    transform: none;
-}
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
 
 
 
@@ -180,36 +126,21 @@ header .contenedor{
     font-size: 14px;
     color: #2d3436;
     font-weight: 900px;
-<<<<<<< HEAD
   
-=======
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
  
 }
 
 .menu__abajo > ul >  li:hover >  a{
-<<<<<<< HEAD
 background: #FAFAFA;
 padding: 10px;
 
 
-=======
-background: #ffeaa7;
-padding: 10px;
-
-  
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
   
 }
 
 .menu__abajo li  > ul >  li:hover >  a{
-<<<<<<< HEAD
     border-bottom: 2px solid #17c0eb;
     color:#17c0eb;
-=======
-    border-bottom: 2px solid #000;
-    color:#000;
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
     font-weight: 500;
 }
 /*final menu abajo*/
@@ -228,27 +159,17 @@ padding: 10px;
 
 }
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
 .columna__derecha img{
     border-radius: 130px;
     width: 90px;
     vertical-align: middle;
     margin-right: 5px;
 }
-<<<<<<< HEAD
 .fa-hand-point-left:hover{
 
 
 color: #f1c40f;
 }
-=======
-
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
 
 
 /*fin de estilos header*/
@@ -259,12 +180,7 @@ color: #f1c40f;
 
 .btn_top:hover{
     border-bottom: 2px solid #f0932b;
-<<<<<<< HEAD
     padding-bottom: 5px;
-=======
-     
-   
->>>>>>> 33e6a9c0d46adc58c6432cfe77dc10076dd2d059
 }
 
 
