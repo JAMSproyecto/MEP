@@ -1,5 +1,7 @@
 'use strict';
 
+
+
 const InputFotoCentroEdu = document.querySelector('#fotoCentroEdu');
 const ImgFotoCentroEdu = document.querySelector('#fotoCentroEduPrevia');
 const PesoFotoCentroEdu = document.querySelector('#pesoFotoCentroEdu');
@@ -151,28 +153,30 @@ let enviarDatos = async () => {
     const CorreoContacto = InputCorreoContacto.value.trim();
     const IdentificacionContacto = parseInt(InputIdentificacionContacto.value, 10) || 0;
     const DepartamentoContacto = InputDepartamentoContacto.value.trim();
-    const TelefonoContacto = parseInt(InputTelefonoContacto.value, 10) || 0;
+   const TelefonoContacto = parseInt(InputTelefonoContacto.value, 10) || 0;
 
+let error = false;
 
-    if (Nombre.length < 3) {
+    if (Nombre.length < 3 || Nombre.value == '') {
         mostrarAlerta('Digite un nombre válido', InputNombre);
         return false;
+        error = true;
     } else {
         InputNombre.classList.remove('error_input');
     }
-    if (NombreComercial.length < 3) {
+    if (NombreComercial.length < 3 || NombreComercial.value == '') {
         mostrarAlerta('Digite un nombre comercial válido', InputNombreComercial);
         return false;
     } else {
         InputNombreComercial.classList.remove('error_input');
     }
-    if (CedulaJuridica.toString(10).length < 9) {
+    if (CedulaJuridica.toString(10).length < 9 || CedulaJuridica.value == '' ||  CedulaJuridica.value == 0) {
         mostrarAlerta('Digite una cédula jurídica válida', InputCedulaJuridica);
         return false;
     } else {
         InputCedulaJuridica.classList.remove('error_input');
     }
-    if (CorreoCentro.length < 1) {
+    if (CorreoCentro.length < 1 || CorreoCentro.value == '') {
         mostrarAlerta('Digite un correo electrónico válido', InputCorreoCentro);
         return false;
     } else {
@@ -184,25 +188,25 @@ let enviarDatos = async () => {
     } else {
         InputCorreoCentro.classList.remove('error_input');
     }
-    if (AnnoFundacion < 1800) {
+    if (AnnoFundacion < 1800 || AnnoFundacion.value == '' || AnnoFundacion.value <= 0) {
         mostrarAlerta('Digite un año de fundación válido', InputAnnoFundacion);
         return false;
     } else {
         InputAnnoFundacion.classList.remove('error_input');
     }
-    if (Resenna.length < 10) {
+    if (Resenna.length < 10 ) {
         mostrarAlerta('Digite una reseña válida', InputResenna);
         return false;
     } else {
         InputResenna.classList.remove('error_input');
     }
-    if (TelefonoCentro.toString(10).length < 8) {
+    if (TelefonoCentro.toString(10).length < 8 ||TelefonoCentro.value =='' || TelefonoCentro.value <= 0) {
         mostrarAlerta('Digite un número de teléfono válido', InputTelefonoCentro);
         return false;
     } else {
         InputTelefonoCentro.classList.remove('error_input');
     }
-    if (TipoInstitucion.length < 1) {
+    if (TipoInstitucion.length <= 0 ) {
         mostrarAlerta('Seleccione el tipo de institución', InputTipoInstitucion);
         return false;
     } else {
@@ -232,7 +236,7 @@ let enviarDatos = async () => {
     } else {
         InputDistrito.classList.remove('error_input');
     }
-    if (DirSennas.length < 1) {
+    if (DirSennas.length < 1 || DirSennas.value == '' ) {
         mostrarAlerta('Digite una dirección con señas', InputDirSennas);
         return false;
     } else {
@@ -244,20 +248,20 @@ let enviarDatos = async () => {
     } else {
         InputDirSennas.classList.remove('error_input');
     }
-    if (PrimerNombre.length < 3) {
+    if (PrimerNombre.length < 3 || PrimerNombre.value == '') {
         mostrarAlerta('Digite un nombre válido', InputPrimerNombre);
         return false;
     } else {
         InputPrimerNombre.classList.remove('error_input');
     }
-    if (PrimerApellido.length < 3) {
+    if (PrimerApellido.length < 3 || PrimerApellido == '') {
         mostrarAlerta('Digite un apellido válido', InputPrimerApellido);
         return false;
     } else {
         InputPrimerApellido.classList.remove('error_input');
     }
 
-    if (CorreoContacto.length < 1) {
+    if (CorreoContacto.length < 1 || CorreoCentro.value == '') {
         mostrarAlerta('Digite un correo electrónico válido', InputCorreoContacto);
         return false;
     } else {
@@ -270,21 +274,21 @@ let enviarDatos = async () => {
         InputCorreoContacto.classList.remove('error_input');
     }
 
-    if (IdentificacionContacto.toString(10).length < 9) {
+    if (IdentificacionContacto.toString(10).length < 9 || IdentificacionContacto == '') {
         mostrarAlerta('Digite una identificación válida', InputIdentificacionContacto);
         return false;
     } else {
         InputIdentificacionContacto.classList.remove('error_input');
     }
 
-    if (DepartamentoContacto.length < 1) {
+    if (DepartamentoContacto.length < 1 || DepartamentoContacto.value == '') {
         mostrarAlerta('Digite un departamento válido', InputDepartamentoContacto);
         return false;
     } else {
         InputDepartamentoContacto.classList.remove('error_input');
     }
 
-    if (TelefonoContacto.toString(10).length < 8) {
+    if (TelefonoContacto.toString(10).length < 8 || TelefonoContacto.toString(10).length <= 0 || TelefonoCentro.value == '') {
         mostrarAlerta('Digite un número de teléfono válido', InputTelefonoContacto);
         return false;
     } else {
