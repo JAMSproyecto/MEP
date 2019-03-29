@@ -41,7 +41,7 @@ let db = mongoose.connection;
  */
 let _server = () => {
     console.log(ColorBackEnd(' Back-end corriendo en el puerto ' + Port));
-    console.log(' ');
+    console.log('');
 };
 let server = app.listen(Port, _server());
 
@@ -55,7 +55,7 @@ mongoose.connect(Dburl, {useNewUrlParser: true, useFindAndModify: false, useCrea
  */
 db.once('open', () => {
     console.log(ColorConectado(' Base de datos conectada correctamente'));
-    console.log(' ');
+    console.log('');
 });
 
 /**
@@ -64,12 +64,12 @@ db.once('open', () => {
 db.on('error', (err) => {
     process.stdout.write('\x07');
     console.log(ColorError(' Error de conexión: ' + err));
-    console.log(' ');
+    console.log('');
 });
 
 db.on('disconnected', () => {
-    console.log(ColorDesconectado(' Base de datos desconectada'));
-    console.log(' ');
+    console.log(ColorDesconectado(`${(new Date()).toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1")} - Base de datos desconectada`));
+    console.log('');
 });
 
 /**
