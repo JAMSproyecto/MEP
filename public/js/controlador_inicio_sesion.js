@@ -33,10 +33,10 @@ let obtener_Datos = () => {
             if ('undefined' !== typeof tipoUsuario && null !== tipoUsuario) {
                 switch (tipoUsuario.toLowerCase()) {
                     case 'superadmin' :
-                        window.location.replace('principal_admin.html');
+                        window.location.replace('perfil_admin.html');
                         break;
                     case 'centroeducativo' :
-                        window.location.replace('principal_centro.html');
+                        window.location.replace('perfil_centro.html');
                         break;
                     case 'padrefamilia' :
                         window.location.replace('principal_padres.html');

@@ -1,7 +1,7 @@
 table {
   border-collapse: separate;
  
-  width: 1400px;
+  width: 90%;
   margin: 30px auto;
 }
 th,
@@ -57,14 +57,14 @@ tr:last-child td:last-child {
 
 #tbl_articulos{
   border-collapse: separate;
-  width: 1000px;
+  width: 90%;
   margin: 30px auto;
 }
 
 
 #tbl_lista_utiles{
   border-collapse: separate;
-  width: 1066px;
+  width: 90%;
   margin: 30px auto;
 
 }

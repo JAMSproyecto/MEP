@@ -133,7 +133,8 @@ const preguntasFrecuentes = require('./componentes/preguntas_frecuentes/pregunta
 app.use('/api', preguntasFrecuentes);
 
 
-
+const noticias = require('./componentes/noticia/registrar_noticia.route');
+app.use('/api', noticias);
 
 
 
