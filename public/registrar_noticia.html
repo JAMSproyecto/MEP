@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>MEP</title>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontawesome/all.min.css">
+    <link rel="stylesheet" href="css/headerCentro.css" />
 
 
 
@@ -12,36 +18,76 @@
 
 <body>
 
-    <header class="header">
+    <header>
+        <div class="column__arriba">
+            <nav class="menu__arriba">
+                <ul>
 
-        <div>
-            <a href="listar_noticia.html"> Lista de Noticias</a>
+                    <li> <a class="btn_top contrasenia" href="#">Cambiar Contraseña</a></li>
+                    <li><a class="sesion" href="#"><button id="boton_cerrar">Cerrar sesión</button></a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="header__top">
-            <div class="header__contenedor">
-                <div class="columna__izquierda">
-                    <a href="#">
-                        <img src="./imgs/logo_mep.png" class="imagen_mep">
-                    </a>
+        <div class="column__abajo">
+            <div class="contenedor">
+                <div class="logo">
+                    <img src="imgs/logo_mep.png" class="imagen_mep">
                 </div>
-                <div class="columna__derecha">
-                    <div class="contenedor">
-                        <nav class="celda menu">
-                            <a href="#">
-                                <img src="./imgs/parents.jpg"
-                                    class="imagen_padre">
-                                <span>Roberto</span>
-                            </a>
-                        </nav>
-                        <form class="celda boton">
-                            <button type="button" class="btn" id="btn-sesion">cerrar sesión</button>
-                        </form>
-                    </div>
-                </div>
+                <nav class="menu__abajo">
+                    <ul>
+
+                        <span>|</span>
+                        <li>
+                            <a class="calificaciones" href="#">Modificar perfil</a>
+                            <ul>
+                                <li><a class="subtitulos" href="#">Modificar cédula juridica</a></li>
+                                <li><a class="subtitulos" href="#">Ubicación</a></li>
+                                <li><a class="subtitulos" href="#">Imagenes de perfil</a></li>
+                                <li><a class="subtitulos" href="#">Actulizar documentos </a></li>
+                                <li><a class="subtitulos" href="#">Actualizar matrícula</a></li>
+                            </ul>
+
+                        </li>
+                        <span>|</span>
+                        <li><a class="centros" href="#">Actividad</a>
+                            <ul>
+                                <li><a class="subtitulos" href="registrar_actividad.html">Registrar actividad</a></li>
+                                <li><a class="subtitulos" href="listar_actividad.html">Listar actividad</a></li>
+
+                            </ul>
+                        </li>
+                        <span>|</span>
+                        <li><a class="centros" href="#">Noticias</a>
+                            <ul>
+                                <li><a class="subtitulos" href="registrar_noticia.html">Registrar noticias</a></li>
+                                <li><a class="subtitulos" href="listar_noticia.html">Listar noticias</a></li>
+
+                            </ul>
+                        </li>
+                        <span>|</span>
+                        <li><a class="utiles" href="#"> Útiles</a>
+                            <ul>
+                                <li>
+                                    <a class="subtitulos" href="registrarListaUtilesCentro.html">Registrar lista de
+                                        útiles</a></li>
+
+                                <li><a class="subtitulos" href="listaUtilesCentroEducativo.html">Ver lista de útiles</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <span>|</span>
+                        <li>
+                            <a class="reporte">Reportes</a>
+                            <ul>
+                                <li><a class="subtitulos" href="#">Ranking anual</a></li>
+                            </ul>
+                        </li>
+                        <span>|</span>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
-
     <main>
         <section class="noticia">
 
