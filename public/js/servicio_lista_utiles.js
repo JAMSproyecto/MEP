@@ -35,9 +35,9 @@ let registrar_lista_utiles  = ( ptipo, panno, pnombre) =>{
 
 let obtener_lista_utiles = () =>{
     let coleccion_utiles = [];
-
+    let id_usuario = sessionStorage.getItem('id');
     let request = $.ajax({
-        url: "http://localhost:4000/api/listar_lista_utiles",
+        url: "http://localhost:4000/api/listar_lista_utiles/" +id_usuario,
         method: "GET",
         data: {
         },
@@ -47,7 +47,7 @@ let obtener_lista_utiles = () =>{
       });
     
       request.done(function (res) {
-        coleccion_utiles = res.coleccion_utiles;
+        coleccion_utiles = res;
     
       });
     
