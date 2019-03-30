@@ -1,6 +1,7 @@
 'use strict';
 
 const model_utiles = require('./lista_utiles.model');
+const model_cedu = require('../centro_educativo/centroEducativo.model');
 
 module.exports.registrar = (req, res) =>{
     let lista_utiles_nuevo = new model_utiles(
@@ -41,12 +42,21 @@ module.exports.obtener_todos = (req, res) =>{
         function (utiles){
             const cantidad = Object.keys(utiles).length;
             if (cantidad > 0) {
-                res.json(
-                    {
-                        success : true,
-                        coleccion_utiles : utiles
+                model_cedu.findOne({ _id: utiles[0].codigo}).then(
+                    (centro) =>{
+                        
+                        res.json(
+                            {
+                                success : true,
+                                coleccion_utiles : utiles,
+                                nombreCentro: centro.nombre
+                            }
+                        )
                     }
+
                 )
+                
+                
             } else {
                 res.json(
                     {

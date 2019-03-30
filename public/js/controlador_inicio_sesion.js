@@ -39,6 +39,7 @@ let obtener_Datos = () => {
                         window.location.replace('perfil_centro.html');
                         break;
                     case 'padrefamilia' :
+                        sessionStorage.setItem('idBuscarPadre', sessionStorage.getItem('id'));
                         window.location.replace('principal_padres.html');
                         break;
                     default :

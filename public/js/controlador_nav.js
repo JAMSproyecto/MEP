@@ -17,12 +17,15 @@ if( null !== conectado && ('true' === conectado ||  true === conectado) ){
     switch(tipoUsuario.toLowerCase()){
         case 'superadmin':
 
+        sessionStorage.setItem('padreDesdeAdmin', true);
+
         break;
         case 'centroeducativo':
 			
         break;
         case 'padrefamilia':
-		    lblNombreUsuario.innerHTML = nombreUsuario || '';
+            lblNombreUsuario.innerHTML = nombreUsuario || '';
+            sessionStorage.setItem('padreDesdeAdmin', false);
 			
             enlaces[0].classList.add('ocultar');
             enlaces[1].classList.add('ocultar');

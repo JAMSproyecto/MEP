@@ -7,8 +7,8 @@ const input_costo = document.querySelector('#txt_costo');
 const input_lugar = document.querySelector('#txt_lugar');
 const input_finalidad = document.querySelector('#txt_finalidad');
 const input_detalles = document.querySelector('#txt_detalles');
-const boton_enviar = document.querySelector('#btn_enviar');
-   
+const boton_enviar = document.querySelector('#btn_agregar');
+
 
 
 let validar = () => {
@@ -96,18 +96,18 @@ let mostrar_datos = () => {
     }
     else {
 
-             
-              let actividad = input_actividad.value;
-              let fecha= input_fecha.value;
-              let hora_inicio = input_hora_inicio.value;
-              let finaliza = input_finaliza.value;
-              let costo = input_costo.value;
-              let lugar = input_lugar.value;
-              let finalidad = input_finalidad.value;
-              let detalles= input_detalles.value
-        
-              registrar_actividad(actividad, fecha, hora_inicio, finaliza,
-                costo, lugar, finalidad, detalles )
+        let idCentro = sessionStorage.getItem("id");
+        let actividad = input_actividad.value;
+        let fecha = input_fecha.value;
+        let hora_inicio = input_hora_inicio.value;
+        let finaliza = input_finaliza.value;
+        let costo = input_costo.value;
+        let lugar = input_lugar.value;
+        let finalidad = input_finalidad.value;
+        let detalles = input_detalles.value
+
+        registrar_actividad(idCentro, actividad, fecha, hora_inicio, finaliza,
+            costo, lugar, finalidad, detalles);
     }
 
 
