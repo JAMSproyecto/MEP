@@ -1,6 +1,5 @@
 
 /*carrusel*/
-
 .titulo_centro_educativo{
     font-family: 'Cinzel', serif;
     /* width: 500px; */
@@ -11,9 +10,6 @@
     font-size: 21px;
     margin-bottom: 17px;
     font-family: 'Cinzel', serif;
-
- 
-   
 }
 
 .bloque__carrusel{
@@ -50,9 +46,7 @@
 }
 
 .center .slick-center {
-   
     -webkit-transform: scale(1.30);
- 
     transform: scale(1.30);
   }
 
@@ -60,8 +54,6 @@
     font-family: 'slick';
     font-size: 20px;
     line-height: 1;
-   
-    /* color: white; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #0c2461;
@@ -70,8 +62,8 @@
 
 .slick-track{
     opacity: 1;
-width: 2058px;
-transform: translate3d(-1176px, 0px, 0px);
+    width: 2058px;
+    transform: translate3d(-1176px, 0px, 0px);
 }
 
 
@@ -88,87 +80,37 @@ transform: translate3d(-1176px, 0px, 0px);
 
 /*fin de carrusel*/
 
-.oferta_academica{
+.bloque__descripcion{
     display: table;
 }
 
-.preescolar,
-.primaria,
-.secundaria{
+.bloque__servicios,
+.tabla__oferta
+{
     display: table-cell;
     /* margin-left: 10px; */
-    padding-left: 21px;
+  
+}
+
+
+.oferta__academica{
+    margin-left: 50px;
+}
+
+
+.preescolar,
+.primaria,
+.secundaria {
    
-}
-
-
-.preescolar strong,
-.primaria strong,
-.secundaria strong{
-    
-    -webkit-transition-duration: 0.4s;
-        /* -webkit-box-shadow: 0 0 11px #78909C; */
-        box-shadow: 0 0 11px #78909C;
-}
-.oferta_academica .titulo_oferta{
-    margin-right: 102px;
-    /* height: 153px; */
-    /* text-align: center; */
-    padding: 49px;
-    background: #009432;
-}
-
-
-.bloque_academico{
-    position: relative;
-    width: 850px;
-    display: flow-root;
-    margin: auto;
-    font-family: 'Cinzel', serif; 
-}
-
-.oferta_academica{
-    top: 19px;
-    position: relative;
-    left: 109px;
+    border: 1px solid #2d3436;
+    width: 126px;
+    box-shadow: 0 0 3px #78909C;
+    height: 146px;
+    margin: 7px;
+    padding: 63px 30px;
 
 }
-.titulo_oferta h2{
-    padding: 20px 23px;
-    /* width: 156px; */
-    /* background: #009432; */
-    background: #81C784;
-    color: #fff;
-    font-weight: 700;
-}
 
-.secundaria:hover{
-    border-radius: 20px;
- }
-
-
-.preescolar:hover {
-    border-radius: 20px;
-}
-
-.primaria:hover{
-    border-radius: 20px;
-}
-
-.primaria strong,
-.preescolar strong,
-.secundaria strong {
-    border: 3px solid #FFB74D;
-    margin: 10px;
-
-}
-.secundaria strong{
-   padding: 65px 18px;
-   
-}
-.titulo_oferta{
-    text-align: center;
-}
 .menu__editar-oferta{
     position: relative;
     left: 70%;
@@ -181,15 +123,6 @@ transform: translate3d(-1176px, 0px, 0px);
     text-decoration: none;
 }
 
-.titulo_oferta h2{
-    color: #fff;
-    font-size: 20px;
-}
-
- .preescolar strong,
- .primaria strong {
-    padding: 65px 31px;
-}
 
 
 /*fin oferta academica*/
@@ -215,19 +148,6 @@ transform: translate3d(-1176px, 0px, 0px);
     text-decoration: none;
     color: #17c0eb;
 }
-.bloque__servicios{
-        /* background: #f9f9f9; */
-    /* background: #17c0eb; */
-    /* box-shadow: 0 0 0 17px #17c0eb; */
-    width: 1345px;
-    margin: 50px auto;
- 
-    /* height: 233px; */
-    -webkit-box-shadow: 0 0 11px #78909C;
-    box-shadow: 0 0 11px #78909C;
-    padding: 10px 0px;
-}
-
 
 .bloque__comentarios{
     width: 1345px;
@@ -244,24 +164,33 @@ transform: translate3d(-1176px, 0px, 0px);
        font-size: 21px;
        font-weight: 600;
        margin-top: 0px;
-       margin-bottom: 10px;
      color:#fff;
      margin-bottom: 51px;
      font-size: 29px;
-   
- 
 }
+
 .titulo__comentarios{
-    text-align: center;
-   
+    text-align: center;   
 }
+
+
+.tabla__servicios{
+    width: 573px;
+    border-radius: 22px;
+}
+
+.tabla__oferta,
+.tabla__servicios{
+    background: #f9f9f9;
+}
+
 .titulo__servicios{
     text-align: center;
     margin-bottom: 10px;
     /* margin-top: 92px; */
 
 }
-.titulo__servicios h2{
+.titulo__secundario {
     font-size: 29px;
     /* background: red; */
     width: 457px;
@@ -274,29 +203,34 @@ transform: translate3d(-1176px, 0px, 0px);
 
 .faq{
     font-size: 25px;
-    color:
-    #17c0eb;
-}
-
-.faq:hover{
-background-color:  #17c0eb;
+    color:#fff;
+    background: #17c0eb;
+    padding: 5px;
 border-radius: 20px;
-padding: 5px;
-
-color: #fff;
 }
 
-.servicio span{
-    color: #2d3436;
+.fa-flask,
+.fa-mug-hot,
+.fa-user-nurse,
+.fa-bus,
+.fa-user-friends,
+.fa-futbol,
+.fa-book,
+.fa-music
+{
+    padding: 8px;
+    position: relative;
+    left: 20px;
+ 
 }
-
 
 .servicio {
     border: 1px solid #2d3436;
-    width: 182px;
+    width: 121px;
     box-shadow: 0 0 3px #78909C;
     margin: 8px;
-    display: inline-block;
+    display: inline-block;   
+    border-radius: 12px;
 }
 
 .comentario{
@@ -316,10 +250,8 @@ color: #fff;
     display: inline-block;
     margin: 8px;
 }
-.tabla__servicios{
-    width: 900px;
-    margin: auto;
-}
+
+
 .star-rating a {
     display: inline-block;
     color: #95a5a6;
@@ -339,45 +271,37 @@ color: #fff;
 .servicio:hover{
     box-shadow: 0 0 10px #78909C
 }
-.ser__cafeteria
-{
-padding: 20px 32px;
-}
-.ser__laboratorio {
-    padding: 20px 29px;
-}
 
-.ser__enfermeria {
-padding: 20px 32px;
-}
 
-.ser__transporte{
-padding: 20px 31px;
-}
 
 .ser__transporte,
 .ser__deportes,
-.ser__biblioteca
-{
-
-padding: 20px 30px;
+.ser__biblioteca,
+.ser__musica,
+.ser__estudio,
+.ser__laboratorio,
+.ser__cafeteria,
+.ser__enfermeria{
+    padding: 11px 22px;
+    background: #fff;
 }
 
+.fa-user-friends{
+    position: relative;
+    left: 18px;
+}
+
+.fa-futbol{
+    position: relative;
+    left: 15px;
+}
+
+.fa-music{
+    position: relative;
+    left:8px
+}
 .ser__estudio{
-width: 187px;
-padding: 20px 7px;
-}
-
-.ser__musica{
-    padding: 20px 40px;
-    width: 186px;
-}
-
-
-.tabla__servicios {
-    width: 813px;
-    margin: auto;
-
+    padding: 10px 18px;
 }
 
 /*carrusel noticias*/
@@ -406,4 +330,130 @@ padding: 20px 7px;
     font-family: 'Cinzel', serif; 
   
 
+}
+
+/*
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background: url("http://digital.bnint.com/filelib/s9/photos/white_wood_4500x3000_lo_res.jpg");
+}*/
+
+.carousel {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3,
+#carousel-4:checked ~ .control-4,
+#carousel-5:checked ~ .control-5
+ {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
 }

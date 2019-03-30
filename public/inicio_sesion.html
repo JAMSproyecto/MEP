@@ -8,56 +8,47 @@
     <title>MEP</title>
     <link href="./imgs/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/registro.css">
-    <link rel="stylesheet" href="css/footer.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="css/iniciar_sesion.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
-
-    <header class="header">
-        <div class="header__top"></div>
-        <div class="header__bottom">
-            <div class="columna__izquierda">
+    <main>
+        <section class="bloque__iniciar-sesion">
+            <nav class="imagen__principal">
                 <a href="#">
                     <img src="imgs/logo_mep.png" class="imagen_mep">
                 </a>
-            </div>
-            <div class="columna__derecha">
-                <div class="contenedor">
-                    <nav class="celda">
-                        <button type="button" class="btn" id="btn-sesion">Iniciar Sesión</button>
-                        </a>
-                    </nav>
-                    <form class="celda">
-                        <button type="button" class="btn" id="btn-sesion"><a href="./listar_padres.html">Lista de
-                                Padres</a></button>
-                    </form>
+            </nav>
+
+
+            <form class="formulario_iniciar_sesion">
+                <div>
+                    <h3>Iniciar sesión</h3>
                 </div>
-            </div>
-        </div>
-        </div>
-    </header>
+                <div class="controlador">
+                    <label for="txt_correo">Correo electrónico</label>
+                    <input type="email" id="input_usuario">
+                </div>
+                <div class="controlador">
+                    <label for="txt_contrasenna">Contraseña</label>
+                    <input type="password" id="txt_contrasenna">
+                </div>
+                <div class="controlador">
+                        <button type="button"  class="btn" id="boton_ingresar">Iniciar Sesión</button>
+                    </div>
+                
+            </form>
+            
+        </section>
+d
+    </main>
 
-    <section class="bloque_inicio_sesion">
 
-        <h2>Inicio de Sesión</h2>
 
-        <div class="bloque_registro">
-            <label for="input_usuario">Correo Electrónico</label>
-            <input type="email" id="input_usuario">
-        </div>
 
-        <div class="bloque_registro">
-            <label for="input_contrasenna">Contraseña</label>
-            <input type="email" id="input_contrasenna">
-        </div>
-        <div class="bloque_boton">
-            <button id="boton_ingresar">Iniciar Sesión</button>
-        </div>
-    </section>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
