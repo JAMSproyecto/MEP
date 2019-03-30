@@ -6,12 +6,17 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
     <title>MEP</title>
-    <link href="./imgs/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link href="./css/reset.min.css" rel="stylesheet">
-    <link href="./css/fontawesome/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
     <link href="./css/animate.min.css" rel="stylesheet">
-    <link href="./css/general.css" rel="stylesheet">
+    <link href="./css/general.css" rel="stylesheet" />
+    <link href="./css/footer.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/fontawesome/all.min.css">
     <link rel="stylesheet" href="css/headerCentro.css" />
+    <link rel="stylesheet" href="css/general.css" />
 
 
 </head>
@@ -28,9 +33,9 @@
                     <li> <a class="btn_top notificacioness" href="#">Notificaciones</a></li>
                     <li>
                         <form>
-                                <button class="btn btn--amarillo" id="boton_cerrar">Cerrar sesión</button>
+                            <button class="btn btn--amarillo" id="boton_cerrar">Cerrar sesión</button>
                         </form>
-                       
+
                     </li>
                 </ul>
             </nav>
@@ -48,7 +53,7 @@
 
                             <a class="calificaciones" href="#">Calificaciones</a>
                             <ul>
-                                <li><a href="#">Calificar  centros educativos</a></li>
+                                <li><a href="#">Calificar centros educativos</a></li>
                                 <li><a href="#">Registrar un rubro</a></li>
                                 <li><a href="#">Lista de rubros</a></li>
                                 <li><a href="#"> Ver calificación de centros educativos </a></li>
@@ -95,8 +100,8 @@
                         <span>|</span>
                         <li><a class="utiles" href="#"> Preguntas frecuentes</a>
                             <ul>
-                                <li><a class="subtitulos" href="#">Registrar FAQ</a></li>
-                                <li><a class="subtitulos" href="#">Listar FAQ</a>
+                                <li><a class="subtitulos" href="registrarPreguntaFrecuenteGeneral.html">Registrar FAQ</a></li>
+                                <li><a class="subtitulos" href="listarPreguntasFrecuentesGenerales.html">Listar FAQ</a>
                                     <ul>
                                         <li><a class="subtitulos" href="#">Listar centro educativo</a>
                                     </ul>
@@ -125,26 +130,23 @@
     </header>
 
     <main>
+        <h1 class="titulo__principal">Registrar artículos escolares</h1>
         <section class="bloque__principal">
-            <h1 class="titulo__principal">Registrar Artículos Escolares</h1>
-            <div class="contenedor__articulos">
-                <form class="formulario__articulos">
-                    <div class="datos nombre__articulo">
-                        <label for="txt_nombre">Nombre</label>
-                        <input type="text" id="txt_nombre">
-                    </div>
-                    <div class="datos description__articulo">
-                        <label for="txt_descripcion">Agregar una Descripción</label>
-                        <textarea id="txt_descripcion"></textarea>
-                    </div>
-                </form>
-                <form class=" bloque__boton btn__articulos">
-                    <button type="button" class="btn_articulo boton" id="btn_agregar">Registrar</button>
-                </form>
+            <form class="formulario__articulos">
+                <div class="text_center">
+                    <label for="txt_nombre">Nombre</label>
+                    <input type="text" id="txt_nombre">
+                </div>
+                <div class="text_center">
+                    <label for="txt_descripcion">Agregar una descripción</label>
+                    <textarea id="txt_descripcion"></textarea>
+                </div>
+            </form>
             </div>
-
-
         </section>
+        <form class=" bloque__boton ">
+                <button type="button" class="btn btn--amarillo" id="btn_agregar">Registrar</button>
+            </form>
         <div class="menu__articulo">
             <div class="contenedor__menu">
                 <nav class="regresar regresar__articulo">
