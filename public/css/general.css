@@ -37,7 +37,6 @@ h2 {
 }
 .error_input {
   background-color: rgba(255, 82, 82,0.3);
-  height: 18px;
 }
 
 
@@ -711,10 +710,7 @@ main.formulario textarea:not(.error_input):focus {
 .bloque__principal-utiles{
     margin-top: 0px;
 }
-.error_input {
-  background-color: rgba(255, 82, 82,0.3);
-  height: 18px;
-}
+
 
 .formulario-boton .btn{
     font-weight: 700;
