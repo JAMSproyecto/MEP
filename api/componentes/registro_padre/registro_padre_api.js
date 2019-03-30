@@ -62,7 +62,7 @@ module.exports.registrar_Padre = (req, res) => {
                 res.json(
                     {
                         success: false,
-                        message: `1Ha ocurrido el siguiente error ${error}`
+                        message: `Usuario ya existente, por favor intente otro correo`
                     }
                 )
             } else {
