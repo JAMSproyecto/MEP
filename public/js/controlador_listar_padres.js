@@ -5,9 +5,9 @@ const input_filtrar = document.querySelector('#txt_filtrar');
 
 
 
-let irAlPerfil = (pcorreo) => {
-	localStorage.setItem('adminVerPerfilPadre', pcorreo);
-	alert('Ir al perfil: '+localStorage.getItem('adminVerPerfilPadre'));
+let irAlPerfil = (pId) => {
+    sessionStorage.setItem('idBuscarPadre', pId);
+    window.location.replace("principal_padres.html");
 };
 
 
