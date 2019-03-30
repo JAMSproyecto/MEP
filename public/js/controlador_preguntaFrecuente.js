@@ -54,7 +54,7 @@ let registrar_preguntaFrecuente = () => {
 
 
         post_registrarPreguntaFrecuente(pregunta, respuesta, centroEducativo);
-
+        window.location.replace('./perfilCEdu.html');
 
     }
 };
