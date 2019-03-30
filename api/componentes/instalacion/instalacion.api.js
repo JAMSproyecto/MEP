@@ -5,9 +5,9 @@ const ObtenerFecha = require('./../funciones_genericas/obtenerFecha');
 const ModelBitacora = require('./../bitacora_transaccional/bitacora.model');
 const ModelCEduNiveles = require('./../centro_educativo_niveles/CEduNiveles.model');
 
-const ModelAdmin = require('./../usuarios/admin.model');
 const ModelUsuario = require('./../usuarios/usuario.model');
-const ConfigAdmin = require('./../usuarios/config_usuario_admin') || {};
+const ModelAdmin = require('./../administrador/admin.model');
+const ConfigAdmin = require('./../administrador/config_usuario_admin') || {};
 
 const ArrayNiveles = ['Preescolar', 'Primaria', 'Secundaria', 'Superior'];
 const ArrayCantNiveles = ArrayNiveles.length;

@@ -1,5 +1,7 @@
 'use strict';
 const Mongoose = require('mongoose');
+const AutoIncrementar = require('mongoose-plugin-autoinc');
+const NombreTabla = 'padres_familia_';
 
 let schema_registro_padres = new Mongoose.Schema(
     {
@@ -30,4 +32,11 @@ let schema_registro_padres = new Mongoose.Schema(
     }
 );
 
-module.exports = Mongoose.model('padres_familia_', schema_registro_padres);
+schema_registro_padres.plugin(AutoIncrementar.plugin, {
+    model: NombreTabla,
+    field: '_id',
+    startAt: 1,
+    incrementBy: 1
+});
+
+module.exports = Mongoose.model(NombreTabla, schema_registro_padres);
