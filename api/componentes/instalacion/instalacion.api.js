@@ -4,6 +4,11 @@ const Tiza = require('chalk');
 const ObtenerFecha = require('./../funciones_genericas/obtenerFecha');
 const ModelBitacora = require('./../bitacora_transaccional/bitacora.model');
 const ModelCEduNiveles = require('./../centro_educativo_niveles/CEduNiveles.model');
+
+const ModelAdmin = require('./../usuarios/admin.model');
+const ModelUsuario = require('./../usuarios/usuario.model');
+const ConfigAdmin = require('./../usuarios/config_usuario_admin') || {};
+
 const ArrayNiveles = ['Preescolar', 'Primaria', 'Secundaria', 'Superior'];
 const ArrayCantNiveles = ArrayNiveles.length;
 
@@ -53,6 +58,47 @@ let insertarNiveles = async () => {
     return true;
 };
 
+/**
+ * Función para insertar el usuario administrador
+ * @return {Boolean}
+ */
+let insertarAdministrador = async () => {
+    try {
+        const vFecha = ObtenerFecha.get() || '';
+
+        let admin_nuevo = new ModelAdmin({
+            correo: ConfigAdmin.correo,
+            nombre1: ConfigAdmin.nombre1,
+            nombre2: ConfigAdmin.nombre2,
+            apellido1: ConfigAdmin.apellido1,
+            apellido2: ConfigAdmin.apellido2,
+            telefono: ConfigAdmin.telefono,
+            extension: ConfigAdmin.extension,
+            puesto: ConfigAdmin.puesto
+        });
+        let guardarAdmin = await admin_nuevo.save();
+
+        let registroUsuario = new ModelUsuario();
+        registroUsuario.correo = ConfigAdmin.correo;
+        registroUsuario.pin = 'NULL';
+        registroUsuario.tipo = 'SuperAdmin';
+        registroUsuario.fechaCreado = vFecha;
+        registroUsuario.fechaActualizado = vFecha;
+        registroUsuario.contrasena = ConfigAdmin.contrasena;
+        registroUsuario.activo = true;
+
+        let guardarUsuario = await registroUsuario.save();
+
+
+        console.log(Tiza.bold.white.bgBlack(`Se instaló el usuario administrador`));
+    } catch (err) {
+        console.log(Tiza.bold.yellow.bgBlack(`Error al instalar el usuario administrador:`));
+        console.log(Tiza.bold.yellow.bgBlack(err.message));
+        return false;
+    }
+    return true;
+};
+
 module.exports.instalacion = async (req, res) => {
     if (req === 'RWwgU2XDsW9yIGVzIG1pIGx1eiB5IG1pIHNhbHZhY2nDs24uIChTYWxtbyAyNywxKQ==') {
         try {
@@ -89,11 +135,35 @@ module.exports.instalacion = async (req, res) => {
                 }
             }
 
-            // TODO: Aquí se pone la instalación del usuario administrador.
-            respuesta.push({
-                success: false,
-                message: 'En construcción...'
-            });
+
+            //Instalar el administrador.
+
+            //validamos si ya fué creado:
+            const cantAdmins = await ModelAdmin.find().count();
+
+            if (cantAdmins > 0) {
+                respuesta.push({
+                    success: true,
+                    message: 'El usuario administrador ya se encuentra instalado'
+                });
+            } else {
+                const ResultadoAdmin = await insertarAdministrador();
+                if (ResultadoAdmin === true) {
+                    respuesta.push({
+                        success: true,
+                        message: 'El usuario administrador se instaló correctamente'
+                    });
+                } else {
+                    respuesta.push({
+                        success: false,
+                        message: 'Ocurrió un error al instalar el usuario administrador'
+                    });
+                }
+            }
+
+
+            // TODO: Aquí se pone la siguiente instalación.
+
 
             // Respuesta final:
             res.json({
