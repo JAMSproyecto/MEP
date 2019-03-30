@@ -1,0 +1,89 @@
+
+main {
+    margin: 135px 30px 30px 30px;
+    padding: 5px 20px;
+    border-radius: 4px;
+	background: #f5f6fa;
+	-webkit-box-shadow: 0 0 11px #78909C;
+    box-shadow: 0 0 11px #78909C;
+}
+
+
+main section {
+    display: flow-root;
+    padding-bottom: 45px;
+}
+
+main section .datos_izq,
+main section .datos_der {
+    display: inline-block;
+    margin: 0 auto;
+    width: 48%;
+}
+
+main section .datos_izq {
+    float: left;
+}
+
+main section .datos_der {
+    float: right;
+}
+
+main section .datos_izq input,
+main section .datos_izq fieldset,
+main section .datos_izq select,
+main section .datos_izq textarea,
+main section .datos_der input,
+main section .datos_der fieldset,
+main section .datos_der select,
+main section .datos_der textarea {
+    max-width: 340px;
+    margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+
+main input[type="file"],
+main input[type="text"],
+main input[type="password"],
+main input[type="email"],
+main input[type="url"],
+main input[type="date"],
+main input[type="month"],
+main input[type="time"],
+main input[type="datetime"],
+main input[type="datetime-local"],
+main input[type="week"],
+main input[type="number"],
+main input[type="search"],
+main input[type="tel"],
+main select,
+main textarea {
+    max-width: 340px;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    main section .datos_izq,
+    main section .datos_der {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 991.98px) {
+    main {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    main {
+        margin-top: 70px;
+    }
+}
+
+
