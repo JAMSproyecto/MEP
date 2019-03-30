@@ -62,7 +62,7 @@ module.exports.registrar_Padre = (req, res) => {
                 res.json(
                     {
                         success: false,
-                        message: `1Ha ocurrido el siguiente error ${error}`
+                        message: `Usuario ya existente, por favor intente otro correo`
                     }
                 )
             } else {
@@ -81,10 +81,56 @@ module.exports.registrar_Padre = (req, res) => {
                                 from: 'soporte.mep.costarica@gmail.com',
                                 to: registro_Padre.correo,
                                 subject: 'Verificación de correo electrónico',
-                                html: `<h1 style="color:#227093;">Saludos ${ registro_Padre.nombre} </h1>
-                                <p>Gracias por registrarse en nuestra aplicación</p>
-                                <p>Por favor verifique el siguiente pin de validación</p>
-                                <p>${Pin_Obtenido} </p>
+                                html: `<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="referrer" content="never"><meta type="xrm/designer/setting" name="type" value="marketing-designer-content-editor-document"><meta type="xrm/designer/setting" name="font-family" value="Verdana, Arial, sans-serif" datatype="font" label="Font Family"><meta type="xrm/designer/setting" name="body-text-size" value="14px" datatype="text" label="Body Font Size"><meta type="xrm/designer/setting" name="body-text-color" value="#000000" datatype="color" label="Body Text Color"><style>body {font-family: /* @font-family */Verdana, /* @font-family */Arial, /* @font-family */sans-serif/* @font-family */;font-size: /* @body-text-size */14px/* @body-text-size */;color: /* @body-text-color */ #000000 /* @body-text-color */;}</style></head>
+                                
+                                <body><div class="wrapperContainer" data-container="true"> <div data-editorblocktype="Image"><div class="imageWrapper"><img src="./public/imgs/logo_MEP"></div>
+                                </div><div data-editorblocktype="Divider"><div class="dividerWrapper" align="center">
+                                <table aria-role="presentation" style="padding: 0px; margin: 0px; width: 100%">
+                                    <tbody>
+                                        <tr style="padding: 0px;">
+                                            <td style="margin:0px; padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 5px; vertical-align:top;">
+                                            <p style="margin: 0px; padding: 0px; border-bottom: 3px solid rgb(0, 128, 255); line-height: 0px; width: 100%;"><span>&nbsp;</span></p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                                
+                                </div><div data-editorblocktype="Text"><p><strong><span style="font-size:18px;">Bienvenido al sistema ${registro_Padre.nombre},</span></strong></p>
+                                
+                                <p></p>
+                                
+                                
+                                
+                                
+                                
+                                
+                                </div><div data-editorblocktype="Text"><p>Se ha registrado tu perfil de manera correcta en nuestra aplicación.</p>
+                                
+                                <p></p>
+                                </div><div data-editorblocktype="Text"><p>Por favor ingrese el siguiente pin de validación en la sección de validación de credenciales, puede ingresar siguiendo este link.</p>
+                                
+                                <p></p>
+                                </div><div data-editorblocktype="Text"><p>Su pin de validación es: ${Pin_Obtenido}</p>
+                                
+                                <p></p>
+                                </div><div data-editorblocktype="Divider"><div class="dividerWrapper" align="center">
+                                <table aria-role="presentation" style="padding: 0px; margin: 0px; width: 100%">
+                                    <tbody>
+                                        <tr style="padding: 0px;">
+                                            <td style="margin:0px; padding-left: 0px; padding-right: 0px; padding-top: 5px; padding-bottom: 5px; vertical-align:top;">
+                                            <p style="margin: 0px; padding: 0px; border-bottom: 3px solid rgb(0, 128, 255); line-height: 0px; width: 100%;"><span>&nbsp;</span></p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                                </div><div data-editorblocktype="Image"><div class="imageWrapper"><img src="">
+                                
+                                </div>
+                                
+                                
+                                </div></div></body> </p>
                                 `
                             };
                             transporter.sendMail(mailOptions, function (error, info) {
