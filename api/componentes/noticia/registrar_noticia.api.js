@@ -6,6 +6,7 @@ const model_registrar_noticia = require('./registrar_noticia.model');
 module.exports.registrar_noticia = (req, res) =>{
     let noticia_nueva = new model_registrar_noticia(
         {
+            idCentro : req.body.idCentro,
             tema : req.body.tema,
             noticia: req.body.noticia,
             autor : req.body.autor,
@@ -41,7 +42,8 @@ module.exports.registrar_noticia = (req, res) =>{
 
 
 module.exports.listar_todas_noticias = (req ,res) =>{
-    model_registrar_noticia.find().then(
+    const filtros = {idCentro: req.body.idCentro};
+    model_registrar_noticia.find(filtros).then(
         function(noticias){
             if(noticias.length > 0){
                 res.json(

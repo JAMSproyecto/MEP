@@ -79,7 +79,7 @@ let mostrar_datos = () => {
               let fecha = input_fecha.value;
               let informacion= input_informacion.value;
         
-              registrar_noticia(tema,noticia, autor, fecha, informacion )
+              registrar_noticia(tema,noticia, autor, fecha, informacion );
     }
 
 
