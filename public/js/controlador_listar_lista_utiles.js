@@ -18,8 +18,9 @@ function seleccionar_lista(){
 
 
 let mostrar_datos = () =>{
-    let lista_utiles = obtener_lista_utiles();
-   
+    let response = obtener_lista_utiles();
+   let lista_utiles = response.coleccion_utiles;
+   let nombre = response.nombreCentro;
 
     for (let i= 0; i < lista_utiles.length; i++) {
        let fila = tabla.insertRow();
@@ -42,7 +43,7 @@ let mostrar_datos = () =>{
        fila.insertCell().innerHTML = lista_utiles[i]["tipo"];
        fila.insertCell().innerHTML = lista_utiles[i]["nombre"];
        fila.insertCell().innerHTML = lista_utiles[i]["anno"];  
-       fila.insertCell().innerHTML = lista_utiles[i]["_id"]; 
+       fila.insertCell().innerHTML = nombre; 
        fila.insertCell().appendChild(boton_ver); 
        fila.insertCell().appendChild(boton_agregar);
 
