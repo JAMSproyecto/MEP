@@ -27,9 +27,34 @@ let obtener_Datos = () => {
     if (!errorBlancos) {
         let usuarioAceptado = validar_credenciales(usuario, codificar(contrasenna));
         if (usuarioAceptado) {
-            window.location.href = 'principal_padres.html';
+
+            const tipoUsuario = sessionStorage.getItem('tipoUsuario');
+
+            if ('undefined' !== typeof tipoUsuario && null !== tipoUsuario) {
+                switch (tipoUsuario.toLowerCase()) {
+                    case 'superadmin' :
+                        window.location.replace('principal_admin.html');
+                        break;
+                    case 'centroeducativo' :
+                        window.location.replace('principal_centro.html');
+                        break;
+                    case 'padrefamilia' :
+                        window.location.replace('principal_padres.html');
+                        break;
+                    default :
+                        mostrarAlerta('Tipo de usuario desconocido');
+                        sessionStorage.clear();
+                        window.location.replace('inicio_sesion.html');
+                        break;
+                }
+            } else {
+                mostrarAlerta('Error de sesión');
+                sessionStorage.clear();
+                window.location.replace('inicio_sesion.html');
+            }
+
         } else {
-            mostrarAlerta('Usuario o contraseña invalida');
+            mostrarAlerta('El nombre de usuario o la contraseña son incorrectos');
         }
     } else {
         mostrarAlerta('Por favor ingrese el usuario y la contraseña');
