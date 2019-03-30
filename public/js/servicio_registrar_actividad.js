@@ -54,12 +54,10 @@ let registrar_actividad = (pactividad, pfecha, phora_inicio, pfinaliza, pcosto,
 
 let listar_todas_actividades = () => {
     let actividades_arreglo = [];
-
+    let idCentro = sessionStorage.getItem('id');
     let request = $.ajax({
-        url: "http://localhost:4000/api/listar_todas_actividades",
+        url: "http://localhost:4000/api/listar_todas_actividades/" + idCentro,
         method: "GET",
-        data: {
-        },
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
         async: false
