@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="css/fontawesome/all.min.css">
     <link rel="stylesheet" href="css/headerCentro.css" />
+    <link rel="stylesheet" href="css/tablas.css" />
+    <link rel="stylesheet" href="css/general.css" />
 
 </head>
 
@@ -86,36 +88,41 @@
         </div>
     </header>
     <main>
-        <input type="text" id="txt_filtrar">
-        <table id="tbl_listar_noticia">
-            <thead>
-                <tr>
-                    <th>Tema de la noticia</th>
-                    <th>Título de la noticia</th>
-                    <th>Autor</th>
-                    <th>Fecha</th>
-                    <th>Información</th>
+        <section>
+            <h1 class="titulo__principal">Lista de actividades</h1>
+            <div class="wrapper">
+                <div class="bloque__filtro">
+                    <input type="text" id="txt_filtrar">
+                </div>
+                <table id="tbl_listar_noticia">
+                <thead>
+                    <tr>
+                        <th>Tema de la noticia</th>
+                        <th>Título de la noticia</th>
+                        <th>Autor</th>
+                        <th>Fecha</th>
+                        <th>Información</th>
 
-                </tr>
+                    </tr>
 
 
-            </thead>
-            <tbody>
+                </thead>
+                <tbody>
 
 
-            </tbody>
-        </table>
+                </tbody>
+                </table>
 
     </main>
 
 
-   
+
 
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="./js/servicio_registrar_noticia.js"></script>
+<script src="./js/servicio_registrar_noticia.js"></script>
 <script src="./js/controlador_listar_noticia.js"></script>
 
 
