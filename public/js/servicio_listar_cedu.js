@@ -33,9 +33,9 @@ let listarCEdu = (pCallback) => {
         }
     }).fail((jqXHR, textStatus) => {
 
-        const elError = 'No se pudo obtener la lista de centros educativos';
+        const elError = 'Error listarCEdu: ' + jqXHR.statusText + ' [' + jqXHR.status + ']  -  ' + jqXHR.responseText;
 
-        console.error(elError);
+        console.log(elError);
 
         //Verificamos que pCallback sea una función
         if ('function' == typeof (pCallback)) {

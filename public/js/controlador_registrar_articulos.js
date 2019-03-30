@@ -31,8 +31,7 @@ let obtener_datos = () => {
         let nombre = input_nombre.value;
         let descripcion = input_descripcion.value;
         registrar_articulo(nombre, descripcion);
-        input_nombre.value = '';
-        input_descripcion.value = '';
+       
     } else {
         swal.fire({
             type: 'warning',

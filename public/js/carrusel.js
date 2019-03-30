@@ -8,9 +8,11 @@ $('.your-class').slick({
 
 
   $('.noticias').slick({
-    slidesToShow: 4, 
+    centerPadding: '60px',
  
     centerMode: true,
     centerPadding: '60px',
-    slidesToShow: 3
+    slidesToShow: 3,
+    autoplay: true,
+    autoplaySpeed: 9000,
   });

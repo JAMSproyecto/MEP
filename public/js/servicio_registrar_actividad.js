@@ -24,16 +24,19 @@ let registrar_actividad = (pactividad, pfecha, phora_inicio, pfinaliza, pcosto,
         if (msg.success) {
             swal.fire({
                 type: 'success',
-                title: 'los datos fueron guardados exitosamente',
-                text: ' nos comunicaremos con usted'
+                title: 'Los datos fueron guardados exitosamente',
+                text: ' Nos comunicaremos con usted',
+                onAfterClose: function () {
+                    window.location.replace('./listar_actividad.html');
+                  }
             });
-
+         
         }
         else {
             swal.fire({
                 type: 'error',
-                title: 'los datos no se guardados',
-                text: ' error'
+                title: 'Los datos no se guardados',
+                text: 'Error al registrar'
             });
 
         }

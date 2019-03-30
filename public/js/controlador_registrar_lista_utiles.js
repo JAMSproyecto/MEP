@@ -35,8 +35,6 @@ let validar = () => {
     return error;
 };
 
-
-
 let obtener_datos = () =>{
     if (validar() == false) {
         let tipo = input_tipo.value;
@@ -54,27 +52,3 @@ let obtener_datos = () =>{
 };
 
 boton_crear.addEventListener('click', obtener_datos );
-
-window.onload = () => {
-    sessionStorage.setItem('tipoUsuario', 'CentroEducativo');
-
-    let tipoUsuario = sessionStorage.getItem('tipoUsuario');
-
-    if (null !== tipoUsuario) {
-        console.log('tipoUsuario', tipoUsuario);
-            if (tipoUsuario === 'SuperAdmin') {
-                
-                input_tipo.innerHTML = '<option value="">Seleccione el tipo de lista</option><option value="MEP">MEP</option><option value="centro_educativo">Centro Educativo</option>';
-                input_tipo.selectedIndex=1;
-            input_tipo.disabled = true;
-            }
-           if (tipoUsuario === 'CentroEducativo') {
-                
-            input_tipo.innerHTML = '<option value="">Seleccione el tipo de lista</option><option value="centro_educativo">Centro Educativo</option>';
-            input_tipo.selectedIndex=1;
-            input_tipo.disabled = true;
-        }
-    }else{
-        console.error('No se encontró el tipo de usuario');
-    }
-};
