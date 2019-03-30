@@ -1,7 +1,7 @@
 'use strict';
 
 const Input_Usuario = document.querySelector('#input_usuario');
-const Input_Contrasenna = document.querySelector('#input_contrasenna');
+const Input_Contrasenna = document.querySelector('#txt_contrasenna');
 const Boton_Ingresar = document.querySelector('#boton_ingresar');
 
 let mostrarAlerta = (mensaje) => {
@@ -48,9 +48,9 @@ let validar = (pusuario, pcontrasenna) => {
 
     if (pcontrasenna == '') {
         error = true;
-        input_contrasenna.classList.add('error_input');
+        txt_contrasenna.classList.add('error_input');
     } else {
-        input_contrasenna.classList.remove('error_input');
+        txt_contrasenna.classList.remove('error_input');
     }
 
     return error;

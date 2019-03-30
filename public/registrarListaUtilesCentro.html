@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
     <title>MEP</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="imgs/favicon.ico">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="css/fontawesome/all.min.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="./css/tablas.css">
     <link rel="stylesheet" href="css/headerCentro.css" />
-    <link rel="stylesheet" href="css/general.css" />
-
-
-
-
-
+    <link rel="stylesheet" href="./css/general.css" />
+    
 </head>
-
 <body>
     <header>
         <div class="column__arriba">
@@ -94,44 +90,55 @@
         </div>
     </header>
     <main>
-        <section>
-            <h1 class="titulo__principal">Lista de actividades</h1>
-            <div class="wrapper">
-                <div class="bloque__filtro">
-                    <label for="txt_filtrar">Filtrar</label>
-                    <input type="text" id="txt_filtrar">
+            <h1 class="titulo__principal">Crear lista de útiles</h1>
+            <section class="bloque__principal  bloque__principal-utiles">
+                <form class="formulario_lista_utiles">
+                    <div class="text_center">
+                        <label for="txt_tipo">Tipo</label>
+                        <select id="txt_tipo">
+                            <option value="">Seleccione el tipo de lista</option>
+                            <option value="MEP">MEP</option>
+                            <option value="centro_educativo">Centro Educativo</option>
+                        </select>
+                    </div>
+                    <div class="text_center">
+                        <label for="txt_nombre">Nombre</label>
+                        <input type="text" id="txt_nombre">
+                    </div>
+                    <div class="text_center">
+                        <label for="txt_anno">Año</label>
+                        <input type="text" id="txt_anno">
+                    </div>
+                </form>
+            </section>
+            <form class="formulario-boton">
+                <button type="button" class="btn btn--amarillo" id="btn_agregar">Registrar</button>
+            </form>
+            <div class="menu menu__registrar-utiles">
+                <div class="contenedor__menu">
+                    <nav class=" regresar regresar__registrar-articulo">
+                        <a href="">
+                            <i class="fas fa fars fa-arrow-circle-left"></i>
+                            <p>Lista de útiles</p>
+                        </a>
+                    </nav>
+                    <nav class="avanzar avanzar__lista-utiles">
+                        <a href="#">
+                            <i class="fas fag fa-arrow-circle-right"></i>
+                            <p>Reportes</p>
+                        </a>
 
+                    </nav>
                 </div>
-                <table id="tbl_listar_actividad">
-                    <thead>
-                        <tr>
-                            <th>Actividad</th>
-                            <th>Fecha</th>
-                            <th>Hora Inicio</th>
-                            <th>Hora Final</th>
-                            <th>Costo</th>
-                            <th>Lugar</th>
-                            <th>Finalidad</th>
-                            <th>Detalles</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
             </div>
-        </section>
-    </main>
+        </main>
 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="js/servicio_lista_utiles.js"></script>
+        <script src="js/controlador_registrar_lista_utiles.js"></script>
 
-
-
-</body>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="js/servicio_registrar_actividad.js"></script>
-<script src="js/controlador_listar_actividad.js"></script>
-
-
+    </body>
 
 </html>

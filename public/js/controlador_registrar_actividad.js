@@ -7,7 +7,7 @@ const input_costo = document.querySelector('#txt_costo');
 const input_lugar = document.querySelector('#txt_lugar');
 const input_finalidad = document.querySelector('#txt_finalidad');
 const input_detalles = document.querySelector('#txt_detalles');
-const boton_enviar = document.querySelector('#btn_enviar');
+const boton_enviar = document.querySelector('#btn_agregar');
    
 
 
