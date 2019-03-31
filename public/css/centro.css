@@ -374,10 +374,12 @@ font-size: 30px;
     width: 920px;
     margin: 20px auto;
 }
-.fc-button{
-    background-color: #17C0EB;
-    box-shadow: 0 0 10px #78909C;
+button.fc-button{
+    background: #17C0EB !important;
+    box-shadow: 0 0 10px #78909C !important;
+    min-width: none;
+    min-height: none;
 }
 .fc-day-header{
-    text-transform: capitalize;
+    text-transform: capitalize !important;
 }
