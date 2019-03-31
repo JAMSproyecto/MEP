@@ -24,9 +24,6 @@ let mostrar_datos = () =>{
         fila.insertCell().innerHTML = noticias[i]['fecha'];
         fila.insertCell().innerHTML = noticias[i]['informacion'];
 
-
-     
-
     }
     
 
