@@ -2,8 +2,8 @@
 
 
 const Tabla_PreguntaFrecuente = document.querySelector('#tbl_preguntasFrecuentes tbody');
-const Slt_Filtros = document.querySelector('#txt_filtro');
-const Id_Centro = document.querySelector('#centro');
+const Slt_Filtros = document.querySelector('#txt_filtrar');
+const Id_Centro = sessionStorage.getItem("id");
 /*
     Eventos
  */
