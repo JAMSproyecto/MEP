@@ -41,6 +41,7 @@ module.exports.obtener_todos = (req, res) =>{
     model_utiles.find({codigo : req.body.codigo}).then(
         function (utiles){
             const cantidad = Object.keys(utiles).length;
+            
             if (cantidad > 0) {
                 model_cedu.findOne({ _id: utiles[0].codigo}).then(
                     (centro) =>{
