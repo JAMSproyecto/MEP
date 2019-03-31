@@ -23,7 +23,9 @@ let registrar_noticia = (pidCentro, ptema, pnoticia, pautor, pfecha,
             swal.fire({
                 type: 'success',
                 title: 'La noticia fue registrada exitosamente',
- 
+                onAfterClose: function () {
+                    window.location.replace('./listar_noticia.html');
+                  }
             });
 
         }
