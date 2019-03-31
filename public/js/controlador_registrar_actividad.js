@@ -1,4 +1,5 @@
 'use strict';
+
 const input_actividad = document.querySelector('#txt_actividad');
 const input_fecha = document.querySelector('#txt_fecha');
 const input_hora_inicio = document.querySelector('#txt_hora_inicio');
@@ -14,34 +15,34 @@ const boton_enviar = document.querySelector('#btn_agregar');
 let validar = () => {
 
     let error = false;
-
-    if (input_actividad.value.trim() == '') {
-        input_actividad.classList.add('error_input');
+    if (input_actividad.value == '') {
         error = true;
+        input_actividad.classList.add('error_input');
     } else {
         input_actividad.classList.remove('error_input');
 
     }
+    
 
-
-    if (input_fecha.value.trim() == '') {
-        input_fecha.classList.add('error_input');
+    if (input_fecha.value == '') {
         error = true;
+        input_fecha.classList.add('error_input');
     } else {
         input_fecha.classList.remove('error_input');
+
     }
 
 
-    if (input_hora_inicio.value.trim() == '') {
-        input_hora_inicio.classList.add('error_input');
+    if (input_hora_inicio.value == '') {
         error = true;
+        input_hora_inicio.classList.add('error_input');
     } else {
         input_hora_inicio.classList.remove('error_input');
 
     }
 
 
-    if (input_finaliza.value.trim() == '') {
+    if (input_finaliza.value == '') {
         input_finaliza.classList.add('error_input');
         error = true;
     } else {
@@ -50,7 +51,7 @@ let validar = () => {
     }
 
 
-    if (input_costo.value.trim() == '') {
+    if (input_costo.value == '') {
         input_costo.classList.add('error_input');
         error = true;
     } else {
@@ -59,32 +60,32 @@ let validar = () => {
     }
 
 
-    if (input_lugar.value.trim() == '') {
+    if (input_lugar.value == '') {
         input_lugar.classList.add('error_input');
         error = true;
     } else {
         input_lugar.classList.remove('error_input');
     }
 
-    if (input_finalidad.value.trim() == '') {
-        input_finalidad.classList.add('error_input');
+    if (input_finalidad.value == '') {
         error = true;
+        input_finalidad.classList.add('error_input');
     } else {
         input_finalidad.classList.remove('error_input');
     }
 
 
-    if (input_detalles.value.trim() == '') {
-        input_detalles.classList.add('error_input');
+    if (input_detalles.value == '') {
         error = true;
+        input_detalles.classList.add('error_input');
     } else {
         input_detalles.classList.remove('error_input');
     }
     return error;
 };
 
-let mostrar_datos = () => {
 
+let mostrar_datos = () => {
 
     if (validar() == true) {
         Swal.fire({
