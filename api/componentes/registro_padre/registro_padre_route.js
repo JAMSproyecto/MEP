@@ -3,8 +3,8 @@ const express = require('express');
 const router = express.Router();
 const registro_Padre_Api = require('./registro_padre_api');
 
-router.param('correo', function(req,res, next, correo){
-    req.body.correo = correo;
+router.param('idPadre', function(req,res, next, pIdPadre){
+    req.body.idPadre = pIdPadre;
 
     next();
     }
@@ -27,7 +27,7 @@ router.route('/listar_Padres')
 
 
 
-    router.route('/buscar_padre/:correo')
+    router.route('/buscar_padre/:idPadre')
     .get(
         function (req, res) {
             registro_Padre_Api.buscar_padre(req, res);

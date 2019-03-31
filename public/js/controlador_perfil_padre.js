@@ -8,7 +8,7 @@ const provincia_padre = document.querySelector('#provincia_padre');
 const canton_padre = document.querySelector('#canton_padre');
 const distrito_padre = document.querySelector('#distrito_padre');
 
-let id_padre = sessionStorage.getItem('correo');
+let id_padre = sessionStorage.getItem('idBuscarPadre');
 
 let infoPadre = buscar_padre(id_padre);
 if(infoPadre && Object.keys(infoPadre).length > 0){

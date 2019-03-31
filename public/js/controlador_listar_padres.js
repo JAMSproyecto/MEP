@@ -4,7 +4,16 @@ const tabla = document.querySelector('#tabla_padres_registrados tbody');
 const input_filtrar = document.querySelector('#txt_filtrar');
 
 
+
+let irAlPerfil = (pId) => {
+    sessionStorage.setItem('idBuscarPadre', pId);
+    window.location.replace("principal_padres.html");
+};
+
+
 let padresFamilia = listar_padres();
+
+
 
 let mostrar_datos = () => {
     let filtros = input_filtrar.value;
@@ -22,6 +31,7 @@ let mostrar_datos = () => {
             fila.insertCell().innerHTML = padresFamilia[i]['correo'];
             fila.insertCell().innerHTML = padresFamilia[i]['provincia'];
             fila.insertCell().innerHTML = padresFamilia[i]['canton'];
+            fila.insertCell().innerHTML = '<button onClick="irAlPerfil('+padresFamilia[i]['_id']+'); return false;">Ver más</button>';
         }
     }
 };

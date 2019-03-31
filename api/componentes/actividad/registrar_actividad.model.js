@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 let schema_actividad = new mongoose.Schema(
     {
+        idCentro: {type: Number, ref: 'centro_educativo_', required: true},
         actividad : {type : String, required : true},
         fecha : {type : String, required: true},
         hora_inicio : {type: String, required: true},
