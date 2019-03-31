@@ -29,3 +29,22 @@ module.exports.obtener_todos_bitacora = async (req, res) => {
         });
     }
 };
+
+module.exports.registrar_bitacora = (pAccion, pActor, pFecha) =>{
+    let registro = new ModelBitacora({
+        accion: pAccion,
+        realizadaPor: pActor,
+        fecha: pFecha
+    });
+
+    registro.save((error)=>{
+        if(error){
+            return false;
+            console.log("Error al registrar bitácora");
+        }
+        else{
+            return true;
+            console.log("Éxito al registrar en bitácora");
+        }
+    });
+};

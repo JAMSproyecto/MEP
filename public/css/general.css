@@ -1696,13 +1696,6 @@ margin-bottom: 0px;
 
 
 
-.formulario-cita .error_input, 
-.columna__contenedor .error_input,
-.datos__generales .erros_input {
-    border: 1px solid red;
-}
-
-
 /*meus de regresar o avanzar*/
 
 .avanzar{

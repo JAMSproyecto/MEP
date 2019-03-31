@@ -20,11 +20,12 @@
         <div class="header__top">
             <nav class="menu_top">
                 <ul>
-				    <li>
-				        <a id="lblNombreUsuario" href="javascript:void(0);"></a>
-				    </li>
                     <li>
-                        <a id="boton_cerrar" class="btn btn--amarillo" href="javascript:void(0);">Cerrar sesi&oacute;n</a>
+                        <a id="lblNombreUsuario" href="javascript:void(0);"></a>
+                    </li>
+                    <li>
+                        <a id="boton_cerrar" class="btn btn--amarillo" href="javascript:void(0);">Cerrar
+                            sesi&oacute;n</a>
                     </li>
                 </ul>
             </nav>
@@ -57,7 +58,9 @@
         </div>
     </header>
     <main>
+
         <section class="lista_centros">
+
             <div class=" grey centros">
                 <h2>Datos Personales</h2>
                 <div class="bloque_izquierdo">
@@ -88,6 +91,34 @@
                 </div>
             </div>
 
+        </section>
+        <section>
+
+            <div class=" grey centros">
+                <strong>Lista de centros educativos</strong>
+                <div class="tabla__responsive">
+                    <table class="tabla tabla__rayada" id="tblCentrosEducativos">
+                        <thead class="cabecera--celeste">
+                            <tr>
+                                <th>Foto</th>
+                                <th>Nombre</th>
+                                <th>Provincia</th>
+                                <th>Cantón</th>
+                                <th>Distrito</th>
+                                <th>Dirección</th>
+                                <th>Calificación</th>
+                                <th>Calificación MEP</th>
+                                <th>Perfil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                </div>
+            </div>
+        </section>
+
+        <section>
             <div class="grey atrasados">
                 <strong>Lista de favoritos</strong>
                 <table id="tbl_centro">
@@ -105,7 +136,9 @@
                     </tbody>
                 </table>
             </div>
+
         </section>
+
         <footer>
             <div class="footer__cuerpo">
                 <div class="footer__flex">
@@ -163,7 +196,7 @@
                     </section>
                     <section class="footer__inferior__seccion footer__flex">
                         <div class="footer__inferior__envoltura">
-                            <i class="fa fa-copyright"></i> 2019 
+                            <i class="fa fa-copyright"></i> 2019
                             <address class="footer__direccion__compania">JAMS</address>
                             <span class="footer__inferior__derechos"> - Todos los derechos reservados </span>
                         </div>
@@ -184,5 +217,12 @@
 <script src="js/servicio_perfil_padres.js"></script>
 <script src="js/controlador_perfil_padre.js"></script>
 <script src="js/controlador_cerrar_sesion.js"></script>
+
+<script src="./js/general.js"></script>
+
+<script src="./js/direccionUbicacion/provinciaCantonDistrito.js"></script>
+<script src="./js/direccionUbicacion/controladorListar.js"></script>
+<script src="./js/servicio_listar_cedu.js"></script>
+<script src="./js/controlador_listar_cedu.js"></script>
 
 </html>

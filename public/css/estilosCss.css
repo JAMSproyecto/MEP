@@ -138,3 +138,15 @@ body{
     margin-top: 12px;
     
 }
+
+.tbl_centro_edu{
+    margin-top: 37px;
+ 
+    width: 947px;
+    /* border: 3px solid #fff; */
+    background: #03A9F4;
+    padding: 7px;
+    color: #fff;
+    /* margin: 13px; */
+    width: 100px;
+}

@@ -129,6 +129,17 @@ module.exports.obtener_todos_centro_educativo = async (req, res) => {
         });
     }
 };
-
-
+/**
+ * titulo_centro_educativo
+ * tabla__servicios
+ */
+module.exports.obtener_centroEducativo = (req, res) =>{
+    ModelRegistrarCEdu.findById(req.body.id).then(
+        (centro)=>{
+            res.json({
+                success: true,
+                centro: centro
+            });
+    });
+}
 
