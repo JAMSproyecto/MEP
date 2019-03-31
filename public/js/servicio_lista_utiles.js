@@ -64,6 +64,7 @@ let obtener_lista_utiles = () => {
 
 };
 
+
 let agregar_articulo = (pid_lista, pcodigo_articulo, pcantidad) => {
 
   let request = $.ajax({
