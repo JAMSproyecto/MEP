@@ -369,3 +369,15 @@ font-size: 30px;
     font-weight: 700;
     text-transform: capitalize;
 }
+
+#calendario{
+    width: 920px;
+    margin: 20px auto;
+}
+.fc-button{
+    background-color: #17C0EB;
+    box-shadow: 0 0 10px #78909C;
+}
+.fc-day-header{
+    text-transform: capitalize;
+}

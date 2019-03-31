@@ -21,6 +21,8 @@ let calendario = new FullCalendar.Calendar(calendarioEl,{
         day: 'Día',
         list: 'Lista'
     },
+    height: 400,
+    locale: 'es',
     events: eventos
 });
 calendario.render();
