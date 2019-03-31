@@ -2,8 +2,8 @@
 
 
 const Tabla_PreguntaFrecuente = document.querySelector('#tbl_preguntasFrecuentes tbody');
-const Slt_Filtros = document.querySelector('#txt_filtro');
-const Id_Centro = document.querySelector('#centro');
+const Slt_Filtros = document.querySelector('#txt_filtrar');
+const Id_Centro = sessionStorage.getItem("id");
 /*
     Eventos
  */
@@ -26,7 +26,6 @@ let filtrarPreguntas = () =>{
 
 window.addEventListener('load', () => {
 
-    /** Metodo listar_mascotas definido en el servicio_mascotas */
     get_ListarPreguntasFrecuentesGenerales(Tabla_PreguntaFrecuente);
     Slt_Filtros.addEventListener('keyup', filtrarPreguntas);
     Slt_Filtros.addEventListener('blur', filtrarPreguntas);

@@ -2,10 +2,10 @@
 'use strict';
 
 
-let buscar_padre = (pcorreo) => {
+let buscar_padre = (pIdPadre) => {
   let buscar_info_padre = [];
   let request = $.ajax({
-    url: "http://localhost:4000/api/buscar_padre/" + pcorreo,
+    url: "http://localhost:4000/api/buscar_padre/" + pIdPadre,
     method: 'GET',
     contentType: "application/x-www-form-urlencoded; charset=utf-8",
     async: false

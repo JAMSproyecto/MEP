@@ -169,7 +169,7 @@ module.exports.listar_Padres = (req, res) => {
                 res.json(
                     {
                         success: false,
-                        data: 'Data not found'
+                        data: 'Datos no encontrados'
                     }
                 )
             }
@@ -178,8 +178,8 @@ module.exports.listar_Padres = (req, res) => {
 };
 
 module.exports.buscar_padre = function (req, res) {
-    const filtros = { correo: req.body.correo };
-
+    const filtros = { _id: req.body.idPadre };
+console.log(filtros);
     Model_Registro_Padre.findOne(filtros).then(
         function (usuarioPadre) {
             if (usuarioPadre) {
