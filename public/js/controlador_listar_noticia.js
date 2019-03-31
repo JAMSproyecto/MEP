@@ -4,8 +4,8 @@
 const tabla = document.querySelector('#tbl_listar_noticia tbody');
 const input_filtrar = document.querySelector('#txt_filtrar');
 
-
-const noticias = listar_todas_noticias();
+let idCentro = sessionStorage.getItem('id');
+const noticias = listar_todas_noticias(idCentro);
 
 let mostrar_datos = () =>{
     
