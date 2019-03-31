@@ -59,12 +59,14 @@ footer .footer__lista__top {
 
 footer .footer__lista__top > li {
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 3px;
 }
 
 footer .footer__lista__header {
-    padding: 10px 0 5px 0;
-    font: 2.3vw "Oswald", sans-serif;
+    padding: 2px 0 0 0;
+    font: 1.9vw "Oswald", sans-serif;
+    margin-top: 0;
+	margin-bottom: 2px;
 }
 
 footer .footer__ancla__lista {
@@ -76,7 +78,7 @@ footer .footer__social__seccion {
     align-items: center;
     justify-content: space-around;
     position: relative;
-    margin-top: 5px;
+    margin-top: 0;
 }
 
 footer .footer__social__seccion::after {
@@ -98,7 +100,8 @@ footer .footer__social__traslapar {
 footer .footer__social__conectate {
     display: flex;
     align-items: center;
-    font: 3.5em "Oswald", sans-serif;
+    font: 2.5em "Oswald", sans-serif;
+    height: 39px;
 }
 
 footer .footer__social__pequeno {
@@ -107,7 +110,7 @@ footer .footer__social__pequeno {
 }
 
 footer .footer__social__traslapar > a {
-    font-size: 3em;
+    font-size: 2.34em;
 }
 
 footer .footer__social__traslapar > a:not(:first-child) {
@@ -136,7 +139,7 @@ footer .footer__direccion__compania {
 
 @media only screen and (max-width: 768px) {
     footer .footer__lista__header {
-        font-size: 2em;
+        font-size: 1.4em;
     }
 
     footer .footer__ancla__lista {
@@ -163,7 +166,7 @@ footer .footer__direccion__compania {
     }
 
     footer .footer__lista__header {
-        font-size: 3em;
+        font-size: 2.4em;
     }
 
     footer .footer__ancla__lista {
@@ -224,7 +227,7 @@ footer .footer__direccion__compania {
 
 @media only screen and (max-width: 320px) {
     footer .footer__lista__header {
-        font-size: 2.2em;
+        font-size: 1.6em;
     }
 
     footer .footer__ancla__lista {
