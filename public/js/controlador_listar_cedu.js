@@ -38,8 +38,9 @@ let cargarDataTable = () => {
 };
 
 let irAlPerfil = (idCEdu) => {
-	localStorage.setItem('padreVerPerfilCEdu', idCEdu);
-	alert('Ir al perfil: '+localStorage.getItem('padreVerPerfilCEdu'));
+	sessionStorage.setItem('padreVerPerfilCEdu', idCEdu);
+    //alert('Ir al perfil: '+localStorage.getItem('padreVerPerfilCEdu'));
+    window.location.replace('./perfil_centro.html')
 };
 
 let cargarCEdu = () => {

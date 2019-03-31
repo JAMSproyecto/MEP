@@ -18,71 +18,7 @@ let transporter = nodemailer.createTransport({
 module.exports.registrar = (req, res) => {
 
 
-    /*
-    let fecha = new Date(req.body.Fecha + ' 00:00:00 GMT-06:00');
-
-   2019-03-10 00:00:00 GMT-06:00
-
-    2019-03-10  
-
-    2019-03-10 00:00:00 GMT-00:00
-
-
-    let dia = fecha.getDate();
-    let mes = fecha.getMonth()+1;
-    let annio = fecha.getFullYear();
-
-
-   console.log(dia,mes,annio);
-    if(mes < 10){
-        mes = '0' + mes;
-    }
-
-    if (dia < 10){
-        dia = '0' + dia;
-    }
-    /**
- * Retorna la fecha en el formato 'YYYY-MM-DD hh:mm:ss'
- * @return {String}
- */
-
-    /*
-   let obtenerFecha = () => {
-       const fecha = new Date();
-       const dia_semana = fecha.getDay();
-       const anio = fecha.getFullYear();
-       let dia_mes = fecha.getDate();
-       let mes = fecha.getMonth();
-       let h = fecha.getHours();
-       let m = fecha.getMinutes();
-       let s = fecha.getSeconds();
-       mes += 1;
-       if (mes < 10) {
-           mes = '0' + mes;
-       }
-       if (dia_mes < 10) {
-           dia_mes = '0' + dia_mes;
-       }
-       if (h < 10) {
-           h = '0' + h;
-       }
-       if (m < 10) {
-           m = '0' + m;
-       }
-       if (s < 10) {
-           s = '0' + s;
-       }
-       return anio + '-' + mes + '-' + dia_mes + ' ' + h + ':' + m + ':' + s;
-   };
-   
-       
-       console.log(req.body);
-   aqui estoy validando la fecha, la convierto de string a numeros
-   junto con la hora
-   
-   
-   
-   let calendario =  dia +'-'+ mes + '-' + annio;*/
+    
     let nueva_cita = new cita_modelo(
         {
             Nombre: req.body.Nombre,
@@ -93,7 +29,8 @@ module.exports.registrar = (req, res) => {
             Hora: req.body.Hora,
             Motivo: req.body.Motivo,
             Comentario: req.body.Comentario,
-            Codigo: req.body.Codigo
+            Codigo: req.body.Codigo,
+            Centro_asociado: req.body.Centro_asociado
 
         }
     );
@@ -206,3 +143,33 @@ module.exports.listar_todos = (req, res) => {
     )
 };
 /*fin de funcion listar citas*/
+
+
+/**
+ * obtener_citasCentro
+ * @param req Parametro de petición de cliente
+ * @param res Parametro de respuesta a cliente
+ *  
+ */
+module.exports.obtener_citasCentro = (req, res) =>{
+    cita_modelo.find({
+        Centro_asociado : req.body.id
+    }).then(function (citas) {
+        console.log(citas);
+        if (citas.length > 0) {
+            res.json(
+                {
+                    success: true,
+                    citas: citas
+                }
+            )
+        } else {
+            res.json(
+                {
+                    success: false,
+                    citas: 'No se encontraron citas'
+                }
+            )
+        }
+    });
+}
