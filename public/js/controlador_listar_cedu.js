@@ -39,8 +39,7 @@ let cargarDataTable = () => {
 
 let irAlPerfil = (idCEdu) => {
 	sessionStorage.setItem('padreVerPerfilCEdu', idCEdu);
-    //alert('Ir al perfil: '+localStorage.getItem('padreVerPerfilCEdu'));
-    window.location.replace('./perfil_centro.html')
+    window.location.replace('./perfilCentroPadre.html')
 };
 
 let cargarCEdu = () => {

@@ -36,7 +36,9 @@ let obtener_Datos = () => {
                         window.location.replace('perfil_admin.html');
                         break;
                     case 'centroeducativo' :
+                    sessionStorage.setItem('padreVerPerfilCEdu', sessionStorage.getItem('id'));
                         window.location.replace('perfil_centro.html');
+                        
                         break;
                     case 'padrefamilia' :
                         sessionStorage.setItem('idBuscarPadre', sessionStorage.getItem('id'));

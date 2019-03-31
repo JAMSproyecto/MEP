@@ -49,11 +49,10 @@ let registrar_noticia = (pidCentro, ptema, pnoticia, pautor, pfecha,
     });
 };
 
-let listar_todas_noticias = () => {
+let listar_todas_noticias = (pId) => {
     let noticias_arreglo = [];
-    let idCentro = sessionStorage.getItem('id');
     let request = $.ajax({
-        url: "http://localhost:4000/api/listar_todas_noticias/" + idCentro,
+        url: "http://localhost:4000/api/listar_todas_noticias/" + pId,
         method: "GET",
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
