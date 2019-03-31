@@ -1,0 +1,58 @@
+.padres strong{
+    font-weight: 700;
+    color: #000;
+}
+
+
+.padres span{
+    font-size: 20px;
+}
+.bloque_izquierdo img{
+    padding-left: 64px;
+}
+
+.bloque_derecho{
+    padding-right: 40px;
+}
+.nombre{
+    position: relative;
+    right: 30%;
+    margin: 10px;
+}
+
+.correo{
+    position: relative;
+    right: 48px;
+    margin: 10px;
+}
+
+.telefono{
+    position: relative;
+    right: 25%;
+    margin: 10px;
+}
+
+.cedula{
+    position: relative;
+    right: 38%;
+    margin: 10px;
+}
+
+.provincia{
+    
+        position: relative;
+        right: 47%;
+        margin: 10px;
+}
+
+.canton{
+    position: relative;
+    /* right: 129px; */
+    right: 48%;
+    margin: 10px;
+}
+
+.distrito{
+    position: relative;
+    right: 47%;
+}
