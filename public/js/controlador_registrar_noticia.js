@@ -6,7 +6,7 @@ const input_fecha = document.querySelector('#txt_fecha');
 const input_informacion = document.querySelector('#txt_informacion');
 
 const boton_enviar = document.querySelector('#btn_enviar');
-   
+
 
 
 let validar = () => {
@@ -72,14 +72,14 @@ let mostrar_datos = () => {
     }
     else {
 
-             
-              let tema = input_tema.value;
-              let noticia= input_noticia.value;
-              let autor = input_autor.value;
-              let fecha = input_fecha.value;
-              let informacion= input_informacion.value;
-        
-              registrar_noticia(tema,noticia, autor, fecha, informacion );
+        let idCentro = sessionStorage.getItem("id");
+        let tema = input_tema.value;
+        let noticia = input_noticia.value;
+        let autor = input_autor.value;
+        let fecha = input_fecha.value;
+        let informacion = input_informacion.value;
+
+        registrar_noticia(idCentro, tema, noticia, autor, fecha, informacion);
     }
 
 

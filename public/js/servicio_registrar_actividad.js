@@ -1,11 +1,12 @@
 'use strict';
 
-let registrar_actividad = (pactividad, pfecha, phora_inicio, pfinaliza, pcosto,
+let registrar_actividad = (pidCentro, pactividad, pfecha, phora_inicio, pfinaliza, pcosto,
     plugar, pfinalidad, pdetalles) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_actividad",
         method: "POST",
         data: {
+            idCentro: pidCentro,
             actividad: pactividad,
             fecha: pfecha,
             hora_inicio: phora_inicio,

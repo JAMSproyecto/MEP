@@ -43,7 +43,7 @@ let registrarCentroEducativo = (pNombre, pNombreComercial, pCedulaJuridica, pCor
                     title: 'Éxito',
                     html: 'El centro educativo se registr&oacute; correctamente',
                     onAfterClose: function () {
-                        document.location = 'centros_educativos.html';
+                        window.location.replace("credenciales.html");
                     }
                 });
             } else {
@@ -54,7 +54,7 @@ let registrarCentroEducativo = (pNombre, pNombreComercial, pCedulaJuridica, pCor
                     animation: false,
                     customClass: 'animated tada',
                     showConfirmButton: true,
-                    text: res.msg
+                    text: res.message
                 });
 
             }

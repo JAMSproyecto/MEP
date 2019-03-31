@@ -12,7 +12,7 @@ let shema_cita = new mongoose.Schema(
         Hora: {type:String, required: true},
         Motivo: {type: String, required: true},
         Comentario: {type: String, require: true},
-        Centro_asociado: {type: String, require: false}
+        Centro_asociado: {type: String, require: true}
 
     }
 );

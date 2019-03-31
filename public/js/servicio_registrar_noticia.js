@@ -1,11 +1,12 @@
 'use strict';
 
-let registrar_noticia = (ptema, pnoticia, pautor, pfecha, 
+let registrar_noticia = (pidCentro, ptema, pnoticia, pautor, pfecha, 
     pinformacion) => {
     let request = $.ajax({
         url: "http://localhost:4000/api/registrar_noticia",
         method: "POST",
         data: {
+            idCentro: pidCentro,
             tema: ptema,
             noticia: pnoticia,
             autor: pautor,
@@ -50,7 +51,7 @@ let listar_todas_noticias = () => {
     let noticias_arreglo = [];
     let idCentro = sessionStorage.getItem('id');
     let request = $.ajax({
-        url: "http://localhost:4000/api/listar_todas_noticias" + idCentro,
+        url: "http://localhost:4000/api/listar_todas_noticias/" + idCentro,
         method: "GET",
         dataType: "json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',

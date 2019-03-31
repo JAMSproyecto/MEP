@@ -68,3 +68,9 @@ tr:last-child td:last-child {
   margin: 30px auto;
 
 }
+
+#tbl_listar_noticia {
+  border-collapse: separate;
+  width: 90%;
+  margin: 30px auto;
+}
