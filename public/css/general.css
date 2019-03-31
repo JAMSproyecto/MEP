@@ -37,9 +37,6 @@ h2 {
 }
 
 
-
-
-
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 body {
@@ -659,18 +656,13 @@ button.btn--amarillo::before {
     transition: opacity 0.2s;
 }
 
- fieldset.error_input, input.error_input,
- select.error_input,
- textarea.error_input {
-    border-color: #eb3b5a;
-    box-shadow: 0 0 0 .2rem rgba(235, 59, 90, .25);
-}
 
-fieldset:not(.error_input):hover,
+
+ fieldset:not(.error_input):hover,
  fieldset:not(.error_input):focus,
- input:not(.error_input):focus,
-select:not(.error_input):focus,
- textarea:not(.error_input):focus {
+input:not(.error_input):focus,
+ select:not(.error_input):focus,
+textarea:not(.error_input):focus {
     border-color: #80bdff;
     box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
 }
