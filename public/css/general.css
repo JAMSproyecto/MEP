@@ -35,10 +35,6 @@ h2 {
 .centros__aprobados{
     margin-bottom: 100px;
 }
-.error_input {
-  background-color: rgba(255, 82, 82,0.3);
-  height: 18px;
-}
 
 
 
@@ -663,19 +659,18 @@ button.btn--amarillo::before {
     transition: opacity 0.2s;
 }
 
-main.formulario fieldset.error_input,
-main.formulario input.error_input,
-main.formulario select.error_input,
-main.formulario textarea.error_input {
+ fieldset.error_input, input.error_input,
+ select.error_input,
+ textarea.error_input {
     border-color: #eb3b5a;
     box-shadow: 0 0 0 .2rem rgba(235, 59, 90, .25);
 }
 
-main.formulario fieldset:not(.error_input):hover,
-main.formulario fieldset:not(.error_input):focus,
-main.formulario input:not(.error_input):focus,
-main.formulario select:not(.error_input):focus,
-main.formulario textarea:not(.error_input):focus {
+fieldset:not(.error_input):hover,
+ fieldset:not(.error_input):focus,
+ input:not(.error_input):focus,
+select:not(.error_input):focus,
+ textarea:not(.error_input):focus {
     border-color: #80bdff;
     box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
 }
@@ -711,10 +706,7 @@ main.formulario textarea:not(.error_input):focus {
 .bloque__principal-utiles{
     margin-top: 0px;
 }
-.error_input {
-  background-color: rgba(255, 82, 82,0.3);
-  height: 18px;
-}
+
 
 .formulario-boton .btn{
     font-weight: 700;
@@ -1710,13 +1702,6 @@ margin-bottom: 0px;
 }
 
 
-
-
-.formulario-cita .error_input, 
-.columna__contenedor .error_input,
-.datos__generales .erros_input {
-    border: 1px solid red;
-}
 
 
 /*meus de regresar o avanzar*/
