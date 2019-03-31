@@ -1,10 +1,5 @@
-$('.your-class').slick({
-    centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
-    
-  });
 
+$('.your-class').slick();
 
 
   $('.noticias').slick({
