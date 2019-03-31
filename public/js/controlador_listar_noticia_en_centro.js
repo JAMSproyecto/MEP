@@ -13,7 +13,7 @@ let mostrar_datos = () => {
             let bloques = '';
         noticias.forEach( function (objeto) {
             bloques +='<div class="noticia not">';
-            bloques +=' <h2 class="titulo">'+ objeto.tema +'</h2>';
+            bloques +=' <h3 class="titulo">'+ objeto.tema +'</h3>';
             bloques +='<strong class="nombre__noticia">'+ objeto.noticia +'</strong>';
             bloques +='<p class="hora__noticia">'+ objeto.fecha +'</p>';
             bloques +='</div>';
