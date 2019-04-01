@@ -6,6 +6,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
     <title>MEP</title>
+    <link href="./imgs/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
@@ -31,10 +32,11 @@
                     </li>
                     <li> <a class="btn_top contrasenia" href="#">Cambiar contraseña</a></li>
                     <li> <a class="btn_top notificacioness" href="#">Notificaciones</a></li>
+					<li>
+                        <a class="btn_top" id="lblNombreUsuario" href="javascript:void(0);"></a>
+                    </li>
                     <li>
-                        <form>
-                            <button class="btn btn--amarillo" id="boton_cerrar">Cerrar sesión</button>
-                        </form>
+                        <a id="boton_cerrar" class="btn btn--amarillo" href="javascript:void(0);">Cerrar sesi&oacute;n</a>
 
                     </li>
                 </ul>
@@ -144,26 +146,20 @@
             </form>
             </div>
         </section>
-        <form class=" bloque__boton ">
+        <div class="bloque__boton ">
                 <button type="button" class="btn btn--amarillo" id="btn_agregar">Registrar</button>
-            </form>
-        <div class="menu__articulo">
-            <div class="contenedor__menu">
-                <nav class="regresar regresar__articulo">
-                    <a href="perfil_admin.html">
-                        <i class="fas fars fa-arrow-circle-left"></i>
-                        <p>Perfil</p>
-                    </a>
-                </nav>
-                <nav class=" avanzar avanzar__articulo">
-                    <a href="listar_articulos.html">
-                        <i class="fas far fa-arrow-circle-right"></i>
-                        <p>Lista de articulos</p>
-                    </a>
-
-
-                </nav>
-
+            </div>
+        
+        <div class="paginador">
+            <div class="paginador__contenido">
+                <a class="derecha" href="perfil_admin.html">
+                    <i class="fas fa-arrow-circle-left fa-lg"></i>
+                    <p>Perfil</p>
+                </a>
+                <a class="izquierda" href="listar_articulos.html">
+                    <i class="fas fa-arrow-circle-right fa-lg"></i>
+                    <p>Lista de art&iacute;culos</p>
+                </a>
             </div>
         </div>
 
