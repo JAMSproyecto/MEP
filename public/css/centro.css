@@ -7,15 +7,14 @@
 
 
 .titulo_centro_educativo{
-    font-family: 'Cinzel', serif;
-    /* width: 500px; */
-    /* margin: auto; */
+    color: #34495e;
+    font-size: 29px;
     padding-top: 33px;
     text-align: center;
     /* border-bottom: 2px solid; */
-    font-size: 21px;
+ 
     margin-bottom: 17px;
-    font-family: 'Cinzel', serif;
+   
 }
 
 .slider {
@@ -135,7 +134,7 @@
 
 
 .tabla__servicios{
-    width: 740px;
+    width: 1110px;
     margin: auto;
 }
 
@@ -177,9 +176,8 @@ border-radius: 20px;
 .fa-book,
 .fa-music
 {
-    padding: 8px;
-    position: relative;
-    left: 25px;
+    padding: 10px;
+   
 }
  
 .servicio p{
@@ -191,14 +189,20 @@ border-radius: 20px;
 
 .servicio {
     border: 1px solid #2d3436;
-    width: 161px;
+    width: 250px;
     box-shadow: 0 0 3px #78909C;
     margin: 10px;
     display: inline-block;
     /* border-radius: 12px; */
     background: #fff;
+   
 }
 
+.servicio span {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 19px;
+}
 .comentario{
     background: #fff;
     width: 237px;
@@ -248,7 +252,7 @@ border-radius: 20px;
 .ser__laboratorio,
 .ser__cafeteria,
 .ser__enfermeria{
-    padding: 11px 30px;
+    padding: 24px 30px;
   
 }
 
@@ -268,15 +272,15 @@ font-size: 30px;
 }
 
 .contenedor__tabla{
+    margin: 50px auto;
     width: 1000px;
-    margin: auto;
 }
 
 .oferta__academica{
     display: table;
 }
 
-.contenedor__servicios,
+
 .tabla__noticias,
 .tabla__actividad{
     background: #f9f9f9;
