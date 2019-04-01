@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 
 let shema_cita = new mongoose.Schema(
     {
+        codigo :{type : mongoose.Schema.Types.Number, require : true, index : true},
         Nombre: { type: String, required: true },
         Apellidos: { type: String, required: true },
         Telefono: { type: String, required: true },

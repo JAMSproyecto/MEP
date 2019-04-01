@@ -97,6 +97,7 @@ let mostrar_datos = () => {
         );
 
     } else {
+        let id = sessionStorage.getItem("id");
         let nombre = input_nombre.value;
         let apellidos = input_apellidos.value;
         let telefono = input_telefono.value;
@@ -108,7 +109,7 @@ let mostrar_datos = () => {
         let codigo = input_centro.value;
 
 
-        registrar_cita(nombre,apellidos,telefono,correo,fecha,hora,motivo, comentario,codigo);
+        registrar_cita(id,nombre,apellidos,telefono,correo,fecha,hora,motivo, comentario,codigo);
 
 
     }

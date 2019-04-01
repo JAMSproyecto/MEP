@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
     <title>MEP</title>
-   
+
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
@@ -17,121 +17,32 @@
     <link rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./css/fontawesome/all.min.css">
     <link rel="stylesheet" href="./css/headerCentro.css" />
-    
 
-</head>
-
-<body>
-        <header>
-                <div class="column__arriba">
-                    <nav class="menu__arriba">
+    <header>
+        <div class="column__arriba">
+            <nav class="menu__arriba">
+                <div class="colum__abajo">
+                    <nav class="menu__registrarse">
                         <ul>
-                            <li> <a href="perfil_admin.html"><i class="fas fa-hand-point-left"></i></li>
-                            <li><a class="btn_top modificar" href="#">Modificar Perfil</a>
-                            </li>
-                            <li> <a class="btn_top contrasenia" href="#">Cambiar contraseña</a></li>
-                            <li> <a class="btn_top notificacioness" href="#">Notificaciones</a></li>
+                            <li> <a class="registrarse" href="index.html">Regresar Inicio</a></li>
+                            <li><a href="registroCentroLanpage.html">Registrarse como centro educativo</a></li>
                             <li>
-                                <button  class="btn btn--amarillo" id="boton_cerrar">Cerrar sesi&oacute;n</button>
-                                    
+
+                                <button class="btn btn--amarillo" id="boton_cerrar">Iniciar Sesión</button>
+
+
                             </li>
                         </ul>
                     </nav>
                 </div>
-                <div class="column__abajo">
-                    <div class="contenedor">
-                        <div class="logo">
-                            <img src="imgs/logo_mep.png" class="imagen_mep">
-                        </div>
-                        <nav class="menu__abajo">
-                            <ul>
-                                <span>|</span>
-                                <li><a class="centros" href="#">Centros Educativos</a>
-                                    <ul>
-                                        <li><a href="registrarCentroEducativo.html">Registrar centro educativo</a></li>
-                                        <li><a href="listaCEdu.html">Lista de centros educativos</a></li>
-        
-                                        <li><a href="#">Aprobar/Rechazar centro educativo</a></li>
-                                        <li><a href="#"> Suspender/Reactivar centro educativo </a></li>
-                                    </ul>
-                                </li>
-                                <span>|</span>
-                                <li>
-                                    <a class="calificaciones" href="#">Calificaciones</a>
-                                    <ul>
-                                        <li><a href="#">Calificar un centro educativo</a></li>
-                                        <li><a href="#">Registrar un rubro</a></li>
-                                        <li><a href="#">Lista de rubros</a></li>
-                                        <li><a href="#"> Ver Calificación de centros </a></li>
-                                    </ul>
-        
-                                </li>
-        
-                                <span>|</span>
-                                <li><a class="utiles" href="#">Útiles</a>
-                                    <ul>
-                                        <li><a href="registrar_articulos.html">Registrar artículos</a></li>
-                                        <li><a href="listar_articulos.html">Listar  artículos</a></li>
-                                        <li><a href="registrar_lista_utiles.html">Registrar lista de útiles</a></li>
-                                        <li><a href="listar_lista_utiles.html">Listar útiles</a></li>
-                                    </ul>
-                                </li>
-                                <span>|</span>
-                                <li><a class="padres" href="#">Usuarios padres de familia</a>
-                                    <ul>
-                                        <li><a href="listar_padres.html">Lista de padres de familia</a></li>
-        
-                                    </ul>
-        
-                                </li>
-                                <span>|</span>
-        
-                                <li><a class="utiles" href="#"> Etiquetas de búsqueda</a>
-                                    <ul>
-                                        <li><a class="subtitulos" href="#">Registrar etiquetas</a></li>
-                                        <li><a class="subtitulos" href="#">Listar etiquetas</a>
-                                        </li>
-                                    </ul>
-        
-                                </li>
-                                <span>|</span>
-                                <li><a class="utiles" href="#"> Preguntas frecuentes</a>
-                                    <ul>
-                                        <li><a class="subtitulos" href="registrarPreguntaFrecuenteGeneral.html">Registrar
-                                                FAQ</a></li>
-                                        <li><a class="subtitulos" href="listarPreguntasFrecuentesGenerales.html">Listar
-                                                FAQ</a></li>
-                                        <li><a class="subtitulos" href="#">Listar FAQ</a>
-                                           
-                                        </li>
-                                    </ul>
-                                </li>
-        
-                                </li>
-                                <span>|</span>
-        
-                                <li>
-                                    <a class="reporte">Reportes</a>
-                                    <ul>
-                                        <li><a href="#">Ranking:Padres de familia</a></li>
-                                        <li><a href="#">Ranking:MEP</a></li>
-                                        <li><a href="#">Visitas a centros educativos</a></li>
-                                        <li><a href="#">Bitacora transacional</a></li>
-                                    </ul>
-                                </li>
-                                <span>|</span>
-        
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </header>
-
+            </nav>
+        </div>
+    </header>
     <div class="text_center">
         <h1>Registro de centros educativos</h1>
     </div>
     <main class="formulario">
-        <section   id="informacionGeneral">
+        <section id="informacionGeneral">
 
             <div class="text_center">
                 <h2>Informaci&oacute;n general</h2>
@@ -253,8 +164,8 @@
             </div>
         </section>
         <div>
-                <hr class="estilo1">
-            </div>
+            <hr class="estilo1">
+        </div>
         <section id="contacto">
             <div class="text_center">
                 <h2>Contacto</h2>
@@ -297,7 +208,7 @@
                 </div>
             </div>
         </section>
-      
+
 
     </main>
     <div class=" text_center">
@@ -349,6 +260,6 @@
     <script src="./js/controlador_registro_cedu.js"></script>
 
     <script src="js/controlador_cerrar_sesion.js"></script>
-</body>
+    </body>
 
 </html>

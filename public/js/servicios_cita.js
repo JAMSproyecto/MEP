@@ -1,11 +1,12 @@
 'use strict';
 
 
-let registrar_cita = (pnombre, papellidos, ptelefono, pcorreo, pfecha, phora, pmotivo, pcomentario, pcodigo) => {
+let registrar_cita = (pid,pnombre, papellidos, ptelefono, pcorreo, pfecha, phora, pmotivo, pcomentario, pcodigo) => {
     let request = $.ajax({
             url: "http://localhost:4000/api/registrar_cita",
             type: "POST",
             data: {
+                idCentro: pid,
                 Nombre: pnombre,
                 Apellidos: papellidos,
                 Telefono: ptelefono,
@@ -23,20 +24,17 @@ let registrar_cita = (pnombre, papellidos, ptelefono, pcorreo, pfecha, phora, pm
     );
 
     request.done(function (msg) {
-        if (msg.success) {
             swal.fire({
                 type: 'success',
                 title: 'Los datos fueron guardados exitosamente',
-                text: 'Nos comunicaremos con usted tan pronto como sea posible'
-            });
-        } else {
-            swal.fire({
-                type: 'error',
-                title: 'Los datos no fueron guardados exitosamente',
-                text: 'Error'
-            });
-        }
-    });
+                text: 'Nos comunicaremos con usted tan pronto como sea posible',
+      
+            }).then((result) => {
+                if (result.value) {
+                  window.location.href = 'perfilCentroPadre.html';
+                }
+        })
+     });
 
     request.fail(function (jqXHR, textStatus) {
         swal.fire({
@@ -51,7 +49,7 @@ let registrar_cita = (pnombre, papellidos, ptelefono, pcorreo, pfecha, phora, pm
 
 let listar_citas = (id) => {
     let lista_citas = [];
-
+    let id = sessionStorage.getItem('id');
     let request = $.ajax(
 
         {
@@ -73,6 +71,6 @@ let listar_citas = (id) => {
     request.fail(function (jqXHR, textStatus) {
 
     });
-    return lista_citas
+    return lista_citas;
 
 };

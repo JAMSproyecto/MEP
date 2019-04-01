@@ -1,7 +1,7 @@
 'uset strict';
 const cita_modelo = require('./citas.model');
 const nodemailer = require('nodemailer');
-
+const cedu_model = require('../centro_educativo/centroEducativo.model');
 
 
 /*funcion para mandar correo al padre*/
@@ -21,6 +21,7 @@ module.exports.registrar = (req, res) => {
     
     let nueva_cita = new cita_modelo(
         {
+            
             Nombre: req.body.Nombre,
             Apellidos: req.body.Apellidos,
             Telefono: req.body.Telefono,
@@ -120,9 +121,11 @@ module.exports.registrar = (req, res) => {
 
 /*funcion de listar citas*/
 module.exports.listar_todos = (req, res) => {
-    cita_modelo.find().then(
+
+    cita_modelo.find({codigo : req.body.codigo}).then(
         function (citas) {
             if (citas.length > 0) {
+                
                 res.json(
                     {
                         success: true,
