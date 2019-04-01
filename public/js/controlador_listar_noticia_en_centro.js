@@ -20,6 +20,7 @@ let mostrar_datos = () => {
         });
         div_noticias.innerHTML = bloques;
     }else{
+        console.log(noticias);
     }
     } else {
         console.error('Error al obtener las noticias');
