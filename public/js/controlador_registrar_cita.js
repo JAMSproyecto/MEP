@@ -7,7 +7,6 @@ const input_correo = document.querySelector('#txt_correo');
 const input_fecha = document.querySelector('#fecha');
 const input_hora = document.querySelector('#hora');
 const input_comentario = document.querySelector('#comentario');
-const input_centro = document.querySelector("[name='codigo_centro']");
 
 const select = document.querySelector('#motivo_cita');
 
@@ -104,10 +103,15 @@ let mostrar_datos = () => {
         let hora = input_hora.value;
         let motivo = select.value;
         let comentario = input_comentario.value;
-        let codigo = input_centro.value;
+        
+        let codigo = sessionStorage.getItem('padreVerPerfilCEdu'); 
+        
+        
 
 
-        registrar_cita(nombre, apellidos, telefono, correo, fecha, hora, motivo, comentario, codigo);
+
+
+        registrar_cita(codigo,nombre, apellidos, telefono, correo, fecha, hora, motivo, comentario);
 
 
     }
