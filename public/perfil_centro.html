@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>MEP</title>
-
+    <link rel="stylesheet" href="./css/fullcalendar/core/main.min.css">
+    <link rel="stylesheet" href="./css/fullcalendar/daygrid/main.min.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
@@ -12,12 +13,6 @@
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="css/fontawesome/all.min.css">
     <link rel="stylesheet" href="css/headerCentro.css" />
-
-    <link rel="stylesheet" href="./css/fullcalendar/core/main.min.css">
-    <link rel="stylesheet" href="./css/fullcalendar/daygrid/main.min.css">
-    <link rel="stylesheet" href="./css/general.css" />
-
-
     <link rel="stylesheet" href="./css/centro.css" />
 </head>
 
@@ -134,12 +129,7 @@
     </div>
 
 
-    <nav class="menu__editar">
-        <a href="#">
-            <i class="fas fat fa-arrow-circle-right"></i>
-            <p>Editar imagenes</p>
-        </a>
-    </nav>
+
     </section>
     <section class="bloque__descripcion">
         <div class="contenedor__servicios">
@@ -184,19 +174,14 @@
                         <p>Música</p>
                     </div>
                 </div>
-                <nav class="menu__editar">
-                    <a href="#">
-                        <i class="fas fat fa-arrow-circle-right"></i>
-                        <p>Editar servicios</p>
-                    </a>
-                </nav>
+
             </div>
         </div>
         </div>
         <div class="tabla__oferta">
             <div class="contenedor__tabla">
                 <div class="titulo_oferta">
-                    <h2 class="titulo__secundario">Oferta academica</h2>
+                    <h2 class="titulo__secundario">Oferta académica</h2>
                 </div>
                 <div class="oferta__academica">
                     <div class="preescolar">
@@ -212,16 +197,37 @@
                         <img src="./imgs/secundaria.jpeg" />
                         <p>Secundaria</p>
                     </div>
-      
-        <div class="tabla__actividad">
-            <div class="contenedor__actividad">
-                <h2 class="titulo">Actividades</h2>
-            </div>
-        </div>
+
+
     </section>
     <div>
         <h2 class="titulo">Noticias</h2>
-        <div id="tabla__noticias" class="contenedor__noticias"></div>
+        <div id="tabla__noticias" class="contenedor__noticias">
+            <div class="contenedor__noticias">
+                <div class="noticia">
+                    <strong class="titulo__noticia"></strong>
+                    <p class="fecha__noticia"></p>
+                    <p class="hora__noticia"></p>
+                </div>
+                <div class="noticia">
+                    <strong class="titulo__noticia"></strong>
+                    <p class="fecha__noticia"></p>
+                    <p class="hora__noticia"></p>
+                </div>
+                <div class="noticia">
+                    <strong class="titulo__noticia"></strong>
+                    <p class="fecha__noticia"></p>
+                    <p class="hora__noticia"></p>
+                </div>
+                <div class="noticia">
+                    <strong class="titulo__noticia"></strong>
+                    <p class="fecha__noticia"></p>
+                    <p class="hora__noticia"></p>
+                </div>
+            </div>
+
+
+        </div>
     </div>
 
     <div class="tabla__actividad">
@@ -250,8 +256,10 @@
 
         </div>
     </div>
-    <div id="calendario">
+    <div class="bloque_calendario">
+        <div id="calendario">
 
+        </div>
     </div>
     </main>
 </body>
@@ -261,16 +269,12 @@
 <script src="./js/carrusel.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="./js/fullcalendar/core/main.min.js"></script>
-<script src="./js/fullcalendar/daygrid/main.min.js"></script>
-<script src="./js/fullcalendar/core/locales-all.min.js"></script>
+
 <script src="./js/servicios_cita.js"></script>
 <script src="js/controlador_cerrar_sesion.js"></script>
 <script src="js/calendario.js"></script>
 <script src="js/servicio_registrar_noticia.js"></script>
-<script src="js/controlador_listar_noticia_en_centro.js"></script>
-<script src="./js/servicio_registrar_actividad.js"></script>
-<script src="js/servicio_perfil_cedu.js"></script>
-<script src="js/controlador_perfil_cedu.js"></script>
+
+
 
 </html>

@@ -347,7 +347,8 @@ font-size: 30px;
     /* padding-top: 44px; */
 }
 
-.actividad{
+.actividad,
+.noticia{
     border: 1px solid #2d3436;
     width: 212px;
     box-shadow: 0 0 3px #78909C;

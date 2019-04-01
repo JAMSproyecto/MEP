@@ -26,17 +26,17 @@
         <div class="column__arriba">
             <nav class="menu__arriba">
                 <ul>
-                    <li><a href="perfil_admin.html">
-                    <li> <a href="perfil_admin.html"><i class="fas fa-hand-point-left"></i></li></a></li>
+                        <li> <a href="perfil_admin.html"><i class="fas fa-hand-point-left"></i></li>
                     <li><a class="btn_top modificar" href="#">Modificar perfil</a>
                     </li>
                     <li> <a class="btn_top contrasenia" href="#">Cambiar contraseña</a></li>
                     <li> <a class="btn_top notificacioness" href="#">Notificaciones</a></li>
                     <li>
                         <form>
-                                <button class="btn btn--amarillo" id="boton_cerrar">Cerrar sesión</button>
+                            <button type="button" id="boton_cerrar" class="btn btn--amarillo">Cerrar
+                                sesi&oacute;n</button>
                         </form>
-                      
+
                     </li>
                 </ul>
             </nav>
@@ -49,37 +49,40 @@
                 <nav class="menu__abajo">
                     <ul>
                         <span>|</span>
-                        <li>
-                            <a class="calificaciones" href="#">Calificaciones</a>
-                            <ul>
-                                <li><a href="#">Calificar centro educativo</a></li>
-                                <li><a href="#">Registrar un rubro</a></li>
-                                <li><a href="#">Lista de rubros</a></li>
-                                <li><a href="#"> Ver Calificación de centros </a></li>
-                            </ul>
-                        </li>
-                        <span>|</span>
                         <li><a class="centros" href="#">Centros educativos</a>
                             <ul>
                                 <li><a href="registrarCentroEducativo.html">Registrar centro educativo</a></li>
                                 <li><a href="listaCEdu.html">Lista de centros educativos</a></li>
-                                <li><a href="#">Aprobar/Rechazar centros educativos</a></li>
-                                <li><a href="#"> Suspender/Reactivar centros educativos </a></li>
+
+                                <li><a href="#">Aprobar/Rechazar centro educativo</a></li>
+                                <li><a href="#"> Suspender/Reactivar centro educativo </a></li>
                             </ul>
                         </li>
                         <span>|</span>
-                        <li><a class="utiles" href="#">Lista de útiles</a>
+                        <li>
+                            <a class="calificaciones" href="#">Calificaciones</a>
                             <ul>
-                                <li><a href="registrar_articulos.html">Agregar artículos</a></li>
+                                <li><a href="#">Calificar un centro educativo</a></li>
+                                <li><a href="#">Registrar un rubro</a></li>
+                                <li><a href="#">Lista de rubros</a></li>
+                                <li><a href="#"> Ver calificación de centros educativos </a></li>
+                            </ul>
+
+                        </li>
+
+                        <span>|</span>
+                        <li><a class="utiles" href="#">Útiles</a>
+                            <ul>
+                                <li><a href="registrar_articulos.html">Registrar artículos</a></li>
                                 <li><a href="listar_articulos.html">Listar artículos</a></li>
-                                <li><a href="registrar_lista_utiles.html">Registrar útiles</a></li>
+                                <li><a href="registrar_lista_utiles.html">Registrar lista de útiles</a></li>
                                 <li><a href="listar_lista_utiles.html">Listar útiles</a></li>
                             </ul>
                         </li>
                         <span>|</span>
-                        <li><a class="padres" href="listar_padres.html">Usuarios padres de familia</a>
+                        <li><a class="padres" href="#">Usuarios padres de familia</a>
                             <ul>
-                                <li><a href="#">Lista de padres de familia</a></li>
+                                <li><a href="listar_padres.html">Lista de padres de familia</a></li>
 
                             </ul>
 
@@ -97,14 +100,11 @@
                         <span>|</span>
                         <li><a class="utiles" href="#"> Preguntas frecuentes</a>
                             <ul>
-                                <li><a class="subtitulos" href="#">Registrar FAQ</a></li>
-                                <li><a class="subtitulos" href="#">Listar FAQ</a>
-                                    <ul>
-                                        <li><a class="subtitulos" href="#">Listar centro educativo</a>
-                                    </ul>
-                                </li>
+                                <li><a class="subtitulos" href="registrarPreguntaFrecuenteGeneral.html">Registrar
+                                        FAQ</a></li>
+                                <li><a class="subtitulos" href="listarPreguntasFrecuentesGenerales.html">Listar
+                                        FAQ</a></li>
                             </ul>
-                        </li>
 
                         </li>
                         <span>|</span>
@@ -128,7 +128,7 @@
 
     <main>
 
-        <section class="formulario">
+        <section class="formulario__listarCE">
             <div class="text_center">
                 <h1 class="titulo__principal">Centros educativos</h1>
             </div>
@@ -157,23 +157,7 @@
                     <tbody></tbody>
 
                 </table>
-                <div class=" menu__centros">
-                    <div class="contenedor__menu">
-                        <nav class=" regresar__registrar">
-                            <a href="registrarCentroEducativo.html">
-                                <i class="fas fars fav fat fa-arrow-circle-left"></i>
-                                <p>Registrar centro educativo</p>
-                            </a>
-                        </nav>
-                        <nav class="avanzar">
-                            <a href="#">
-                                <i class="fas fa-arrow-circle-right"></i>
-
-                            </a>
-
-                        </nav>
-                    </div>
-                </div>
+             
             </div>
         </section>
     </main>
