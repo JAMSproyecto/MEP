@@ -7,7 +7,6 @@ const input_correo = document.querySelector('#txt_correo');
 const input_fecha = document.querySelector('#fecha');
 const input_hora = document.querySelector('#hora');
 const input_comentario = document.querySelector('#comentario');
-const input_centro = document.querySelector("[name='codigo_centro']");
 
 const select = document.querySelector('#motivo_cita');
 

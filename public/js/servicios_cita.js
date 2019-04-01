@@ -1,12 +1,11 @@
 'use strict';
 
 
-let registrar_cita = (pid,pnombre, papellidos, ptelefono, pcorreo, pfecha, phora, pmotivo, pcomentario, pcodigo) => {
+let registrar_cita = (pid,pnombre, papellidos, ptelefono, pcorreo, pfecha, phora, pmotivo, pcomentario) => {
     let request = $.ajax({
             url: "http://localhost:4000/api/registrar_cita",
             type: "POST",
             data: {
-                idCentro: pid,
                 Nombre: pnombre,
                 Apellidos: papellidos,
                 Telefono: ptelefono,
@@ -15,7 +14,7 @@ let registrar_cita = (pid,pnombre, papellidos, ptelefono, pcorreo, pfecha, phora
                 Hora: phora,
                 Motivo: pmotivo,
                 Comentario: pcomentario,
-                Centro_asociado: pcodigo
+                Centro_asociado: pid
             },
             dataType: "json",
             contentType: 'application/x-www-form-urlencoded; charset=UTF-8'

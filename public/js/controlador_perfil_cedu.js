@@ -6,45 +6,53 @@
                     <p class="hora__actividad"></p>
                 </div>
  */
-let crearActividades = (perfil)=>{
+let crearActividades = (perfil) => {
     let actividades = listar_todas_actividades();
 
-    document.querySelector('#titulo_centro_educativo').innerHTML = perfil.Nombre;
+    document.querySelector('.titulo_centro_educativo').innerHTML = perfil.nombre;
 
-    
-    let actividad = document.createElement('div');
-    actividad.classList.add('actividad');
-    
-    let strong = document.createElement('strong');
-    strong.classList.add('nombre__actividad');
+    actividades.forEach((e, index) => {
+        let actividad = document.createElement('div');
+        actividad.classList.add('actividad');
 
-    let fecha = document.createElement('p');
-    fecha.classList.add('fecha__actividad');
+        let strong = document.createElement('strong');
+        strong.classList.add('nombre__actividad');
 
-    let hora = document.createElement('p');
-    fecha.classList.add('hora__actividad');
+        let fecha = document.createElement('p');
+        fecha.classList.add('fecha__actividad');
 
-    actividad.innerHTML
+        let hora = document.createElement('p');
+        hora.classList.add('hora__actividad');
+
+        strong.innerHTML = e.actividad;
+        fecha.innerHTML = e.fecha;
+        hora.innerHTML = `${e.hora_inicio} - ${e.finaliza}`;
+        actividad.appendChild(strong);
+        actividad.appendChild(fecha);
+        actividad.appendChild(hora);
+        document.querySelector('.contenedor__actividad').appendChild(actividad);
+    });
+
 
 };
 
 window.addEventListener('load', () => {
     let id;
 
-    switch(sessionStorage.getItem("tipoUsuario").toLowerCase()){
+    switch (sessionStorage.getItem("tipoUsuario").toLowerCase()) {
         case 'padrefamilia':
-        id = sessionStorage.getItem('padreVerPerfilCEdu')
-        break;
+            id = sessionStorage.getItem('padreVerPerfilCEdu')
+            break;
 
         case 'centroeducativo':
-        id = sessionStorage.getItem('id');
-        break;
+            id = sessionStorage.getItem('id');
+            break;
 
         default:
-        break;
+            break;
     }
     let perfil = get_obtenerPerfil(id);
     crearCalendario(id);
-    crearActividades(perfil);    
+    crearActividades(perfil);
 
 });
