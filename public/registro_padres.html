@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
     <title>MEP</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/fontawesome/all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css">
+    <link href="./imgs/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/reset.min.css">
+    <link rel="stylesheet" href="./css/fontawesome/all.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/general.css" />
     <link rel="stylesheet" href="./css/headerCentro.css" />
-    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="./css/footer.css">
 
 </head>
 
@@ -27,14 +23,11 @@
                 <div class="colum__abajo">
                     <nav class="menu__registrarse">
                         <ul>
-                            <li> <a class="registrarse" href="index.html">Regresar Inicio</a></li>
+                            <li> <a class="registrarse" href="index.html">P&aacute;gina principal</a></li>
                             <li><a href="registroCentroLanpage.html">Registrarse como centro educativo</a></li>
                             <li>
-
-                                <button class="btn btn--amarillo" id="boton_cerrar">Iniciar Sesión</button>
-
-
-                            </li>
+							<a class="btn btn--amarillo" href="./inicio_sesion.html">Iniciar sesi&oacute;n</a>
+							</li>
                         </ul>
                     </nav>
                 </div>
@@ -93,7 +86,6 @@
 
             <div id="contacto">
 
-
                 <div class="datos_izq text_center">
 
                     <div class="text_center">
@@ -124,25 +116,20 @@
                     <div>
                         <label for="slt_provincias">Provincia</label>
                         <select id="slt_provincias">
-                            <option value="">--Selecciones una provincia--</option>
-
-                        </select>
+                            <option disabled selected value="">Seleccione una provincia...</option>
+						</select>
                     </div>
                     <div>
                         <label for="slt_cantones">Cantón</label>
                         <select id="slt_cantones">
-                            <option value="">--Seleccione un cantón--</option>
-
-                        </select>
+                            <option disabled selected value="">Seleccione un cant&oacute;n...</option>
+						</select>
                     </div>
                     <div>
                         <label for="slt_distritos">Distrito</label>
                         <select id="slt_distritos">
-                            <option value="">--Selecciones un distrito--</option>
-                            <select id="sltDistrito">
-                                <option value="" disabled selected>Seleccione un distrito...</option>
-                            </select>
-                        </select>
+                            <option disabled selected value="">Seleccione un distrito...</option>
+						</select>
                     </div>
                 </div>
                 <div class="datos_der text_center">
@@ -153,8 +140,11 @@
                 </div>
             </div>
 
-            <div id="contacto">
-                <h2>Información de estudiantes</h2>
+
+            <div id="estudiante"  class="text_center">
+			<div class="text_center">
+                <h2>Informaci&oacute;n de estudiantes</h2>
+            </div>
                 <div class="hijos">
                     <label for="slt_hijos">Cantidad de hijos</label>
                     <select id="slt_hijos">
@@ -207,12 +197,12 @@
                 </div>
             </div>
 
-
         </section>
+
+        <div class="text_center mb_15">
+            <button class="btn btn--amarillo" id="boton_registrar">Registrar</button>
+        </div>
     </main>
-    <div class=" text_center">
-        <button class="btn btn--amarillo" id="btnRegistrar">Registrar</button>
-    </div>
     <footer>
         <div class="footer__cuerpo">
             <div class="footer__flex">
@@ -294,5 +284,4 @@
 <script src="js/controlador_direccion_reg_padre.js"></script>
 <script src="js/controlador_registro_padre.js"></script>
 <script src="js/servicio_registro_padre.js"></script>
-
 </html>
