@@ -31,29 +31,52 @@ let obtener_Datos = () => {
             const tipoUsuario = sessionStorage.getItem('tipoUsuario');
 
             if ('undefined' !== typeof tipoUsuario && null !== tipoUsuario) {
-                switch (tipoUsuario.toLowerCase()) {
-                    case 'superadmin' :
-                        window.location.replace('perfil_admin.html');
+
+                const elTipoUsuario = tipoUsuario.toLowerCase();
+                const ocupaRedireccion = sessionStorage.getItem('quienIniciaSesion');
+
+                //switch para calquier cosa que no sea redireccionar (excepto el default).
+                switch (elTipoUsuario) {
+                    case 'superadmin':
                         break;
-                    case 'centroeducativo' :
-                    sessionStorage.setItem('padreVerPerfilCEdu', sessionStorage.getItem('id'));
-                        window.location.replace('perfil_centro.html');
-                        
+                    case 'centroeducativo':
+                        sessionStorage.setItem('padreVerPerfilCEdu', sessionStorage.getItem('id'));
                         break;
-                    case 'padrefamilia' :
+                    case 'padrefamilia':
                         sessionStorage.setItem('idBuscarPadre', sessionStorage.getItem('id'));
-                        window.location.replace('principal_padres.html');
                         break;
-                    default :
-                        mostrarAlerta('Tipo de usuario desconocido');
+                    default:
                         sessionStorage.clear();
-                        window.location.replace('inicio_sesion.html');
+                        console.error('Tipo de usuario desconocido');
+                        location.replace('inicio_sesion.html');
                         break;
                 }
+
+                if (null !== ocupaRedireccion) {
+                    sessionStorage.removeItem('quienIniciaSesion');
+                    const aDonde = decodeURIComponent(ocupaRedireccion);
+                    location.replace(aDonde);
+                } else {
+
+                    //switch para redireccionar.
+                    switch (elTipoUsuario) {
+                        case 'superadmin':
+                            location.replace('perfil_admin.html');
+                            break;
+                        case 'centroeducativo':
+                            location.replace('perfil_centro.html');
+
+                            break;
+                        case 'padrefamilia':
+                            location.replace('principal_padres.html');
+                            break;
+                    }
+
+                }
             } else {
-                mostrarAlerta('Error de sesión');
                 sessionStorage.clear();
-                window.location.replace('inicio_sesion.html');
+                mostrarAlerta('Error de sesión');
+                location.replace('inicio_sesion.html');
             }
 
         } else {
@@ -84,4 +107,7 @@ let validar = (pusuario, pcontrasenna) => {
     return error;
 };
 
-Boton_Ingresar.addEventListener('click', obtener_Datos);
+if (Boton_Ingresar) {
+    Boton_Ingresar.addEventListener('click', obtener_Datos);
+}
+
