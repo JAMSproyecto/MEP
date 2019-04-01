@@ -49,7 +49,6 @@ let registrar_cita = (pid,pnombre, papellidos, ptelefono, pcorreo, pfecha, phora
 
 let listar_citas = (id) => {
     let lista_citas = [];
-    let id = sessionStorage.getItem('id');
     let request = $.ajax(
 
         {
