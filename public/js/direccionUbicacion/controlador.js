@@ -82,6 +82,8 @@ let cambioProvincia = () => {
 
 
         sltCanton.innerHTML = '<option disabled selected>Seleccione un cant&oacute;n...</option>';
+		
+		sltDistrito.innerHTML = '<option disabled selected>Seleccione un distrito...</option>';
 
         if (objCantones && !!Object.keys(objCantones).length) {
 			const hasProperty = Object.prototype.hasOwnProperty;

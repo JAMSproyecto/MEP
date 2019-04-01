@@ -5,6 +5,10 @@ const select_cantones = document.querySelector('#slt_cantones');
 const select_distritos = document.querySelector('#slt_distritos');
 
 let llenar_provincias = () =>{
+	select_provincias.innerHTML = '<option disabled selected value="">Seleccione una provincia...</option>';
+	select_cantones.innerHTML = '<option disabled selected value="">Seleccione un cant&oacute;n...</option>';
+	select_distritos.innerHTML = '<option disabled selected value="">Seleccione un distrito...</option>';
+	
     for(let i = 0; i < provincias.length; i++){
         let nuevaOpcion = new Option(provincias[i]['nombre']);
         nuevaOpcion.value = provincias[i]['idProvincia'];
@@ -13,8 +17,8 @@ let llenar_provincias = () =>{
 };
 let llenar_cantones = () =>{
     let provincia = select_provincias.value;
-    select_cantones.innerHTML = '';
-    
+    select_cantones.innerHTML = '<option disabled selected value="">Seleccione un cant&oacute;n...</option>';
+	select_distritos.innerHTML = '<option disabled selected value="">Seleccione un distrito...</option>';
     for(let i = 0; i < cantones.length; i++){
         if(provincia == cantones[i]['Provincia_idProvincia']){
             let nuevaOpcion = new Option(cantones[i]['nombre']);
@@ -27,7 +31,7 @@ let llenar_cantones = () =>{
 
 let llenar_distritos = () =>{
     let cantones = select_cantones.value;
-    select_distritos.innerHTML = '';
+    select_distritos.innerHTML = '<option disabled selected value="">Seleccione un distrito...</option>';
     
     for(let i = 0; i < distritos.length; i++){
         if(cantones == distritos[i]['Canton_idCanton']){

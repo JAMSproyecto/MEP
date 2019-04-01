@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
     <title>MEP</title>
     <link href="./imgs/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="css/reset.css">
@@ -28,8 +28,11 @@
                     </li>
                     <li> <a class="btn_top contrasenia" href="#">Cambiar contraseña</a></li>
                     <li> <a class="btn_top notificacioness" href="#">Notificaciones</a></li>
+					<li>
+                        <a id="lblNombreUsuario" href="javascript:void(0);"></a>
+                    </li>
                     <li>
-                        <button class="btn btn--amarillo" id="boton_cerrar">Cerrar sesión</button>
+                        <a id="boton_cerrar" class="btn btn--amarillo" href="javascript:void(0);">Cerrar sesi&oacute;n</a>
                     </li>
                 </ul>
             </nav>
@@ -124,11 +127,13 @@
     </header>
     <main>
         <section>
-            <h1 class="titulo__principal">Agregar Artículos a la lista de útiles</h1>
+            <h1 class="titulo__principal">Agregar artículos a la lista de útiles</h1>
             <div class="wrapper">
                 <div class="bloque__filtro">
                     <label for="txt_filtrar">Filtrar</label>
                     <input type="text" id="txt_filtrar">
+                </div>
+                <div class="bloque__filtro">
                     <a href="listar_lista_utiles.html">Regresar</a>
                 </div>
                 <div class="contenedor_tabla">
@@ -150,39 +155,33 @@
             </div>
             
         </section>
-        <form class="bloque__boton">
-                <button type="button" class="boton" id="btn_agregar">Agregar</button>
-            </form>
-        <div class="menu menu__articulos">
-            <div class="contenedor__menu">
-
-                <nav class="regresar  regresar__perfil  admin admin__perfil">
-                    <a href="perfil_admin.html">
-                        <i class="fas fars fa-arrow-circle-left"></i>
-                        <p>Perfil</p>
-                    </a>
-                </nav>
-                <nav class="avanzar avanzar__articulos">
-                    <a href="listar_articulos.html">
-                        <i class="fas fat fa-arrow-circle-right"></i>
-                        <p>Lista de articulos</p>
-                    </a>
-
-                </nav>
+        <div class="bloque__boton">
+                <button type="button" class="btn" id="btn_agregar">Agregar</button>
+            </div>
+			
+        <div class="paginador">
+            <div class="paginador__contenido">
+                <a class="derecha" href="perfil_centro.html">
+                    <i class="fas fa-arrow-circle-left fa-lg"></i>
+                    <p>Perfil</p>
+                </a>
+                <a class="izquierda" href="listar_articulos.html">
+                    <i class="fas fa-arrow-circle-right fa-lg"></i>
+                    <p>Lista de art&iacute;culos</p>
+                </a>
             </div>
         </div>
 
     </main>
 
 
+    <script src="./js/controlador_nav.js"></script>
+    <script src="./js/sweetalert2.all.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/servicio_articulos.js"></script>
     <script src="js/servicio_lista_utiles.js"></script>
     <script src="js/controlador_agregar_articulos.js"></script>
-    <script src="js/controlador_cerrar_sesion.js"></script>
 
 </body>
 

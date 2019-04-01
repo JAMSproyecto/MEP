@@ -111,3 +111,10 @@ if (Boton_Ingresar) {
     Boton_Ingresar.addEventListener('click', obtener_Datos);
 }
 
+
+window.onload = () => {
+    if (Input_Usuario) {
+        Input_Usuario.select();
+        Input_Usuario.focus();
+    }
+};
