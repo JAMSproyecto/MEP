@@ -212,8 +212,9 @@ table.dataTable.no-footer {
 
 }
 
-.dataTables_length {
-    float: left;
+.dataTables_wrapper .dataTables_length {
+    float: right;
+    text-align: right;
     margin-bottom: 15px;
 }
 
