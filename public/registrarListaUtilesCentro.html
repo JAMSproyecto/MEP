@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
     <title>MEP</title>
-    <link rel="stylesheet" href="imgs/favicon.ico">
+    <link href="./imgs/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css">
@@ -27,7 +27,10 @@
                 <ul>
                     <li> <a href="perfil_centro.html"><i class="fas fa-hand-point-left"></i></a></li>
                     <li> <a class="btn_top contrasenia" href="#">Cambiar Contraseña</a></li>
-                    <li><button class="btn btn--amarillo" id="boton_cerrar">Cerrar sesión</button></li>
+					<li>
+                        <a id="lblNombreUsuario" href="javascript:void(0);"></a>
+                    </li>
+                    <li><a id="boton_cerrar" class="btn btn--amarillo" href="javascript:void(0);">Cerrar sesi&oacute;n</a></li>
 
                 </ul>
             </nav>
@@ -94,7 +97,7 @@
     <main>
             <h1 class="titulo__principal">Crear lista de útiles</h1>
             <section class="bloque__principal  bloque__principal-utiles">
-                <form class="formulario_lista_utiles">
+                <div class="formulario_lista_utiles">
                     <div class="text_center">
                         <label for="txt_tipo">Tipo</label>
                         <select id="txt_tipo">
@@ -111,28 +114,26 @@
                         <label for="txt_anno">Año</label>
                         <input type="text" id="txt_anno">
                     </div>
-                </form>
-            </section>
-            <form class="formulario-boton">
-                <button type="button" class="btn btn--amarillo" id="btn_agregar">Registrar</button>
-            </form>
-            <div class="menu menu__registrar-utiles">
-                <div class="contenedor__menu">
-                    <nav class=" regresar regresar__registrar-articulo">
-                        <a href="">
-                            <i class="fas fa fars fa-arrow-circle-left"></i>
-                            <p>Lista de útiles</p>
-                        </a>
-                    </nav>
-                    <nav class="avanzar avanzar__lista-utiles">
-                        <a href="#">
-                            <i class="fas fag fa-arrow-circle-right"></i>
-                            <p>Reportes</p>
-                        </a>
-
-                    </nav>
                 </div>
+            </section>
+            <div class="formulario-boton text_center">
+                <button type="button" class="btn btn--amarillo" id="btn_agregar">Registrar</button>
+            </div>		
+			
+        <div class="paginador">
+            <div class="paginador__contenido">
+                <a class="derecha" href="listar_lista_utiles.html">
+                    <i class="fas fa-arrow-circle-left fa-lg"></i>
+                    <p>Lista de &uacute;tiles</p>
+                </a>
+                <a class="izquierda" href="javascript:void(0);">
+                    <i class="fas fa-arrow-circle-right fa-lg"></i>
+                    <p>Reportes</p>
+                </a>
             </div>
+        </div>
+			
+			
         </main>
 
         <footer>
@@ -203,12 +204,12 @@
                     </div>
                 </div>
             </footer>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="js/servicio_lista_utiles.js"></script>
-        <script src="js/controlador_registrar_lista_utiles.js"></script>
-        <script src="js/controlador_cerrar_sesion.js"></script>
+
+        <script src="./js/controlador_nav.js"></script>
+        <script src="./js/sweetalert2.all.min.js"></script>
+        <script src="./js/jquery-3.3.1.min.js"></script>
+        <script src="./js/servicio_lista_utiles.js"></script>
+        <script src="./js/controlador_registrar_lista_utiles.js"></script>
 
     </body>
 
