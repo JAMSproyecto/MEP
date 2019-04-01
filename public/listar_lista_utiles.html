@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MEP</title>
+    <link href="./imgs/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
@@ -35,10 +36,11 @@
                     </li>
                     <li> <a class="btn_top contrasenia" href="#">Cambiar contraseña</a></li>
                     <li> <a class="btn_top notificacioness" href="#">Notificaciones</a></li>
+					<li>
+                        <a id="lblNombreUsuario" href="javascript:void(0);"></a>
+                    </li>
                     <li>
-                        <form>
-                                <button class="btn__sesion btn--amarillo" id="boton_cerrar">Cerrar sesión</button>
-                        </form>
+                        <a id="boton_cerrar" class="btn btn--amarillo" href="javascript:void(0);">Cerrar sesi&oacute;n</a>
                        
                     </li>
                 </ul>
@@ -157,30 +159,31 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="menu__utiles">
-                    <div class="contenedor__menu">
-                        <nav class="regresar regresar__articulo">
-                            <a href="perfil_admin.html">
-                                <i class="fas fars fa-arrow-circle-left"></i>
-                                <p>Perfil</p>
-                            </a>
-                        </nav>
-
-                    </div>
-                </div>
         </section>
-
+		
+        <div class="paginador">
+            <div class="paginador__contenido">
+                <a class="derecha" href="perfil_centro.html">
+                    <i class="fas fa-arrow-circle-left fa-lg"></i>
+                    <p>Perfil</p>
+                </a>
+                <a class="izquierda" href="javascript:void(0);">
+                    <i class="fas fa-arrow-circle-right fa-lg"></i>
+                    <p></p>
+                </a>
+            </div>
+        </div>
 
     </main>
 
 
 
+    <script src="./js/controlador_nav.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/servicio_lista_utiles.js"></script>
     <script src="js/controlador_listar_lista_utiles.js"></script>
-    <script src="js/controlador_cerrar_sesion.js"></script>
 
 </body>
 
