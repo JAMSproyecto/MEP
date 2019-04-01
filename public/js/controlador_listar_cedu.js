@@ -6,32 +6,34 @@ let cargarDataTable = () => {
 	
 	//Nota: en esta función (cargarDataTable) no se utilizan funciones de flecha al propio para poder usar this.
 	
-	$('#tblCentrosEducativos tfoot th').each(function() {
+	$('#tblCentrosEducativos thead tr:eq(1) th').each(function() {
 		let titulo = $(this).text();
-        $(this).html('<input type="text" class="icon-buscar" placeholder="&#xf0b0; ' + titulo.trim() + '" value="" >');
+        $(this).html('<input type="text" class="icon-buscar" placeholder="&#xf0b0;__" value="" >');
     });
 	
 	let tablaDatos = $('#tblCentrosEducativos').DataTable({
-        paging: true,
+		language: {
+			sSearch: 'Filtrar'
+		},
+        paging: false,
+		orderCellsTop: true,
         pagingType: 'full_numbers',
         ordering: true,
-        iDisplayLength: 15,
-        aLengthMenu: [[5, 10, 15, 25, 50, 100, -1], [5, 10, 15, 25, 50, 100, 'Todos']],
+        iDisplayLength: -1,
         bDestroy: false,
         bFilter: true,
         searching: true,
         bSort: true,
-        order: [[7, 'desc'],[6, 'desc']]
+        order: [[7, 'desc'],[6, 'desc']],
+		dom: '<f><t>'
     });
 	
-	tablaDatos.columns().every(function () {
-        let ese = this;
-        $('input', this.footer()).on('keyup change', function() {
-            if (ese.search() !== this.value) {
-                ese.search(this.value).draw();
-            }
-        });
-    });
+	$('#tblCentrosEducativos thead').on( 'keyup', '.icon-buscar',function () {
+        tablaDatos
+            .column( $(this).parent().index() )
+            .search( this.value )
+            .draw();
+    } );
 	
 	
 	
@@ -39,7 +41,7 @@ let cargarDataTable = () => {
 
 let irAlPerfil = (idCEdu) => {
 	sessionStorage.setItem('padreVerPerfilCEdu', idCEdu);
-    window.location.replace('./perfilCentroPadre.html')
+    location.replace('./perfilCentroPadre.html')
 };
 
 let cargarCEdu = () => {
@@ -100,7 +102,7 @@ let cargarCEdu = () => {
 						    tr_fila.insertCell().innerHTML = '0';
 						}
 						
-						tr_fila.insertCell().innerHTML = '<button class="btn--amarillo"  onClick="irAlPerfil('+obj['_id']+'); return false;">Ver m&aacute;s</button>';
+						tr_fila.insertCell().innerHTML = '<button class="btn btn--amarillo" onClick="irAlPerfil('+obj['_id']+'); return false;">Ver m&aacute;s</button>';
                 });
 				
 				cargarDataTable();
