@@ -33,9 +33,7 @@
                     <li> <a class="btn_top contrasenia" href="#">Cambiar contraseña</a></li>
                     <li> <a class="btn_top notificacioness" href="#">Notificaciones</a></li>
                     <li>
-                        <form>
-                            <button class="btn btn--amarillo" id="boton_cerrar">Cerrar sesión</button>
-                        </form>
+                        <button class="btn btn--amarillo" id="boton_cerrar">Cerrar sesión</button>
 
                     </li>
                 </ul>
@@ -134,7 +132,7 @@
             <h1 class="titulo__principal">Registro de pregunta frecuente</h1>
         </div>
         <section class="bloque__principal" id="preguntaFrecuente">
-            <form class="formulario-preguntaFrecuente">
+            <div class="formulario-preguntaFrecuente">
                 <div class="text_center">
                     <label for="txt_pregunta">Pregunta</label>
                     <input type="text" id="txt_pregunta" />
@@ -144,23 +142,24 @@
                     <label for="txt_respuesta">Respuesta</label>
                     <textarea type="text" id="txt_respuesta"></textarea>
                 </div>
-            </form>
+            </div>
         </section>
-        <form class=" bloque__boton ">
-            <button type="button" class="btn--amarillo" id="btn">Registrar</button>
+        <div class="formulario-boton">
+            <button type="button" class="btn--amarillo btn_registrar" id="btn">Registrar</button>
 
-        </form>
+        </div>
     </main>
 
     <footer>
 
     </footer>
+	
+	<script src="./js/controlador_nav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/servicio_preguntaFrecuente.js"></script>
     <script src="js/controlador_preguntaFrecuenteGeneral.js"></script>
-    <script src="js/controlador_cerrar_sesion.js"></script>
 
 </body>
 

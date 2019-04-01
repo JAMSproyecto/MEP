@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MEP</title>
+    <link href="./imgs/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
@@ -18,6 +19,7 @@
     <link rel="stylesheet" href="css/headerCentro.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="./css/tablas.css">
+    <link rel="stylesheet" href="./css/footer.css">
   
  
 
@@ -35,12 +37,12 @@
                     </li>
                     <li> <a class="btn_top contrasenia" href="#">Cambiar contraseña</a></li>
                     <li> <a class="btn_top notificacioness" href="#">Notificaciones</a></li>
+					<li>
+                        <a id="lblNombreUsuario" href="javascript:void(0);"></a>
+                    </li>
                     <li>
-                        <form>
-                            <button type="button" id="boton_cerrar" class="btn btn--amarillo">Cerrar
-                                sesi&oacute;n</button>
-                        </form>
-
+                        <a id="boton_cerrar" class="btn btn--amarillo" href="javascript:void(0);">Cerrar sesi&oacute;n</a>
+                       
                     </li>
                 </ul>
             </nav>
@@ -154,30 +156,99 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="menu__utiles">
-                    <div class="contenedor__menu">
-                        <nav class="regresar regresar__articulo">
-                            <a href="perfil_admin.html">
-                                <i class="fas fars fa-arrow-circle-left"></i>
-                                <p>Perfil</p>
-                            </a>
-                        </nav>
-
-                    </div>
-                </div>
         </section>
-
+		
+        <div class="paginador">
+            <div class="paginador__contenido">
+                <a class="derecha" href="perfil_centro.html">
+                    <i class="fas fa-arrow-circle-left fa-lg"></i>
+                    <p>Perfil</p>
+                </a>
+                <a class="izquierda" href="javascript:void(0);">
+                    <i class="fas fa-arrow-circle-right fa-lg"></i>
+                    <p></p>
+                </a>
+            </div>
+        </div>
 
     </main>
 
 
+        <footer>
+                <div class="footer__cuerpo">
+                    <div class="footer__flex">
+                        <ul class="footer__lista__top">
+                            <li>
+                                <h4 class="footer__lista__header">Contacto</h4>
+                            </li>
+                            <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'><i
+                                        class="fa fas fa-phone"></i> Tel&eacute;fono:
+                                    22-24-66-88</a></li>
+                            <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'><i
+                                        class="fa fas fa-fax"></i> Fax:
+                                    29-53-55-22</a></li>
+                            <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'><i
+                                        class="fa fas fa-envelope-square"></i> Correo electr&oacute;nico:
+                                    educacion@ucenfotec.com</a></li>
+                        </ul>
+                        <ul class="footer__lista__top">
+                            <li>
+                                <h4 class="footer__lista__header">Direcci&oacute;n</h4>
+                            </li>
+                            <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'>San
+                                    Jos&eacute;,
+                                    Barrio Cristo
+                                    Rey</a></li>
+                            <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'>Av 24, calle
+                                    12</a></li>
+                        </ul>
+                        <ul class="footer__lista__top">
+                            <li>
+                                <h4 class="footer__lista__header">Citas</h4>
+                            </li>
+                            <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'><i
+                                        class="far fa-calendar-alt"></i> Agendar</a></li>
+                        </ul>
+                        <section class="footer__social__seccion footer__flex">
+                            <span class="footer__social__traslapar footer__social__conectate">
+                                Conectate <span class="footer__social__pequeno">con</span> nosotros
+                            </span>
+                            <span class="footer__social__traslapar footer__social__iconos__envoltura">
+                                <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank"
+                                    title="Pinterest"><i class="fab fa-pinterest-square"></i></a>
+                                <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank"
+                                    title="Facebook"><i class="fab fa-facebook-square"></i></a>
+                                <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank" title="Twitter"><i
+                                        class="fab fa-twitter-square"></i></a>
+                                <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank"
+                                    title="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank" title="Youtube"><i
+                                        class="fab fa-youtube"></i></a>
+                                <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank"
+                                    title="Google Plus"><i class="fab fa-google-plus-square"></i></a>
+                            </span>
+                        </section>
+                        <section class="footer__inferior__seccion footer__flex">
+                            <div class="footer__inferior__envoltura">
+                                <i class="fa fa-copyright"></i> 2019
+                                <address class="footer__direccion__compania">JAMS</address>
+                                <span class="footer__inferior__derechos"> - Todos los derechos reservados </span>
+                            </div>
+                            <div class="footer__inferior__envoltura">
+                                <a class="footer__ancla__generica" href="javascript:void(0);">Condiciones</a> | <a
+                                    class="footer__ancla__generica" href="javascript:void(0);">Privacidad</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </footer>
 
+    <script src="./js/controlador_nav.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/servicio_lista_utiles.js"></script>
     <script src="js/controlador_listar_lista_utiles.js"></script>
-    <script src="js/controlador_cerrar_sesion.js"></script>
 
 </body>
 

@@ -114,7 +114,7 @@
             <div class="wrapper">
                 <div class="celda columna__izquierda-cita">
                     <div class="columna__contenedor-izquierdo">
-                        <form class="formulario-preguntaFrecuente">
+                        <div class="formulario-preguntaFrecuente">
                             <div class="datos">
                                 <label for="txt_pregunta">Pregunta</label>
                                 <div class="controlador" id ="pregunta">
@@ -135,28 +135,29 @@
                             
                             <!-- -->
                             <input type="hidden" id="centro" name="codigo_centro" value="23152" />
-                        </form>
+                        </div>
 
                     </div>
 
                 </div>
             </div>
         </section>
-        <form class="formulario-boton">
+        <div class="formulario-boton">
             <button type="button" class="btn_registrar" id="btn">Registrar</button>
 
-        </form>
+        </div>
     </main>
 
     <footer>
 
     </footer>
+	
+	
+	<script src="./js/controlador_nav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/servicio_preguntaFrecuente.js"></script>
     <script src="js/controlador_preguntaFrecuente.js"></script>
-
-    <script src="js/controlador_cerrar_sesion.js"></script>
 </body>
 </html>

@@ -40,7 +40,7 @@
             <div class="wrapper">
                 <div class="celda columna__izquierda-cita">
                     <div class="columna__contenedor-izquierdo">
-                        <form class="formulario-cita">
+                        <div class="formulario-cita">
                             <div class="datos">
                                 <label for="txt_nombre">Nombre</label>
                                 <div class="controlador">
@@ -77,7 +77,7 @@
                             <!-- -->
                             <!-- ¿Qué es esto? 
                                 <input type="hidden" id="centro" name="codigo_centro" value="23152" /> -->
-                        </form>
+                        </div>
 
                     </div>
 
@@ -86,7 +86,7 @@
 
                 <div class="celda columna__derecha-cita">
                     <div class="columna__contenedor">
-                        <form class="cita">
+                        <div class="cita">
                             <div class="fecha">
                                 <label for="fecha">Fecha</label>
                                 <input type="text" id="fecha">
@@ -95,8 +95,8 @@
                                 <label for="hora">Hora</label>
                                 <input type="time"  id="hora">
                             </div>
-                        </form>
-                        <form class="frm__motivo">
+                        </div>
+                        <div class="frm__motivo">
                             <div>
                                 <label for="motivo_cita">Motivo Cita</label>
                                 <select id="motivo_cita">
@@ -112,15 +112,15 @@
                                 <label for="comentario">Comentario</p>
                                     <textarea id="comentario"></textarea>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <form class="formulario-boton">
+        <div class="formulario-boton">
             <button type="button" class="btn_registrar" id="btn">Registrar</button>
 
-        </form>
+        </div>
     </main>
 
     <footer>
@@ -191,12 +191,13 @@
                 </div>
             </div>
         </footer>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		
+	<script src="./js/controlador_nav.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/controlador_nav.js"></script>
+
     <script src="js/servicio_perfil_padres.js"></script>
     <script src="js/controlador_perfil_padre.js"></script>
-    <script src="js/controlador_cerrar_sesion.js"></script>
 
     <script src="./js/general.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
