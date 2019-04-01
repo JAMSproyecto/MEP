@@ -1,47 +1,66 @@
 'use strict';
 
+const botonCerrarSesion = document.querySelector('#boton_cerrar');
+const lblNombreUsuario = document.querySelector('#lblNombreUsuario');
 const enlaces = document.querySelectorAll('#menu-derecho a');
-const botonCerrarSesion = document.querySelector('#boton_cerrar')
-const lblNombreUsuario = document.querySelector('#lblNombreUsuario')
 
 let conectado = sessionStorage.getItem('conectado');
-let tipoUsuario = sessionStorage.getItem('tipoUsuario');
-let nombreUsuario = sessionStorage.getItem('nombreUsuario');
 
-let cerrar_sesion = () => {
+let cerrar_sesion = (esAuto) => {
     sessionStorage.clear();
-    window.location.replace('inicio_sesion.html');
+    if ('boolean' == typeof esAuto && esAuto === true) {
+        sessionStorage.setItem('quienIniciaSesion', encodeURIComponent(window.location.href));
+    }
+    console.log('Redireccionando al inicio de sesión');
+    location.replace('inicio_sesion.html');
 };
 
-if( null !== conectado && ('true' === conectado ||  true === conectado) ){
-    switch(tipoUsuario.toLowerCase()){
-        case 'superadmin':
+let controlar_sesion = () => {
+    if (null !== conectado && ('true' === conectado || true === conectado)) {
 
-        sessionStorage.setItem('padreDesdeAdmin', true);
+        let tipoUsuario = sessionStorage.getItem('tipoUsuario');
 
-        break;
-        case 'centroeducativo':
-			
-        break;
-        case 'padrefamilia':
-            lblNombreUsuario.innerHTML = nombreUsuario || '';
-            sessionStorage.setItem('padreDesdeAdmin', false);
-			
-            enlaces[0].classList.add('ocultar');
-            enlaces[1].classList.add('ocultar');
-            enlaces[2].classList.add('ocultar');
-			
-        break;
+        if (lblNombreUsuario) {
+            lblNombreUsuario.innerHTML = sessionStorage.getItem('nombreUsuario') || '';
+        }
 
-        default: 
-            console.log("cerrando sesión porque el tipo es: " + tipoUsuario);
-	        cerrar_sesion();
-        break;
+        switch (tipoUsuario.toLowerCase()) {
+            case 'superadmin':
+
+                sessionStorage.setItem('padreDesdeAdmin', true);
+
+                break;
+            case 'centroeducativo':
+
+                break;
+            case 'padrefamilia':
+
+
+                sessionStorage.setItem('padreDesdeAdmin', false);
+
+                if (enlaces) {
+                    enlaces[0].classList.add('ocultar');
+                    enlaces[1].classList.add('ocultar');
+                    enlaces[2].classList.add('ocultar');
+                }
+
+                break;
+
+            default:
+                console.log('Cerrando sesión porque el tipo de usuario es desconocido');
+                cerrar_sesion(true);
+                break;
+        }
+
+    } else {
+        console.log('Acceso restringido, no está conectado');
+        cerrar_sesion(true);
     }
+};
 
-}else{
-	console.log("cerrando sesión porque no está conectado" + typeof conectado);
-	cerrar_sesion();
+controlar_sesion();
+
+if (botonCerrarSesion) {
+    botonCerrarSesion.addEventListener('click', cerrar_sesion, false);
 }
 
-botonCerrarSesion.addEventListener('click', cerrar_sesion);
