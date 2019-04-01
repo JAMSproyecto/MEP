@@ -47,13 +47,13 @@ let registrar_cita = (pid,pnombre, papellidos, ptelefono, pcorreo, pfecha, phora
 
 
 
-let listar_citas = () => {
+let listar_citas = (id) => {
     let lista_citas = [];
-    let idCentro = sessionStorage.getItem('id');
+    let id = sessionStorage.getItem('id');
     let request = $.ajax(
 
         {
-            url: "http://localhost:4000/api/obtener_citasCentro/" + idCentro,
+            url: "http://localhost:4000/api/obtener_citasCentro/" + id,
             type: "GET",
             data: {},
             dataType: "json",

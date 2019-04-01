@@ -124,7 +124,6 @@ module.exports.listar_todos = (req, res) => {
 
     cita_modelo.find({codigo : req.body.codigo}).then(
         function (citas) {
-
             if (citas.length > 0) {
                 
                 res.json(
@@ -158,7 +157,6 @@ module.exports.obtener_citasCentro = (req, res) =>{
     cita_modelo.find({
         Centro_asociado : req.body.id
     }).then(function (citas) {
-        console.log(citas);
         if (citas.length > 0) {
             res.json(
                 {

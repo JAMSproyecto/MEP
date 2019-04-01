@@ -371,16 +371,15 @@ font-size: 30px;
 }
 
 #calendario{
-    background: red;
-    width: 900px;
-    margin: auto;
+    width: 920px;
+    margin: 20px auto;
 }
-
-.bloque_calendario{
-    background: red;
-    height: 300px;
+button.fc-button{
+    background: #17C0EB !important;
+    box-shadow: 0 0 10px #78909C !important;
+    min-width: none;
+    min-height: none;
 }
-
-.fc-widget-content{
-height: 400px;
+.fc-day-header{
+    text-transform: capitalize !important;
 }

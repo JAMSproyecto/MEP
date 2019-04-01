@@ -9,6 +9,7 @@ const ObtenerFecha = require('./../funciones_genericas/obtenerFecha');
 
 let transporter = Nodemailer.createTransport({
     service: 'gmail',
+    secure: true,
     auth: {
         user: 'soporte.mep.costarica@gmail.com',
         pass: '1Proyecto9'
