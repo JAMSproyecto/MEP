@@ -23,32 +23,26 @@
 <body>
     <header>
         <div class="column__arriba">
-                <nav class="menu__arriba">
-                    <ul>
-                    
-                        <button type="button" class="btn btn--amarillo" id="btn-sesion">Iniciar Sesión</button>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="columna__derecha">
-                <div class="contenedor">
-                    <nav class="celda">
-                        
-                        </a>
+            <nav class="menu__arriba">
+                <div class="colum__abajo">
+                    <nav class="menu__registrarse">
+                        <ul>
+                            <li> <a class="registrarse" href="index.html">Regresar Inicio</a></li>
+                            <li><a href="registroCentroLanpage.html">Registrarse como centro educativo</a></li>
+                            <li>
+
+                                <button class="btn btn--amarillo" id="boton_cerrar">Iniciar Sesión</button>
+
+
+                            </li>
+                        </ul>
                     </nav>
-                    <form class="celda">
-                        <button type="button" class="btn" id="btn-sesion"><a href="./listar_padres.html">Lista de
-                                Padres</a></button>
-                    </form>
                 </div>
-            </div>
-        </div>
+            </nav>
         </div>
     </header>
     <div class="text_center">
         <h1>Registro de padres de familia</h1>
-        <h2>Por favor ingrese la siguiente información</h2>
     </div>
 
     <main class="formulario">
@@ -96,10 +90,10 @@
                     <input type="date" id="fecha_nacimiento">
                 </div>
             </div>
-           
+
             <div id="contacto">
-               
-                   
+
+
                 <div class="datos_izq text_center">
 
                     <div class="text_center">
@@ -146,8 +140,8 @@
                         <select id="slt_distritos">
                             <option value="">--Selecciones un distrito--</option>
                             <select id="sltDistrito">
-                                    <option value="" disabled selected>Seleccione un distrito...</option>
-                                </select>
+                                <option value="" disabled selected>Seleccione un distrito...</option>
+                            </select>
                         </select>
                     </div>
                 </div>
@@ -215,11 +209,10 @@
 
 
         </section>
-
-        <div class="bloque_boton">
-            <button id="boton_registrar">Registrarse</button>
-        </div>
     </main>
+    <div class=" text_center">
+        <button class="btn btn--amarillo" id="btnRegistrar">Registrar</button>
+    </div>
     <footer>
         <div class="footer__cuerpo">
             <div class="footer__flex">
@@ -298,10 +291,8 @@
 <script src="js/provincias.js"></script>
 <script src="js/cantones.js"></script>
 <script src="js/distritos.js"></script>
-<script src="./js/funciones_autenticacion.js"></script>
-<script src="./js/direccionUbicacion/provinciaCantonDistrito.js"></script>
-<script src="./js/direccionUbicacion/controlador.js"></script>
 <script src="js/controlador_direccion_reg_padre.js"></script>
 <script src="js/controlador_registro_padre.js"></script>
 <script src="js/servicio_registro_padre.js"></script>
+
 </html>
