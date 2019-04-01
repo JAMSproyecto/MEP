@@ -1366,3 +1366,120 @@ display: inherit;
         width: 100%;
     }
 }
+
+
+
+
+
+
+.paginador,
+.paginador *,
+.paginador *:before,
+.paginador *:after,
+.paginador__contenido,
+.paginador__contenido *,
+.paginador__contenido *:before,
+.paginador__contenido *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+.paginador {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.paginador__contenido {
+  font-size: 8pt;
+  line-height: 1;
+  font-weight: 400;
+  font-family: 'Open Sans', 'Source Sans Pro', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  text-align: center;
+  transition: font-size .2s ease-in-out;
+  width: 100%;
+  min-height: 50px;
+  margin: 6em auto 50px auto;
+}
+
+.paginador__contenido .derecha {
+  float: left;
+  padding-left: 1.1em;
+}
+
+.paginador__contenido .izquierda {
+  float: right;
+  padding-right: 1.1em;
+}
+
+.paginador__contenido .derecha p,
+.paginador__contenido .izquierda p {
+  padding-top: 5px;
+}
+
+.paginador__contenido > a {
+  font-size: 140%;
+}
+
+.paginador__contenido a {
+  color: #17c0eb;
+  font-size: 100%;
+  text-decoration: none;
+  padding: .5em;
+}
+
+.paginador__contenido a:focus,
+.paginador__contenido a:hover {
+  color: #17c0eb;
+}
+
+.paginador__contenido a i:focus,
+.paginador__contenido a i:hover {
+  color: #34495e;
+}
+
+.paginador__contenido a p:focus,
+.paginador__contenido a p:hover {
+  color: #17c0eb;
+}
+
+@media (min-width: 350px) {
+  .paginador__contenido {
+    font-size: 10pt;
+  }
+}
+
+@media (min-width: 500px) {
+  .paginador__contenido {
+    font-size: 12pt;
+  }
+}
+
+@media (min-width: 700px) {
+  .paginador__contenido {
+    font-size: 14pt;
+  }
+}
+
+@media (min-width: 900px) {
+  .paginador__contenido {
+    font-size: 16pt;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
