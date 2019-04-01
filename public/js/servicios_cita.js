@@ -14,7 +14,7 @@ let registrar_cita = (pnombre, papellidos, ptelefono, pcorreo, pfecha, phora, pm
                 Hora: phora,
                 Motivo: pmotivo,
                 Comentario: pcomentario,
-                Codigo: pcodigo
+                Centro_asociado: pcodigo
             },
             dataType: "json",
             contentType: 'application/x-www-form-urlencoded; charset=UTF-8'

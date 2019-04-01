@@ -55,7 +55,19 @@ let registrar_actividad = (pidCentro, pactividad, pfecha, phora_inicio, pfinaliz
 
 let listar_todas_actividades = () => {
     let actividades_arreglo = [];
-    let idCentro = sessionStorage.getItem('id');
+    let idCentro;
+    switch(sessionStorage.getItem('tipoUsuario').toLowerCase()){
+        case 'centroeducativo':
+            idCentro = sessionStorage.getItem('id');
+            break;
+        case 'padrefamilia':
+            idCentro = sessionStorage.getItem('padreVerPerfilCEdu');
+            break;
+        default:
+        break;
+        
+    }
+
     let request = $.ajax({
         url: "http://localhost:4000/api/listar_todas_actividades/" + idCentro,
         method: "GET",
@@ -63,7 +75,6 @@ let listar_todas_actividades = () => {
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
         async: false
     });
-
     request.done(function (res){
         actividades_arreglo = res.msg;
 

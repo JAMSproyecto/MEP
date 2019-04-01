@@ -107,7 +107,7 @@ let mostrar_datos = () => {
         let codigo = input_centro.value;
 
 
-        registrar_cita(nombre, apellidos, telefono, correo, fecha, hora, motivo, comentario);
+        registrar_cita(nombre, apellidos, telefono, correo, fecha, hora, motivo, comentario, codigo);
 
 
     }
