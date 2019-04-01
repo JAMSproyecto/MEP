@@ -30,7 +30,6 @@ module.exports.registrar = (req, res) => {
             Hora: req.body.Hora,
             Motivo: req.body.Motivo,
             Comentario: req.body.Comentario,
-            Codigo: req.body.Codigo,
             Centro_asociado: req.body.Centro_asociado
 
         }
@@ -110,7 +109,7 @@ module.exports.registrar = (req, res) => {
                 res.json(
                     {
                         success: true,
-                        msg: `Registo exitoso`
+                        msg: `Registro exitoso`
                     }
                 );
             }
