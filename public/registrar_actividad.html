@@ -106,7 +106,7 @@
         <section>
             <h1 class="titulo__principal"> Registrar Evento </h1>
             <div class=" bloque__principal bloque__actividad">
-                <form>
+                <div>
                     <div class="dato text_center">
                         <label for="txt_actividad">Nombre de la actividad</label>
                         <input type="text" id="txt_actividad">
@@ -141,12 +141,12 @@
                         <label for="txt_detalles"> Informacion Importante </label>
                         <textarea id="txt_detalles"></textarea>
                     </div>
-                </form>
+                </div>
             </div>
         </section>
-        <form class="formulario-boton">
+        <div class="formulario-boton">
             <button type="button" class="btn btn--amarillo" id="btn_agregar">Registrar</button>
-        </form>
+        </div>
     </main>
     <footer>
             <div class="footer__cuerpo">
@@ -216,12 +216,12 @@
                 </div>
             </div>
         </footer>
+    <script src="./js/controlador_nav.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="js/servicio_registrar_actividad.js"></script>
     <script src="js/controlador_registrar_actividad.js"></script>
-    <script src="js/controlador_cerrar_sesion.js"></script>
 
 
 
