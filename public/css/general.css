@@ -268,21 +268,8 @@ margin-bottom: 0px;
     position: relative;
     top: 151px;
 }
-.regresar__registrar{
-    position: relative;
-    top: 0;
-    left: 54px;
-}
-
-.regresar__registrar a{
-    text-decoration: none;
-    color:  #17c0eb;
-}
 
 
-.fat{
-    left: 63px;
-}
 /* right: 25px; */
 
 .contenedor__centro{
@@ -345,59 +332,6 @@ textarea{
 
 /*meus de regresar o avanzar*/
 
-.avanzar{
-    position: relative;
-    left: 80%;
-    bottom: 42px;
-}
-
-.regresar{
-    position: relative;
-    top:400px;
-    left: 22px;
-    
-}
-.avanzar a,
-.regresar a{
-    text-decoration: none;
-}
-
-.avanzar p,
-.regresar p{
-color:  #17c0eb;
-
-}
-
-.fa-arrow-circle-right
-
-{
-    font-size: 30px;
-    color: #17c0eb;
-    left: 73px;
-    position: relative;
-    
-}
-
-
-.fa-arrow-circle-left{
-    font-size: 30px;
-    color: #17c0eb;
-    left: 20px;
-    position: relative;
-}
-.fas:hover{
-    color: #34495e
-}
-
-.fars{
-    position: relative;
-    left: 3px;
-}
-.far{
-    position: relative;
-    left: 37px;
-
-}
 .menu{
     position: relative;
     bottom: 50px;
@@ -416,10 +350,6 @@ color:  #17c0eb;
 
 }
 
-.fa {
-    position: relative;
-    left: 38px;
-}
 .menu_lista_de_utiles{
     position: relative;
 
@@ -436,57 +366,12 @@ color:  #17c0eb;
 
 
 
-.avanzar  p,
-.regresar  p{
-    color:  #17c0eb;
-  
-    }
 
 
-
-.fa-arrow-right{
-color: #17c0eb;
-}
-
-.avanzar a:hover{
-    text-decoration: none;
-}
-
-.regresar a:hover{
-    text-decoration: none;
-}
-.regresar__registrar-articulo{
-    position: relative;
-    top: 0px;
-    left: 25%;
-}
-
-.fag{
-    position: relative;
-    left: 18px;
-}
-.avanzar__lista-utiles{
-    left: 67%;
-    /* top: -25px; */
-    bottom: 48px;
-}
-    
-
-.regresar__lista-articulos{
-    position: relative;
-    left: 240px;
-}
 .menu__registro-centro{
     position: relative;
     bottom: 50px;
     top: 0px;
-}
-
-
-.regresar__perfil{
-    position: relative;
-    bottom: 94px;
-    left: 175px;
 }
 
 
@@ -497,11 +382,6 @@ color: #17c0eb;
 }
 
 
-.regresar__principal{
-position: relative;
-top:0px;
-left: 100px;
-}
 
 
 
@@ -516,78 +396,12 @@ left: 100px;
     left: 241px;
 }
 
-.avanzar__articulos{
-    position: relative;
-    left: 76%;
-}
-
-.regresar_listar{
-    position: relative;
-    top: 0px;
-    left: 247px;
-}
-
-
-.fat{
-    left: 40px;
-    position: relative;
-}
-
 .menu__articulos{
     position: relative;
     top: 0px;
     right: 6%;
 }
-    
-
-.regresar__articulo p{
-  color:  #17c0eb;
-}
-
-
-.regresar__articulo a{
-    text-decoration: none;
-}
-.regresar__articulo{
-    position: relative;
-    top:0px;
-    left: 373px;
-}
-
-.fap{
-    position: relative;
-    left: 42px;
-}
-
-.faf{
-    position: relative;
-    left:10px;
-}
-
-.fad{
-    position: relative;
-    left: 16px; 
-}
-
-
-.fav {
-    left: 69px;
-    position: relative;
-}
-.avanzar__articulo{
-
-position: relative;
-left: 68%;
-}
-
-
-.fal{
-    position: relative;
-    left: 44px;
-}
-
-
-
+ 
 .text__datos{
     text-align: center;
 }
