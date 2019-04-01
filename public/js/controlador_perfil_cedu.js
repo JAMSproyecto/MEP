@@ -1,8 +1,17 @@
 'use strict';
+/**
+ * <div class="actividad">
+                    <strong class="nombre__actividad"></strong>
+                    <p class="fecha__actividad"></p>
+                    <p class="hora__actividad"></p>
+                </div>
+ */
+let crearActividades = (perfil)=>{
+    let actividades = listar_todas_actividades();
 
-let crearPerfil = (perfil)=>{
     document.querySelector('#titulo_centro_educativo').innerHTML = perfil.Nombre;
 
+    
     let actividad = document.createElement('div');
     actividad.classList.add('actividad');
     
@@ -15,7 +24,8 @@ let crearPerfil = (perfil)=>{
     let hora = document.createElement('p');
     fecha.classList.add('hora__actividad');
 
-    
+    actividad.innerHTML
+
 };
 
 window.addEventListener('load', () => {
@@ -35,6 +45,6 @@ window.addEventListener('load', () => {
     }
     let perfil = get_obtenerPerfil(id);
     crearCalendario(id);
-    crearPerfil(perfil);    
+    crearActividades(perfil);    
 
 });
