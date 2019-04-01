@@ -15,6 +15,7 @@ let crearPerfil = (perfil)=>{
     let hora = document.createElement('p');
     fecha.classList.add('hora__actividad');
 
+    
 };
 
 window.addEventListener('load', () => {
