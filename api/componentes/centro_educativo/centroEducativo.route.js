@@ -1,6 +1,6 @@
 'use strict';
 const Express = require('express');
-const Router =  Express.Router();
+const Router = Express.Router();
 const RegistrarCEduApi = require('./centroEducativo.api');
 
 Router.param('id', (req, res, next, id) => {
@@ -17,7 +17,7 @@ Router.route('/obtener_todos_centro_educativo').get((req, res) => {
 });
 
 Router.route('/obtener_perfil_centro_educativo/:id').get((req, res) => {
-   RegistrarCEduApi.obtener_centroEducativo(req, res);
+    RegistrarCEduApi.obtener_perfil_centro_educativo(req, res);
 });
 
 module.exports = Router;
