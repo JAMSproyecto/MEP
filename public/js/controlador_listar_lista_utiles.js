@@ -31,6 +31,7 @@ let mostrar_datos = () => {
             boton_agregar.textContent = 'Agregar Artículos';
             boton_agregar.dataset.codigo = lista_utiles[i]['_id'];
             boton_agregar.classList.add('btn_tabla');
+            
 
             boton_ver.type = 'button';
             boton_ver.textContent = 'Ver'

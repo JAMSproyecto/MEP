@@ -135,11 +135,13 @@
 
 
 .tabla__servicios{
-    width: 573px;
-    border-radius: 22px;
+    width: 740px;
+    margin: auto;
 }
 
-
+.titulo_oferta{
+    text-align: center;
+}
 
 .titulo__servicios{
     text-align: center;
@@ -177,7 +179,7 @@ border-radius: 20px;
 {
     padding: 8px;
     position: relative;
-    left: 43px;
+    left: 25px;
 }
  
 .servicio p{
@@ -186,17 +188,15 @@ border-radius: 20px;
     font-size: 19px;
 
 }
-.tabla__servicios{
-    width: 1000px;
-    margin: auto;
-}
+
 .servicio {
     border: 1px solid #2d3436;
-    width: 188px;
+    width: 161px;
     box-shadow: 0 0 3px #78909C;
     margin: 10px;
-    display: inline-block;   
-    border-radius: 12px;
+    display: inline-block;
+    /* border-radius: 12px; */
+    background: #fff;
 }
 
 .comentario{
@@ -368,4 +368,19 @@ font-size: 30px;
     font-size: 30px;
     font-weight: 700;
     text-transform: capitalize;
+}
+
+#calendario{
+    background: red;
+    width: 900px;
+    margin: auto;
+}
+
+.bloque_calendario{
+    background: red;
+    height: 300px;
+}
+
+.fc-widget-content{
+height: 400px;
 }

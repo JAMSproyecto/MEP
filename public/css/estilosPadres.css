@@ -56,3 +56,19 @@
     position: relative;
     right: 47%;
 }
+
+.padres{
+    border: 1px solid #b2bec3;
+}
+
+.centros h2{
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    margin: 26px 0 32px;
+    font-weight: 500px;
+   }
+
+
+
+  
