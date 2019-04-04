@@ -1,8 +1,3 @@
-body{
-    font-family: 'Yantramanav', sans-serif;
-}
-
-
 .titulo__principal {
     text-align: center;
      font-size: 30px; 
@@ -1063,8 +1058,6 @@ select:not(.error_input):focus,
 }
 
 .bloque__filtro input{
-    width: 232px;
-    /* display: block; */
     display: inline-block;
 }
 
