@@ -32,19 +32,22 @@ let listarCEdu = (pCallback) => {
             throw new Error('Se esperaba una función');
         }
     }).fail((jqXHR, textStatus) => {
+        if (0 != jqXHR.status) {
+            const elError = 'Error listarCEdu: ' + jqXHR.statusText + ' [' + jqXHR.status + ']  -  ' + jqXHR.responseText;
 
-        const elError = 'Error listarCEdu: ' + jqXHR.statusText + ' [' + jqXHR.status + ']  -  ' + jqXHR.responseText;
+            console.error(elError);
 
-        console.log(elError);
+            //Verificamos que pCallback sea una función
+            if ('function' == typeof (pCallback)) {
 
-        //Verificamos que pCallback sea una función
-        if ('function' == typeof (pCallback)) {
+                //Ejecutamos la función pCallback
+                pCallback(false, elError);
 
-            //Ejecutamos la función pCallback
-            pCallback(false, elError);
-
+            } else {
+                throw new Error(elError);
+            }
         } else {
-            throw new Error(elError);
+            console.error('Verifique la conexión con la base de datos');
         }
     });
 };
